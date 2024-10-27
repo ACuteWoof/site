@@ -1,0 +1,1 @@
+27th August 2024|Completely static blog with tailwind and some bash scripting!|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel pulvinar tortor, id luctus nisi.|00001.html
