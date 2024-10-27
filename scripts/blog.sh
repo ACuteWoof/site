@@ -6,6 +6,7 @@ cd "${0%/*}"
 [ ! -d ../blog/ ] && mkdir -p ../blog/
 [ ! -d ../src/public/blog/md ] && mkdir -p ../src/public/blog/md
 
+rm -rf ../src/public/blog/md/*
 cp -r ../blog/* ../src/public/blog/md/.
 
 echo "" > ../extra/blog.html || touch ../extra/blog.html
