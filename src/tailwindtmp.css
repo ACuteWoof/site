@@ -1136,6 +1136,48 @@ a:hover {
   text-decoration-color: #fff !important;
 }
 
+div.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(38 38 38 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+  padding: 1rem;
+}
+
+div.project:hover {
+  background-color: rgb(23 23 23 / 0.7);
+}
+
+@media (min-width: 768px) {
+  div.project {
+    flex-direction: row;
+  }
+}
+
+div.project img {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  div.project img {
+    max-height: 8rem;
+  }
+}
+
+div.project div.text {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
+}
+
 div.blogpost {
   color: var(--tw-prose-body);
   max-width: 65ch;
@@ -1713,6 +1755,10 @@ div.blogpost h3 {
   margin-top: 0px !important;
 }
 
+.static {
+  position: static;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -1784,9 +1830,18 @@ div.blogpost h3 {
   line-height: 1;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-slate-300 {
