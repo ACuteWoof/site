@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  a {
+    @apply underline leading-none underline-offset-2 transition-all duration-150 ease-in-out;
+  }
+  a:hover {
+    @apply bg-white text-black decoration-white;
+  }
+  a.exception {
+    @apply leading-none underline-offset-2 transition-all duration-150 ease-in-out;
+  }
+  a.exception:hover {
+    @apply bg-transparent text-white decoration-white;
+  }
+}
