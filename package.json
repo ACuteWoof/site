@@ -1,0 +1,20 @@
+{
+  "name": "ACuteWoof",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss build -i ./src/tailwind.css -o ./public/tailwind.css",
+    "build": "NODE_ENV=production yarn dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/ACuteWoof/site.git",
+  "author": "ACuteWoof <sutharshanvithushan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.20",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.14"
+  }
+}
