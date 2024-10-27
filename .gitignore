@@ -130,5 +130,5 @@ public/tailwind.css
 .pnp.*
 
 # my stuff
-extra/
-public/
+/extra/
+/public/
