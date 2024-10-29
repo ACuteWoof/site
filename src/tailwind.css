@@ -17,7 +17,7 @@
   }
 
   div.project {
-    @apply flex flex-col items-center md:flex-row gap-4 bg-neutral-900 hover:bg-neutral-900/70 p-4 border border-neutral-800;
+    @apply flex flex-col md:items-center md:flex-row gap-4 bg-neutral-900 hover:bg-neutral-900/70 p-4 border border-neutral-800;
   }
   div.project img {
     @apply h-full md:max-h-32;
