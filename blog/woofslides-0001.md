@@ -1,3 +1,5 @@
+<img src="https://github.com/woofslides/.github/blob/main/profile/logo.png?raw=true" width="100" height="100">
+
 # Presentations with HTML, and more.
 
 It starts with Linux, and me having to make presentations. I don't use office suites, just like a stereotypical Arch user, so when I had to write documents and make presentations, well, I was lost.
