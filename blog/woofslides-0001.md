@@ -34,4 +34,4 @@ I haven't done much searching because I'm lazy, but from what I've seen so far, 
 
 ---
 
-Check out [WoofSlides](https://github.com/woofslides) on GitHub.
+Check out [WoofSlides](https://github.com/woofslides) on GitHub, and my [Notion site](https://acutewoof.notion.site/Woof-slides-11e57c8022a380679f1ce26ee0a480e5) for update notes that aren't made out to be blog posts yet.
