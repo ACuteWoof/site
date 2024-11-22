@@ -10,8 +10,7 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Message sent to Woof!")
-
+	
 	var websocket_uri string = os.Getenv("WEBSOCKET_URI")
 
 	postBody, _ := json.Marshal(map[string]string{
@@ -25,6 +24,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		log.Fatalln(err)
-	}
+	} else {
+  fmt.Fprintf(w, "Message sent to Woof!")
+}
 
 }
