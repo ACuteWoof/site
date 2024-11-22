@@ -1,4 +1,4 @@
-export default async function handler(request, response) {
+export function GET(request, response) {
 
   const data = { message: "Hello from Vercel API!" };
 
