@@ -22,7 +22,7 @@
 		message = document.getElementById("themessage").value
 		const xhr = new XMLHttpRequest();
 		try{
-xhr.open("GET", "https://www.lewoof.xyz/api/index?message="+message);
+xhr.open("GET", "/api/index?message="+message);
 xhr.send();
 xhr.responseType = "json";
 xhr.onload = () => {
