@@ -15,7 +15,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	var websocket_uri string = os.Getenv("WEBSOCKET_URI")
 
 	postBody, _ := json.Marshal(map[string]string{
-		"content": "@acutewoof, " + r.RemoteAddr + " says: " + r.URL.Query()["message"][0],
+		"content": string("<@618114750827462660>, " + r.RemoteAddr + " says: " + r.URL.Query()["message"][0]),
 	})
 
 	responseBody := bytes.NewBuffer(postBody)
