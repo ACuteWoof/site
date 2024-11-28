@@ -18,29 +18,32 @@
       rel="stylesheet"
     />
     <script defer>
-	    function sendmessage() {
-		message = document.getElementById("themessage").value
-		const xhr = new XMLHttpRequest();
-		try{
-xhr.open("GET", "/api/index?message="+message);
-xhr.send();
-xhr.responseType = "json";
-xhr.onload = () => {
-  if (xhr.readyState == 4 && xhr.status == 200) {
-    const data = xhr.response;
-    document.getElementById("themessage").value = ""
-    document.getElementById("sendbutton").innerHTML = "Message sent :)"
-    console.log(data);
-  } else {
-    console.log(`Error: ${xhr.status}`);
-    document.getElementById("sendbutton").innerHTML = "Couldn't send message :/"
-  }
-};
-  } catch(e) {
-  console.error(e)
-    document.getElementById("sendbutton").innerHTML = "Couldn't send message :/"
-    }
-	    }
+      function sendmessage() {
+        message = document.getElementById("themessage").value;
+        const xhr = new XMLHttpRequest();
+        try {
+          xhr.open("GET", "/api/index?message=" + message);
+          xhr.send();
+          xhr.responseType = "json";
+          xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              const data = xhr.response;
+              document.getElementById("themessage").value = "";
+              document.getElementById("sendbutton").innerHTML =
+                "Message sent :)";
+              console.log(data);
+            } else {
+              console.log(`Error: ${xhr.status}`);
+              document.getElementById("sendbutton").innerHTML =
+                "Couldn't send message :/";
+            }
+          };
+        } catch (e) {
+          console.error(e);
+          document.getElementById("sendbutton").innerHTML =
+            "Couldn't send message :/";
+        }
+      }
     </script>
   </head>
   <body
@@ -74,7 +77,7 @@ xhr.onload = () => {
           class="text-left prose prose-neutral prose-invert"
         >
           <h2>Social/Contact</h2>
-	  
+
           <ul>
             <li>
               Email:<!-- -->
@@ -84,23 +87,27 @@ xhr.onload = () => {
             </li>
             <li>Discord: @acutewoof</li>
             <li>
-              Instagram:<!-- -->
-              <a target="_blank" href="https://instagram.com/acutewoof"
-                >@acutewoof</a
-              >
-            </li>
-            <li>
               Github:<!-- -->
               <a target="_blank" href="https://github.com/acutewoof"
                 >acutewoof</a
               >
             </li>
           </ul>
-<div class="flex flex-col gap-2">
-	  <textarea maxlength="2000" class="flex min-h-[60px] w-full rounded-md border border-neutral-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" id="themessage" placeholder="Leave a message"></textarea>
-	  <button class="border border-neutral-800 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-neutral-800/90 h-9 px-4 py-2" id="sendbutton" onclick="sendmessage()">Send Privately :P</button>
-	  </div>
-
+          <div class="flex flex-col gap-2">
+            <textarea
+              maxlength="2000"
+              class="flex min-h-[60px] w-full rounded-md border border-neutral-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+              id="themessage"
+              placeholder="Leave a message"
+            ></textarea>
+            <button
+              class="border border-neutral-800 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-neutral-800/90 h-9 px-4 py-2"
+              id="sendbutton"
+              onclick="sendmessage()"
+            >
+              Send Privately :P
+            </button>
+          </div>
         </section>
       </div>
       <div class="flex flex-col lg:grid lg:grid-cols-2 gap-8">
@@ -108,4 +115,9 @@ xhr.onload = () => {
           <div class="prose prose-neutral prose-invert">
             <h2>Projects</h2>
           </div>
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
