@@ -12,6 +12,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	if license == adminkey {
 		fmt.Fprintf(w, "Verified")
 	} else {
-		fmt.Fprintf(w, "No")
+		w.WriteHeader(403)
+		return
 	}
 }
