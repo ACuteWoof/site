@@ -9,6 +9,7 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
 	var adminkey string = os.Getenv("TMP_ADMIN_KEY")
 	license := r.URL.Query()["license"][0]
+	w.Header().Add("Content-Type", "application/json")
 	if license == adminkey {
 		fmt.Fprintf(w, `{"license": "verified"}`)
 		return
