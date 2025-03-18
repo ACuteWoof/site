@@ -1,5 +1,4 @@
 WoofPress|Printing books (and compilations) that are either out of print, or hard to find.|https://press.lewoof.xyz|images/press.png
-Radiant Tools|Tools for Solana; features only a Solana mixer for now. More to come.|https://radiant-tools.com|images/radiant-tools.png
 E-Commerce Dashboard for GSL Wholesalers LTD|The frontend for the e-commerce dashboard built specifically for GSL Wholesalers LTD.|-|images/gsl.png
 Kreatis|A web development agency.|https://kreatis.lewoof.xyz|images/kreatis.png
 Woof OS|Woof OS is a simple respin of Arch Linux with a focus on simplicity and speed.|https://os.lewoof.xyz/|https://os.lewoof.xyz/images/qtile/s4.png
