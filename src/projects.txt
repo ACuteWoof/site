@@ -1,3 +1,4 @@
+Ashes & Inks|Classics publishing, connected to WoofPress.|https://ashesandink.store|images/ashesandink.png
 WoofPress|Printing books (and compilations) that are either out of print, or hard to find.|https://press.lewoof.xyz|images/press.png
 E-Commerce Dashboard for GSL Wholesalers LTD|The frontend for the e-commerce dashboard built specifically for GSL Wholesalers LTD.|-|images/gsl.png
 Kreatis|A web development agency.|https://kreatis.lewoof.xyz|images/kreatis.png
