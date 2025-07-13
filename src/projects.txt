@@ -1,7 +1,7 @@
-Ashes & Ink|Classics publishing, connected to WoofPress.|https://ashesandink.store|images/ashesandink.png
 Landing for Asuga Nodes|Read, write, and build onchain with blazing-fast RPCs, real-time streams, and developer-first APIs — all backed by Solana's most dependable infrastructure.|https://asuganodes.com|images/asuga-landing.png
 Dashboard for Asuga Nodes|Dashboard to manage your NFT and nodes from Asuga Nodes.|https://dashboard.asuganodes.com|images/asuga-dashboard.png
+Ashes & Ink|Classics publishing, connected to WoofPress.|https://ashesandink.store|images/ashesandink.png
 WoofPress|Printing books (and compilations) that are either out of print, or hard to find.|https://press.lewoof.xyz|images/press.png
+Woof OS|Woof OS is a simple respin of Arch Linux with a focus on simplicity and speed.|https://os.lewoof.xyz/|https://os.lewoof.xyz/images/qtile/s4.png
 E-Commerce Dashboard for GSL Wholesalers LTD|The frontend for the e-commerce dashboard built specifically for GSL Wholesalers LTD.|-|images/gsl.png
 Kreatis|A web development agency.|https://kreatis.lewoof.xyz|images/kreatis.png
-Woof OS|Woof OS is a simple respin of Arch Linux with a focus on simplicity and speed.|https://os.lewoof.xyz/|https://os.lewoof.xyz/images/qtile/s4.png
