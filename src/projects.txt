@@ -1,3 +1,4 @@
+Dashboard for Legendx Bot|The dashboard that lets you manage your validator running the legendx mev bot|https://legendx.bot|images/legendx.png
 Landing for Asuga Nodes|Read, write, and build onchain with blazing-fast RPCs, real-time streams, and developer-first APIs — all backed by Solana's most dependable infrastructure.|https://asuganodes.com|images/asuga-landing.png
 Dashboard for Asuga Nodes|Dashboard to manage your NFT and nodes from Asuga Nodes.|https://dashboard.asuganodes.com|images/asuga-dashboard.png
 Ashes & Ink|Classics publishing, connected to WoofPress.|https://ashesandink.store|images/ashesandink.png
