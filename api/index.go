@@ -1,4 +1,4 @@
-package handler
+
 
 import (
 	"bytes"
@@ -29,5 +29,4 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	} else {
 		fmt.Fprintf(w, "Message sent to Woof!")
 	}
-
 }
