@@ -4,5 +4,6 @@ Ashes & Ink|Classics publishing, connected to WoofPress.|https://ashesandink.sto
 BugsArchive|A site for writings about computer science from volunteers, with no frontend use of JavaScript, that can be read on almost any sort of browser (including terminal based web browsers), with nothing but content.|https://bugs.lewoof.xyz|images/bugsarchive.png
 WoofPress|Printing books (and compilations) that are either out of print, or hard to find.|https://press.lewoof.xyz|images/press.png
 Woof OS|Woof OS is a simple respin of Arch Linux with a focus on simplicity and speed.|https://os.lewoof.xyz/|https://os.lewoof.xyz/images/qtile/s4.png
-E-Commerce Dashboard for GSL Wholesalers LTD|The frontend for the e-commerce dashboard built specifically for GSL Wholesalers LTD.|-|images/gsl.png
-Kreatis|A web development agency.|https://kreatis.lewoof.xyz|images/kreatis.png
+Gamma Tech Suite Bot|A Discord bot to view analytics about tokens on Solana.|https://gammasuite.tech/|images/gamma.png
+E-Commerce Dashboard for GSL Wholesalers LTD|The frontend for the e-commerce dashboard built specifically for GSL Wholesalers LTD.| |images/gsl.png
+Kreatis|A web development agency. (No longer active, shown here to highlight my design abilities)|https://kreatis.lewoof.xyz|images/kreatis.png
