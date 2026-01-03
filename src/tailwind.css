@@ -23,7 +23,10 @@
     @apply flex flex-col md:items-center md:flex-row gap-4 bg-gruvboxDark-bgH/70 hover:bg-gruvboxDark-bgH p-4 border border-gruvboxDark-bg4;
   }
   div.project img {
-    @apply h-full md:max-h-32 sepia hover:sepia-0 transition-all duration-150;
+    @apply h-full md:max-h-32 sepia transition-all duration-150;
+  }
+  div.project:hover img {
+    @apply sepia-0;
   }
   div.project div.text {
     @apply flex flex-col gap-2 text-gruvboxDark-fg0 h-full;
