@@ -9,7 +9,7 @@ module.exports = {
       display: ["Modern Antiqua", "serif"],
     },
     backgroundImage: {
-      main: 'url("/api/background")',
+      main: 'url("https://lewoof.xyz/api/background")',
     },
     extend: {
       colors: {
@@ -87,7 +87,7 @@ module.exports = {
           css: {
             "--tw-prose-body": theme("colors.gruvbox.fg"),
             "--tw-prose-headings": theme("colors.gruvbox.fg"),
-            "--tw-prose-links": theme("colors.gruvbox.blue"),
+            "--tw-prose-links": theme("colors.gruvbox.aqua"),
             "--tw-prose-bold": theme("colors.gruvbox.fg"),
             "--tw-prose-counters": theme("colors.gruvbox.aqua"),
             "--tw-prose-bullets": theme("colors.gruvbox.aqua"),
@@ -103,7 +103,7 @@ module.exports = {
             // Dark mode invert colors
             "--tw-prose-invert-body": theme("colors.gruvboxDark.fg"),
             "--tw-prose-invert-headings": theme("colors.gruvboxDark.fg"),
-            "--tw-prose-invert-links": theme("colors.gruvboxDark.blue"),
+            "--tw-prose-invert-links": theme("colors.gruvboxDark.aqua"),
             "--tw-prose-invert-bold": theme("colors.gruvboxDark.fg"),
             "--tw-prose-invert-counters": theme("colors.gruvboxDark.aqua"),
             "--tw-prose-invert-bullets": theme("colors.gruvboxDark.aqua"),
