@@ -9,7 +9,7 @@
     <title>Vithushan</title>
 
     <!--<link rel="stylesheet" href="tailwind.css" />-->
-    <link rel="stylesheet" href="../public/tailwind.css" />
+    <link rel="stylesheet" href="tailwind.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,10 +47,10 @@
     </script>
   </head>
   <body
-    class="m-0 min-h-screen bg-black bg-main bg-cover bg-fixed bg-center p-8 lg:p-12 text-gruvboxDark-fg font-serif w-full backdrop-sepia"
+    class="m-0 min-h-screen bg-black bg-main bg-cover bg-fixed bg-center p-8 lg:p-12 text-gruvboxDark-fg font-serif w-full"
   >
     <main
-      class="flex flex-col gap-8 w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0/85 backdrop-brightness-50 p-8"
+      class="flex flex-col gap-8 w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0/95 backdrop-brightness-50 p-8 backdrop-sepia"
     >
       <section
         id="hero"
@@ -106,12 +106,12 @@
         <div class="flex flex-col gap-2">
           <textarea
             maxlength="2000"
-            class="flex min-h-[60px] w-full border border-gruvboxDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            class="flex min-h-[60px] w-full border border-gruvboxDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-gruvboxDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gruvboxDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
             id="themessage"
             placeholder="Leave a message"
           ></textarea>
           <button
-            class="border border-gruvboxDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-neutral-800/90 h-9 px-4 py-2"
+            class="border border-gruvboxDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-gruvboxDark-fg shadow hover:bg-gruvboxDark-bgH/90 h-9 px-4 py-2"
             id="sendbutton"
             onclick="sendmessage()"
           >
@@ -123,13 +123,13 @@
         <div class="prose prose-invert">
           <h2>Projects</h2>
         </div>
-        <div class="flex flex-col gap-4">==== PROJECTSHERE ====</div>
+        <div class="flex flex-col gap-4">WOOFPROJECTS</div>
       </section>
       <section id="blog" class="flex flex-col gap-8">
         <div class="text-left prose prose-invert">
           <h2>Blog</h2>
         </div>
-        <div class="flex flex-col gap-4">==== BLOGHERE ====</div>
+        <div class="flex flex-col gap-4">WOOFBLOG</div>
       </section>
     </main>
   </body>
