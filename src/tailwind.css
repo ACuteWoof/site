@@ -7,27 +7,27 @@
     @apply underline leading-none underline-offset-2 transition-all duration-150 ease-in-out;
   }
   a:hover {
-    @apply !bg-white !text-black !decoration-white;
+    @apply !bg-gruvboxDark-fg !text-gruvboxDark-bg !decoration-gruvboxDark-fg;
   }
   a.exception {
     @apply leading-none underline-offset-2 transition-all duration-150 ease-in-out;
   }
   a.exception:hover {
-    @apply bg-transparent text-white decoration-white;
+    @apply bg-transparent text-gruvboxDark-fg decoration-gruvboxDark-fg;
   }
 
   div.project {
-    @apply flex flex-col md:items-center md:flex-row gap-4 bg-neutral-900 hover:bg-neutral-900/70 p-4 border border-neutral-800;
+    @apply flex flex-col md:items-center md:flex-row gap-4 bg-gruvboxDark-bgH hover:bg-gruvboxDark-bgH/70 p-4 border border-gruvboxDark-bg4;
   }
   div.project img {
     @apply h-full md:max-h-32;
   }
   div.project div.text {
-    @apply flex flex-col gap-2 text-neutral-300 h-full;
+    @apply flex flex-col gap-2 text-gruvboxDark-fg0 h-full;
   }
 
   div.blogpost {
-    @apply py-2 px-4 border-l border-neutral-800 hover:bg-neutral-900/20 prose prose-neutral prose-invert;
+    @apply py-2 px-4 border-l border-gruvboxDark-bg4 hover:bg-gruvboxDark-bgH/20 prose prose-invert;
   }
   div.blogpost h3 {
     @apply !mt-0;
