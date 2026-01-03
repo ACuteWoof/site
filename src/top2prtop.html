@@ -47,23 +47,77 @@
     </script>
   </head>
   <body
-    class="m-0 min-h-screen bg-neutral-950 p-8 lg:p-12 text-white font-serif"
+    class="m-0 min-h-screen bg-neutral-950 bg-main bg-cover p-8 lg:p-12 text-white font-serif w-full"
   >
-    <section
-      id="hero"
-      class="h-[40vh] w-full flex flex-col items-center justify-center"
+    <main
+      class="flex flex-col gap-8 w-full max-w-screen-md mx-auto bg-neutral-900 p-8"
     >
-      <div class="text-center flex flex-col gap-4 items-center">
-        <h1 class="text-5xl lg:text-7xl">I'm 
-	      <a href="./docs/resume.pdf" target="_blank">
-		Vithushan.
-	      </a>
-      </div>
-    </section>
-    <main class="flex flex-col gap-8">
-      <div class="flex flex-col lg:grid lg:grid-cols-2 gap-16">
-        <section id="projects" class="flex flex-col gap-8 lg:max-w-screen-lg lg:ml-auto">
-          <div class="prose prose-neutral prose-invert">
-            <h2>Projects</h2>
+      <section
+        id="hero"
+        class="w-full flex flex-col items-center justify-center"
+      >
+        <div class="text-center flex flex-col gap-4 items-center">
+          <h1 class="text-5xl lg:text-7xl">
+            I'm
+            <a href="./docs/resume.pdf" target="_blank"> Vithushan. </a>
+          </h1>
+          <p>I use computers, and sometimes I don't dislike them</p>
+          <div class="flex gap-4">
+            <a href="https://ashesandink.store">Book store</a>
+            <a href="https://os.lewoof.xyz">Linux distro</a>
           </div>
-          <div class="flex flex-col gap-4">
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="text-left prose max-w-screen-md prose-neutral prose-invert w-full"
+      >
+        <h2>Links/Contact</h2>
+
+        <ul>
+          <li>
+            Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+            or
+            <a target="_blank" href="mailto:sutharshanvithushan@gmail.com"
+              >sutharshanvithushan@gmail.com</a
+            >
+          </li>
+          <li>Discord: @schizophrenicsegfault</li>
+          <li>
+            Github:<!-- -->
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+          <li>Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY</li>
+          <li>
+            Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+          </li>
+          <li>
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col gap-2">
+          <textarea
+            maxlength="2000"
+            class="flex min-h-[60px] w-full border border-neutral-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="themessage"
+            placeholder="Leave a message"
+          ></textarea>
+          <button
+            class="border border-neutral-800 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-neutral-800/90 h-9 px-4 py-2"
+            id="sendbutton"
+            onclick="sendmessage()"
+          >
+            Send Privately :P
+          </button>
+        </div>
+      </section>
+      <section id="projects" class="flex flex-col gap-8 justify-center">
+        <div class="prose prose-neutral prose-invert">
+          <h2>Projects</h2>
+        </div>

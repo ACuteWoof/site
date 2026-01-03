@@ -8,6 +8,9 @@ module.exports = {
       mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular"],
       display: ["Modern Antiqua", "serif"],
     },
+    backgroundImage: {
+      main: 'url("./background.jpg")',
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
