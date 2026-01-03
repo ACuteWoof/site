@@ -9,7 +9,7 @@ module.exports = {
       display: ["Modern Antiqua", "serif"],
     },
     backgroundImage: {
-      main: 'url("./background.jpg")',
+      main: 'url("/api/background")',
     },
     extend: {
       colors: {
