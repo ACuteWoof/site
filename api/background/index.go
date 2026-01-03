@@ -8,9 +8,21 @@ import (
 
 // Define your array of image URLs
 var imageURLs = []string{
-	"https://unsplash.com/photos/8-eG7YJ0gEY/download?w=1920",
-	"https://unsplash.com/photos/9DedxUSwLg4/download?w=1920",
-	"https://unsplash.com/photos/jSH-7IjJVsQ/download?w=1920",
+	"https://unsplash.com/photos/e0wBK0xJXYQ/download",
+	"https://unsplash.com/photos/9DedxUSwLg4/download",
+	"https://unsplash.com/photos/jSH-7IjJVsQ/download",
+	"https://unsplash.com/photos/J3KMRjNlCps/download",
+	"https://unsplash.com/photos/8E31onOcVXg/download",
+	"https://unsplash.com/photos/lSMpjzAOXgs/download",
+	"https://unsplash.com/photos/emJByvG4l88/download",
+	"https://unsplash.com/photos/HhMt_nUAIEc/download",
+	"https://unsplash.com/photos/EQTZi6bae-Q/download",
+	"https://unsplash.com/photos/XBvR0B6uzmA/download",
+	"https://unsplash.com/photos/XnoOrTIjgjw/download",
+	"https://unsplash.com/photos/YIfFVwDcgu8/download",
+	"https://unsplash.com/photos/n-vnWQmmVoY/download",
+	"https://unsplash.com/photos/Agwv1mKDUnc/download",
+	"https://unsplash.com/photos/4BXWIQoS8Fo/download",
 }
 
 func init() {
