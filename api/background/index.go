@@ -38,7 +38,10 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	// Redirect the client to the randomly selected image URL
 	// Use http.StatusTemporaryRedirect (307) or http.StatusFound (302) for temporary redirects,
-    // or http.StatusPermanentRedirect (308) for permanent redirects if desired
+        // or http.StatusPermanentRedirect (308) for permanent redirects if desired
+	w.Header().Set("Cache-Control", "no-store, must-revalidate")
+	w.Header().Set("Pragma", "no-cache") // For older HTTP/1.0 compatibility
+	w.Header().Set("Expires", "0")       // Also for older compatibility
 	http.Redirect(w, r, randomURL, http.StatusTemporaryRedirect)
 }
 
