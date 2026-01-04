@@ -9,6 +9,7 @@ module.exports = {
       display: ["Modern Antiqua", "serif"],
     },
     backgroundImage: {
+      // main: 'url("https://lewoof.xyz/api/background")',
       main: 'url("https://lewoof.xyz/api/background")',
     },
     extend: {
