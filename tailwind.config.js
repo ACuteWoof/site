@@ -14,38 +14,45 @@ module.exports = {
     extend: {
       colors: {
         gruvboxDark: {
-          bg: "#282828",
-          bg0: "#282828",
-          bgH: "#1d2021",
-          bgS: "#32302f",
+          // Official Gruvbox HARD theme
+          // Background colors (from darkest to lightest)
+          bg0_h: "#1d2021",   // Hard background
+          bg0: "#282828",     // Default background
+          bg0_s: "#32302f",   // Soft background
           bg1: "#3c3836",
           bg2: "#504945",
           bg3: "#665c54",
           bg4: "#7c6f64",
 
-          fg: "#ebdbb2",
-          fg0: "#fbf1c7",
-          fg1: "#ebdbb2",
+          // Foreground colors (from lightest to darkest)
+          fg0: "#fbf1c7",     // Brightest foreground
+          fg1: "#ebdbb2",     // Default foreground
           fg2: "#d5c4a1",
           fg3: "#bdae93",
           fg4: "#a89984",
 
+          // Aliases for backwards compatibility
+          bg: "#1d2021",      // bg0_h
+          fg: "#ebdbb2",      // fg1
+
+          // Accent colors
           red: "#cc241d",
-          red2: "#fb4934",
+          red2: "#fb4934",    // Bright red
           green: "#98971a",
-          green2: "#b8bb26",
+          green2: "#b8bb26",  // Bright green
           yellow: "#d79921",
-          yellow2: "#fabd2f",
+          yellow2: "#fabd2f", // Bright yellow
           blue: "#458588",
-          blue2: "#83a598",
+          blue2: "#83a598",   // Bright blue
           purple: "#b16286",
-          purple2: "#d3869b",
+          purple2: "#d3869b", // Bright purple
           aqua: "#689d6a",
-          aqua2: "#8ec07c",
+          aqua2: "#8ec07c",   // Bright aqua
           orange: "#d65d0e",
-          orange2: "#fe8019",
-          gray: "#a89984",
-          gray2: "#928374",
+          orange2: "#fe8019", // Bright orange
+
+          // Gray scale
+          gray: "#928374",
         },
         gruvbox: {
           bg: "#fbf1c7",
@@ -100,22 +107,22 @@ module.exports = {
             "--tw-prose-pre-bg": theme("colors.gruvbox.bg"),
             "--tw-prose-th-borders": theme("colors.gruvbox.bg"),
             "--tw-prose-td-borders": theme("colors.gruvbox.bg"),
-            // Dark mode invert colors
-            "--tw-prose-invert-body": theme("colors.gruvboxDark.fg"),
-            "--tw-prose-invert-headings": theme("colors.gruvboxDark.fg"),
+            // Dark mode invert colors (using Gruvbox HARD theme)
+            "--tw-prose-invert-body": theme("colors.gruvboxDark.fg1"),
+            "--tw-prose-invert-headings": theme("colors.gruvboxDark.fg1"),
             "--tw-prose-invert-links": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-bold": theme("colors.gruvboxDark.fg"),
+            "--tw-prose-invert-bold": theme("colors.gruvboxDark.fg1"),
             "--tw-prose-invert-counters": theme("colors.gruvboxDark.aqua"),
             "--tw-prose-invert-bullets": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-hr": theme("colors.gruvboxDark.bg"),
-            "--tw-prose-invert-quotes": theme("colors.gruvboxDark.fg"),
+            "--tw-prose-invert-hr": theme("colors.gruvboxDark.bg0_h"),
+            "--tw-prose-invert-quotes": theme("colors.gruvboxDark.fg1"),
             "--tw-prose-invert-quote-borders": theme("colors.gruvboxDark.aqua"),
             "--tw-prose-invert-captions": theme("colors.gruvboxDark.aqua"),
             "--tw-prose-invert-code": theme("colors.gruvboxDark.yellow"),
-            "--tw-prose-invert-pre-code": theme("colors.gruvboxDark.fg"),
-            "--tw-prose-invert-pre-bg": theme("colors.gruvboxDark.bg"),
-            "--tw-prose-invert-th-borders": theme("colors.gruvboxDark.bg"),
-            "--tw-prose-invert-td-borders": theme("colors.gruvboxDark.bg"),
+            "--tw-prose-invert-pre-code": theme("colors.gruvboxDark.fg1"),
+            "--tw-prose-invert-pre-bg": theme("colors.gruvboxDark.bg0"),
+            "--tw-prose-invert-th-borders": theme("colors.gruvboxDark.bg1"),
+            "--tw-prose-invert-td-borders": theme("colors.gruvboxDark.bg1"),
           },
         },
       }),
