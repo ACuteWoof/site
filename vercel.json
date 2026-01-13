@@ -1,5 +1,10 @@
 {
   "cleanUrls": true,
+  "functions": {
+    "api/balance/index.go": {
+      "maxDuration": 600
+    }
+  },
   "headers": [
     {
       "source": "/api/(.*)",
