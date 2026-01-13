@@ -193,13 +193,24 @@
                   {
                     label: "Balance",
                     data: balances,
-                    borderColor: "#b8bb26", // Gruvbox green
-                    backgroundColor: "rgba(184, 187, 38, 0.1)",
+                    // add a gradient background
+                    background: {
+                      type: 'linear',
+                      gradient: {
+                        gradient: {
+                          type: 'linear',
+                          beginAtZero: true,
+                          endAtZero: true,
+                        },
+                      },
+                    },
+                    // aqua
+                    borderColor: "#8ec07c",
                     borderWidth: 2,
                     fill: true,
                     tension: 0.4,
-                    pointBackgroundColor: "#b8bb26",
-                    pointBorderColor: "#1d2021",
+                    pointBackgroundColor: "#8ec07c",
+                    pointBorderColor: "#8ec07c",
                     pointBorderWidth: 2,
                     pointRadius: 3,
                     pointHoverRadius: 5,
