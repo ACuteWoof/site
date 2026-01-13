@@ -11,44 +11,45 @@ module.exports = {
     backgroundImage: {
       // main: 'url("https://lewoof.xyz/api/background")',
       main: 'url("https://lewoof.xyz/api/background")',
+      church: 'url("https://lewoof.xyz/api/background/churches")',
     },
     extend: {
       colors: {
         gruvboxDark: {
           // Official Gruvbox HARD theme
           // Background colors (from darkest to lightest)
-          bg0_h: "#1d2021",   // Hard background
-          bg0: "#282828",     // Default background
-          bg0_s: "#32302f",   // Soft background
+          bg0_h: "#1d2021", // Hard background
+          bg0: "#282828", // Default background
+          bg0_s: "#32302f", // Soft background
           bg1: "#3c3836",
           bg2: "#504945",
           bg3: "#665c54",
           bg4: "#7c6f64",
 
           // Foreground colors (from lightest to darkest)
-          fg0: "#fbf1c7",     // Brightest foreground
-          fg1: "#ebdbb2",     // Default foreground
+          fg0: "#fbf1c7", // Brightest foreground
+          fg1: "#ebdbb2", // Default foreground
           fg2: "#d5c4a1",
           fg3: "#bdae93",
           fg4: "#a89984",
 
           // Aliases for backwards compatibility
-          bg: "#1d2021",      // bg0_h
-          fg: "#ebdbb2",      // fg1
+          bg: "#1d2021", // bg0_h
+          fg: "#ebdbb2", // fg1
 
           // Accent colors
           red: "#cc241d",
-          red2: "#fb4934",    // Bright red
+          red2: "#fb4934", // Bright red
           green: "#98971a",
-          green2: "#b8bb26",  // Bright green
+          green2: "#b8bb26", // Bright green
           yellow: "#d79921",
           yellow2: "#fabd2f", // Bright yellow
           blue: "#458588",
-          blue2: "#83a598",   // Bright blue
+          blue2: "#83a598", // Bright blue
           purple: "#b16286",
           purple2: "#d3869b", // Bright purple
           aqua: "#689d6a",
-          aqua2: "#8ec07c",   // Bright aqua
+          aqua2: "#8ec07c", // Bright aqua
           orange: "#d65d0e",
           orange2: "#fe8019", // Bright orange
 
