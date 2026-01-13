@@ -130,6 +130,6 @@ public/tailwind.css
 .pnp.*
 
 # my stuff
-/extra/
-/public/
 .vercel
+global.css
+

@@ -4,7 +4,7 @@
   "description": "My website",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss build -i ./src/tailwind.css -o ./public/tailwind.css",
+    "dev": "tailwindcss build -i ./tailwind.css -o ./global.css",
     "build": "NODE_ENV=production yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
