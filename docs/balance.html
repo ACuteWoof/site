@@ -65,6 +65,16 @@
             const labels = data.map(item => item.date.toLocaleTimeString());
             const balances = data.map(item => item.balance);
 
+	    const currentBalanceElement = document.getElementById('current-balance');
+	    if (currentBalanceElement) {
+	    	currentBalanceElement.innerHTML = balances[balances.length - 1];
+	    }
+
+	    const highestBalanaceElement = document.getElementById('highest-balance');
+	    if (highestBalanaceElement) {
+	    	highestBalanaceElement.innerHTML = Math.max(...balances);
+	    }
+
             const ctx = document.getElementById('balances').getContext('2d');
 
             if (balanceChart) {
@@ -219,6 +229,10 @@
       class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
     >
         <h1>Polymarket Balance Tracker</h1>
+	<div class="grid md:grid-cols-2 gap-4">
+	<strong>Highest Balance: $<span id="highest-balance""></span></strong>
+	<strong>Current Balance: $<span id="current-balance"></span></strong>
+	</div>
         <p id="lastUpdated" class="text-sm text-gruvboxDark-fg3">Loading...</p>
         <div style="height: 400px; width: 100%; max-width: 800px; margin: 0 auto;">
           <canvas id="balances"></canvas>
