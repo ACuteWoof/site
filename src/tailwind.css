@@ -33,7 +33,7 @@
   }
 
   div.blogpost {
-    @apply py-2 px-4 border-l border-gruvboxDark-bg4 hover:bg-gruvboxDark-bg0_h prose prose-invert;
+    @apply py-2 px-4 border-l border-gruvboxDark-bg4 hover:bg-gruvboxDark-bg0_h prose prose-invert !max-w-full;
   }
   div.blogpost h3 {
     @apply !mt-0;
