@@ -291,7 +291,7 @@
           // Update last updated time
           const lastUpdated = document.getElementById("lastUpdated");
           if (lastUpdated) {
-            lastUpdated.textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            lastUpdated.textContent = `Last updated: ${new Date().toLocaleTimeString("en")}`;
           }
         })
         .catch((error) => {
