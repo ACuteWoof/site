@@ -181,97 +181,101 @@
             highestBalanaceElement.innerHTML = Math.max(...balances);
           }
 
-          const ctx = document.getElementById("balances").getContext("2d");
+          // If chart doesn't exist, create it
+          if (!balanceChart) {
+            const ctx = document.getElementById("balances").getContext("2d");
 
-          if (balanceChart) {
-            balanceChart.destroy();
-          }
-
-          balanceChart = new Chart(ctx, {
-            type: "line",
-            data: {
-              labels: labels,
-              datasets: [
-                {
-                  label: "Balance",
-                  data: balances,
-                  borderColor: "#b8bb26", // Gruvbox green
-                  backgroundColor: "rgba(184, 187, 38, 0.1)",
-                  borderWidth: 2,
-                  fill: true,
-                  tension: 0.4,
-                  pointBackgroundColor: "#b8bb26",
-                  pointBorderColor: "#1d2021",
-                  pointBorderWidth: 2,
-                  pointRadius: 3,
-                  pointHoverRadius: 5,
-                },
-              ],
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                title: {
-                  display: true,
-                  text: "Polymarket Balance Over Time",
-                  color: "#ebdbb2", // Gruvbox light text
-                  font: {
-                    size: 16,
-                    weight: "bold",
+            balanceChart = new Chart(ctx, {
+              type: "line",
+              data: {
+                labels: labels,
+                datasets: [
+                  {
+                    label: "Balance",
+                    data: balances,
+                    borderColor: "#b8bb26", // Gruvbox green
+                    backgroundColor: "rgba(184, 187, 38, 0.1)",
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: "#b8bb26",
+                    pointBorderColor: "#1d2021",
+                    pointBorderWidth: 2,
+                    pointRadius: 3,
+                    pointHoverRadius: 5,
                   },
-                },
-                legend: {
-                  labels: {
-                    color: "#ebdbb2",
-                  },
-                },
+                ],
               },
-              scales: {
-                x: {
-                  display: true,
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
                   title: {
                     display: true,
-                    text: "Time",
-                    color: "#ebdbb2",
-                  },
-                  ticks: {
-                    color: "#ebdbb2",
-                    maxTicksLimit: 10,
-                  },
-                  grid: {
-                    color: "rgba(184, 187, 38, 0.2)",
-                  },
-                },
-                y: {
-                  display: true,
-                  title: {
-                    display: true,
-                    text: "Balance",
-                    color: "#ebdbb2",
-                  },
-                  ticks: {
-                    color: "#ebdbb2",
-                    callback: function (value) {
-                      return "$" + value.toFixed(2);
+                    text: "Polymarket Balance Over Time",
+                    color: "#ebdbb2", // Gruvbox light text
+                    font: {
+                      size: 16,
+                      weight: "bold",
                     },
                   },
-                  grid: {
-                    color: "rgba(184, 187, 38, 0.2)",
+                  legend: {
+                    labels: {
+                      color: "#ebdbb2",
+                    },
+                  },
+                },
+                scales: {
+                  x: {
+                    display: true,
+                    title: {
+                      display: true,
+                      text: "Time",
+                      color: "#ebdbb2",
+                    },
+                    ticks: {
+                      color: "#ebdbb2",
+                      maxTicksLimit: 10,
+                    },
+                    grid: {
+                      color: "rgba(184, 187, 38, 0.2)",
+                    },
+                  },
+                  y: {
+                    display: true,
+                    title: {
+                      display: true,
+                      text: "Balance",
+                      color: "#ebdbb2",
+                    },
+                    ticks: {
+                      color: "#ebdbb2",
+                      callback: function (value) {
+                        return "$" + value.toFixed(2);
+                      },
+                    },
+                    grid: {
+                      color: "rgba(184, 187, 38, 0.2)",
+                    },
+                  },
+                },
+                interaction: {
+                  intersect: false,
+                  mode: "index",
+                },
+                elements: {
+                  point: {
+                    hoverBorderWidth: 3,
                   },
                 },
               },
-              interaction: {
-                intersect: false,
-                mode: "index",
-              },
-              elements: {
-                point: {
-                  hoverBorderWidth: 3,
-                },
-              },
-            },
-          });
+            });
+          } else {
+            // Update existing chart
+            balanceChart.data.labels = labels;
+            balanceChart.data.datasets[0].data = balances;
+            balanceChart.update();
+          }
 
           // Update last updated time
           const lastUpdated = document.getElementById("lastUpdated");
