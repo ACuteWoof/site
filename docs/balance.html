@@ -18,174 +18,6 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer>
-      let balanceChart = null;
-
-      function parseCSV(csvText) {
-        const lines = csvText.trim().split('\n');
-        const headers = lines[0].split(',');
-        const data = [];
-
-        for (let i = 1; i < lines.length; i++) {
-          const values = lines[i].split(',');
-          if (values.length >= 2) {
-            const dateStr = values[0].trim();
-            const balance = parseFloat(values[1].trim());
-
-            // Parse the date string
-            const date = new Date(dateStr);
-
-            if (!isNaN(date.getTime()) && !isNaN(balance)) {
-              data.push({
-                date: date,
-                balance: balance
-              });
-            }
-          }
-        }
-
-        return data;
-      }
-
-      function updateChart() {
-        fetch('http://70.34.201.17:80/log.csv')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.text();
-          })
-          .then(csvText => {
-            const data = parseCSV(csvText);
-
-            if (data.length === 0) {
-              console.warn('No valid data found in CSV');
-              return;
-            }
-
-            const labels = data.map(item => item.date.toLocaleTimeString());
-            const balances = data.map(item => item.balance);
-
-	    const currentBalanceElement = document.getElementById('current-balance');
-	    if (currentBalanceElement) {
-	    	currentBalanceElement.innerHTML = balances[balances.length - 1];
-	    }
-
-	    const highestBalanaceElement = document.getElementById('highest-balance');
-	    if (highestBalanaceElement) {
-	    	highestBalanaceElement.innerHTML = Math.max(...balances);
-	    }
-
-            const ctx = document.getElementById('balances').getContext('2d');
-
-            if (balanceChart) {
-              balanceChart.destroy();
-            }
-
-            balanceChart = new Chart(ctx, {
-              type: 'line',
-              data: {
-                labels: labels,
-                datasets: [{
-                  label: 'Balance',
-                  data: balances,
-                  borderColor: '#b8bb26', // Gruvbox green
-                  backgroundColor: 'rgba(184, 187, 38, 0.1)',
-                  borderWidth: 2,
-                  fill: true,
-                  tension: 0.4,
-                  pointBackgroundColor: '#b8bb26',
-                  pointBorderColor: '#1d2021',
-                  pointBorderWidth: 2,
-                  pointRadius: 3,
-                  pointHoverRadius: 5
-                }]
-              },
-              options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                  title: {
-                    display: true,
-                    text: 'Polymarket Balance Over Time',
-                    color: '#ebdbb2', // Gruvbox light text
-                    font: {
-                      size: 16,
-                      weight: 'bold'
-                    }
-                  },
-                  legend: {
-                    labels: {
-                      color: '#ebdbb2'
-                    }
-                  }
-                },
-                scales: {
-                  x: {
-                    display: true,
-                    title: {
-                      display: true,
-                      text: 'Time',
-                      color: '#ebdbb2'
-                    },
-                    ticks: {
-                      color: '#ebdbb2',
-                      maxTicksLimit: 10
-                    },
-                    grid: {
-                      color: 'rgba(184, 187, 38, 0.2)'
-                    }
-                  },
-                  y: {
-                    display: true,
-                    title: {
-                      display: true,
-                      text: 'Balance',
-                      color: '#ebdbb2'
-                    },
-                    ticks: {
-                      color: '#ebdbb2',
-                      callback: function(value) {
-                        return '$' + value.toFixed(2);
-                      }
-                    },
-                    grid: {
-                      color: 'rgba(184, 187, 38, 0.2)'
-                    }
-                  }
-                },
-                interaction: {
-                  intersect: false,
-                  mode: 'index'
-                },
-                elements: {
-                  point: {
-                    hoverBorderWidth: 3
-                  }
-                }
-              }
-            });
-
-            // Update last updated time
-            const lastUpdated = document.getElementById('lastUpdated');
-            if (lastUpdated) {
-              lastUpdated.textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
-            }
-          })
-          .catch(error => {
-            console.error('Error fetching balance data:', error);
-            const ctx = document.getElementById('balances').getContext('2d');
-            ctx.font = '20px serif';
-            ctx.fillStyle = '#fb4934'; // Gruvbox red
-            ctx.textAlign = 'center';
-            ctx.fillText('Error loading balance data', ctx.canvas.width / 2, ctx.canvas.height / 2);
-          });
-      }
-
-      // Initial load
-      updateChart();
-
-      setInterval(updateChart, 60000 * 5);
-
       function sendmessage() {
         message = document.getElementById("themessage").value;
         const xhr = new XMLHttpRequest();
@@ -227,15 +59,15 @@
     <main
       class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
     >
-        <h1>Polymarket Balance Tracker</h1>
-	<div class="grid md:grid-cols-2 gap-4">
-	<strong>Highest Balance: $<span id="highest-balance""></span></strong>
-	<strong>Current Balance: $<span id="current-balance"></span></strong>
-	</div>
-        <p id="lastUpdated" class="text-sm text-gruvboxDark-fg3">Loading...</p>
-        <div style="height: 400px; width: 100%; max-width: 800px; margin: 0 auto;">
-          <canvas id="balances"></canvas>
-        </div>
+      <h1>Polymarket Balance Tracker</h1>
+      <div class="grid md:grid-cols-2 gap-4">
+        <strong>Highest Balance: $<span id="highest-balance"></span></strong>
+        <strong>Current Balance: $<span id="current-balance"></span></strong>
+      </div>
+      <p id="lastUpdated" class="text-sm text-gruvboxDark-fg3">Loading...</p>
+      <div style="height: 400px; width: 100%; max-width: 800px; margin: 0 auto">
+        <canvas id="balances"></canvas>
+      </div>
     </main>
 
     <footer
@@ -289,4 +121,181 @@
       </section>
     </footer>
   </body>
+  <script>
+    let balanceChart = null;
+
+    function parseCSV(csvText) {
+      const lines = csvText.trim().split("\n");
+      const headers = lines[0].split(",");
+      const data = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].split(",");
+        if (values.length >= 2) {
+          const dateStr = values[0].trim();
+          const balance = parseFloat(values[1].trim());
+
+          // Parse the date string
+          const date = new Date(dateStr);
+
+          if (!isNaN(date.getTime()) && !isNaN(balance)) {
+            data.push({
+              date: date,
+              balance: balance,
+            });
+          }
+        }
+      }
+
+      return data;
+    }
+
+    function updateChart() {
+      fetch("http://70.34.201.17:80/log.csv")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then((csvText) => {
+          const data = parseCSV(csvText);
+
+          if (data.length === 0) {
+            console.warn("No valid data found in CSV");
+            return;
+          }
+
+          const labels = data.map((item) => item.date.toLocaleTimeString());
+          const balances = data.map((item) => item.balance);
+
+          const currentBalanceElement =
+            document.getElementById("current-balance");
+          if (currentBalanceElement) {
+            currentBalanceElement.innerHTML = balances[balances.length - 1];
+          }
+
+          const highestBalanaceElement =
+            document.getElementById("highest-balance");
+          if (highestBalanaceElement) {
+            highestBalanaceElement.innerHTML = Math.max(...balances);
+          }
+
+          const ctx = document.getElementById("balances").getContext("2d");
+
+          if (balanceChart) {
+            balanceChart.destroy();
+          }
+
+          balanceChart = new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  label: "Balance",
+                  data: balances,
+                  borderColor: "#b8bb26", // Gruvbox green
+                  backgroundColor: "rgba(184, 187, 38, 0.1)",
+                  borderWidth: 2,
+                  fill: true,
+                  tension: 0.4,
+                  pointBackgroundColor: "#b8bb26",
+                  pointBorderColor: "#1d2021",
+                  pointBorderWidth: 2,
+                  pointRadius: 3,
+                  pointHoverRadius: 5,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Polymarket Balance Over Time",
+                  color: "#ebdbb2", // Gruvbox light text
+                  font: {
+                    size: 16,
+                    weight: "bold",
+                  },
+                },
+                legend: {
+                  labels: {
+                    color: "#ebdbb2",
+                  },
+                },
+              },
+              scales: {
+                x: {
+                  display: true,
+                  title: {
+                    display: true,
+                    text: "Time",
+                    color: "#ebdbb2",
+                  },
+                  ticks: {
+                    color: "#ebdbb2",
+                    maxTicksLimit: 10,
+                  },
+                  grid: {
+                    color: "rgba(184, 187, 38, 0.2)",
+                  },
+                },
+                y: {
+                  display: true,
+                  title: {
+                    display: true,
+                    text: "Balance",
+                    color: "#ebdbb2",
+                  },
+                  ticks: {
+                    color: "#ebdbb2",
+                    callback: function (value) {
+                      return "$" + value.toFixed(2);
+                    },
+                  },
+                  grid: {
+                    color: "rgba(184, 187, 38, 0.2)",
+                  },
+                },
+              },
+              interaction: {
+                intersect: false,
+                mode: "index",
+              },
+              elements: {
+                point: {
+                  hoverBorderWidth: 3,
+                },
+              },
+            },
+          });
+
+          // Update last updated time
+          const lastUpdated = document.getElementById("lastUpdated");
+          if (lastUpdated) {
+            lastUpdated.textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching balance data:", error);
+          const ctx = document.getElementById("balances").getContext("2d");
+          ctx.font = "20px serif";
+          ctx.fillStyle = "#fb4934"; // Gruvbox red
+          ctx.textAlign = "center";
+          ctx.fillText(
+            "Error loading balance data",
+            ctx.canvas.width / 2,
+            ctx.canvas.height / 2,
+          );
+        });
+    }
+
+    // Initial load
+    updateChart();
+
+    setInterval(updateChart, 60000 * 5);
+  </script>
 </html>
