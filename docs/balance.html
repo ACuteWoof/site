@@ -184,8 +184,7 @@
       // Initial load
       updateChart();
 
-      // Update every minute (60,000 milliseconds)
-      setInterval(updateChart, 60000);
+      setInterval(updateChart, 60000 * 5);
 
       function sendmessage() {
         message = document.getElementById("themessage").value;
