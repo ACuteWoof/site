@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I like computers" />
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" />
+    <title>Vithushan</title>
+
+    <!--<link rel="stylesheet" href="tailwind.css" />-->
+    <link rel="stylesheet" href="../global.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Modern+Antiqua&display=swap&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer>
+      function sendmessage() {
+        message = document.getElementById("themessage").value;
+        const xhr = new XMLHttpRequest();
+        try {
+          xhr.open("GET", "/api/index?message=" + message);
+          xhr.send();
+          xhr.responseType = "json";
+          xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              const data = xhr.response;
+              document.getElementById("themessage").value = "";
+              document.getElementById("sendbutton").innerHTML =
+                "Message sent :)";
+              console.log(data);
+            } else {
+              console.log(`Error: `);
+              document.getElementById("sendbutton").innerHTML =
+                "Couldn't send message :/";
+            }
+          };
+        } catch (e) {
+          console.error(e);
+          document.getElementById("sendbutton").innerHTML =
+            "Couldn't send message :/";
+        }
+      }
+    </script>
+  </head>
+  <body
+    class="m-0 min-h-screen bg-black bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-gruvboxDark-fg font-serif w-full flex flex-col gap-8"
+  >
+    <header
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia flex gap-4"
+    >
+      <a href="/">Home</a>
+      <a href="https://ashesandink.store">Book store</a>
+      <a href="https://os.lewoof.xyz">Linux distro</a>
+    </header>
+    <main
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
+    >
+      <h1 id="music">Music</h1>
+      <p>All the albums in my playlist. This page has no real use for
+      you unless you are me.</p>
+      <ul>
+      <li>Apocalyptica &amp; Sabaton - Live or Die (feat. Joakim
+      Brodén)</li>
+      <li>Apocalyptica - 7th Symphony</li>
+      <li>Apocalyptica - Metal Classic, Classic Metal</li>
+      <li>Asking Alexandria - Dark Void EP</li>
+      <li>Avenged Sevenfold - Avenged Sevenfold</li>
+      <li>Avenged Sevenfold - City Of Evil</li>
+      <li>Avenged Sevenfold - Diamonds in the Rough</li>
+      <li>Avenged Sevenfold - Hail To The King</li>
+      <li>Avenged Sevenfold - Life Is But a Dream…</li>
+      <li>Avenged Sevenfold - Nightmare</li>
+      <li>Avenged Sevenfold - Sounding The Seventh Trumpet</li>
+      <li>Avenged Sevenfold - The Stage (Deluxe Edition)</li>
+      <li>Avenged Sevenfold - Waking The Fallen</li>
+      <li>Black Sabbath - Paranoid</li>
+      <li>Breaking Benjamin - Phobia (Explicit Version)</li>
+      <li>C418 - Minecraft – Volume Alpha</li>
+      <li>Casey Edwards, Victor Borba - Bury the Light</li>
+      <li>CHESTER BENNINGTON - MALL (Music From The Motion Picture)</li>
+      <li>Dead By Sunrise - Out Of Ashes</li>
+      <li>Deftones - White Pony (CD2 Black Stallion)</li>
+      <li>Demon Hunter - Outlive</li>
+      <li>Dio - The Last in Line</li>
+      <li>Disturbed - Divisive</li>
+      <li>Disturbed - Immortalized</li>
+      <li>Disturbed - Indestructible</li>
+      <li>Disturbed - Ten Thousand Fists</li>
+      <li>Disturbed - The Sickness (10th Anniversary Edition)</li>
+      <li>Element Eighty - Element Eighty</li>
+      <li>Evanescence - Fallen</li>
+      <li>Falling In Reverse - Drugs</li>
+      <li>Falling In Reverse - Losing My Life</li>
+      <li>Falling In Reverse - Popular Monster</li>
+      <li>Falling In Reverse - Ronald</li>
+      <li>Falling In Reverse - The Drug In Me Is Reimagined</li>
+      <li>Falling In Reverse - The Drug In Me Is You</li>
+      <li>Falling In Reverse - Voices In My Head</li>
+      <li>Falling In Reverse - Watch The World Burn</li>
+      <li>Falling In Reverse - ZOMBIFIED</li>
+      <li>Fort Minor - The Rising Tied (Limited Edition)</li>
+      <li>Fort Minor - Welcome</li>
+      <li>Gojira - Fortitude</li>
+      <li>Gojira - From Mars to Sirius</li>
+      <li>Gojira - L’Enfant Sauvage</li>
+      <li>Gojira - Magma</li>
+      <li>Gojira - The Way of All Flesh</li>
+      <li>Grey Daze - Amends</li>
+      <li>Ichika Nito - Awakening</li>
+      <li>Ichika Nito - Metaphor</li>
+      <li>Imagine Dragons - Smoke + Mirrors (Super Deluxe)</li>
+      <li>Iron Maiden - Piece of Mind (2015 Remaster)</li>
+      <li>Linkin Park - A Thousand Suns</li>
+      <li>Linkin Park - A Thousand Suns (Deluxe Edition)</li>
+      <li>Linkin Park - Friendly Fire</li>
+      <li>Linkin Park - Hybrid Theory</li>
+      <li>Linkin Park - Hybrid Theory (20th Anniversary Edition)</li>
+      <li>Linkin Park - LIVING THINGS</li>
+      <li>Linkin Park - Meteora 20th Anniversary Edition</li>
+      <li>Linkin Park - Minutes to Midnight (Deluxe Edition)</li>
+      <li>Linkin Park - New Divide</li>
+      <li>Linkin Park - One More Light</li>
+      <li>Linkin Park - Recharged</li>
+      <li>Linkin Park - Songs From The Underground (Japan)</li>
+      <li>Linkin Park - The Hunting Party</li>
+      <li>Mark Morton - Anesthetic</li>
+      <li>Martin Garrix &amp; Pierce Fulton feat. Mike Shinoda - BYLAW
+      EP</li>
+      <li>Metallica - 72 Seasons</li>
+      <li>Metallica - Death Magnetic</li>
+      <li>Metallica - Hardwired…To Self-Destruct</li>
+      <li>Metallica - Kill ’Em All (Remastered)</li>
+      <li>Metallica - Load</li>
+      <li>Metallica - Master of Puppets (Remastered)</li>
+      <li>Metallica - Metallica (Remastered)</li>
+      <li>Metallica - Reload</li>
+      <li>Metallica - Ride The Lightning (Remastered)</li>
+      <li>Metallica - S&amp;M 1999</li>
+      <li>Metallica - …And Justice for All</li>
+      <li>Mike Shinoda - fine</li>
+      <li>Mike Shinoda - Post Traumatic</li>
+      <li>Muse - Absolution</li>
+      <li>Pantera - Cowboys from Hell (Deluxe)</li>
+      <li>Pantera - Vulgar Display Of Power</li>
+      <li>Pink Floyd - The Dark Side of the Moon</li>
+      <li>Pink Floyd - The Piper at the Gates of Dawn</li>
+      <li>Pink Floyd - The Wall</li>
+      <li>Pink Floyd - Wish You Were Here</li>
+      <li>Pink Floyd - Meddle</li>
+      <li>Polyphia - Muse</li>
+      <li>Polyphia - New Levels New Devils</li>
+      <li>Polyphia - Remember That You Will Die</li>
+      <li>Polyphia - Renaissance</li>
+      <li>Sabaton - Bismarck</li>
+      <li>Sabaton - Legends</li>
+      <li>Sabaton - Primo Victoria (Re-Armed)</li>
+      <li>Sabaton - The Last Stand</li>
+      <li>Sabaton - The War to End All Wars</li>
+      <li>Slipknot - .5 The Gray Chapter</li>
+      <li>Slipknot - All Hope Is Gone</li>
+      <li>Slipknot - Iowa</li>
+      <li>Slipknot - Slipknot</li>
+      <li>Slipknot - The End, So Far</li>
+      <li>Slipknot - We Are Not Your Kind</li>
+      <li>System Of A Down - Toxicity</li>
+      </ul>
+    </main>
+
+    <footer
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
+    >
+      <section
+        id="contact"
+        class="text-left prose max-w-screen-md prose-invert w-full"
+      >
+        <h2>Addresses, links, and contact</h2>
+
+        <ul>
+          <li class="text-wrap break-all">
+            Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+          </li>
+          <li class="text-wrap break-all">
+            Github:<!-- -->
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+          <li class="text-wrap break-all">
+            Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+          </li>
+          <li class="text-wrap break-all">
+            Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+          </li>
+          <li class="text-wrap break-all">
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col gap-2">
+          <textarea
+            maxlength="2000"
+            class="flex min-h-[60px] w-full border border-gruvboxDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-gruvboxDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gruvboxDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="themessage"
+            placeholder="Leave a message"
+          ></textarea>
+          <button
+            class="border border-gruvboxDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-gruvboxDark-fg shadow hover:bg-gruvboxDark-bg0_h/90 h-9 px-4 py-2"
+            id="sendbutton"
+            onclick="sendmessage()"
+          >
+            Send :P
+          </button>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
