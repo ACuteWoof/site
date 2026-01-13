@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" />
+    <title>Polymarket Balance Tracker</title>
+
+    <!--<link rel="stylesheet" href="tailwind.css" />-->
+    <link rel="stylesheet" href="../global.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Modern+Antiqua&display=swap&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer>
+      let balanceChart = null;
+
+      function parseCSV(csvText) {
+        const lines = csvText.trim().split('\n');
+        const headers = lines[0].split(',');
+        const data = [];
+
+        for (let i = 1; i < lines.length; i++) {
+          const values = lines[i].split(',');
+          if (values.length >= 2) {
+            const dateStr = values[0].trim();
+            const balance = parseFloat(values[1].trim());
+
+            // Parse the date string
+            const date = new Date(dateStr);
+
+            if (!isNaN(date.getTime()) && !isNaN(balance)) {
+              data.push({
+                date: date,
+                balance: balance
+              });
+            }
+          }
+        }
+
+        return data;
+      }
+
+      function updateChart() {
+        fetch('http://70.34.201.17:80/log.csv')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(csvText => {
+            const data = parseCSV(csvText);
+
+            if (data.length === 0) {
+              console.warn('No valid data found in CSV');
+              return;
+            }
+
+            const labels = data.map(item => item.date.toLocaleTimeString());
+            const balances = data.map(item => item.balance);
+
+            const ctx = document.getElementById('balances').getContext('2d');
+
+            if (balanceChart) {
+              balanceChart.destroy();
+            }
+
+            balanceChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: labels,
+                datasets: [{
+                  label: 'Balance',
+                  data: balances,
+                  borderColor: '#b8bb26', // Gruvbox green
+                  backgroundColor: 'rgba(184, 187, 38, 0.1)',
+                  borderWidth: 2,
+                  fill: true,
+                  tension: 0.4,
+                  pointBackgroundColor: '#b8bb26',
+                  pointBorderColor: '#1d2021',
+                  pointBorderWidth: 2,
+                  pointRadius: 3,
+                  pointHoverRadius: 5
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Polymarket Balance Over Time',
+                    color: '#ebdbb2', // Gruvbox light text
+                    font: {
+                      size: 16,
+                      weight: 'bold'
+                    }
+                  },
+                  legend: {
+                    labels: {
+                      color: '#ebdbb2'
+                    }
+                  }
+                },
+                scales: {
+                  x: {
+                    display: true,
+                    title: {
+                      display: true,
+                      text: 'Time',
+                      color: '#ebdbb2'
+                    },
+                    ticks: {
+                      color: '#ebdbb2',
+                      maxTicksLimit: 10
+                    },
+                    grid: {
+                      color: 'rgba(184, 187, 38, 0.2)'
+                    }
+                  },
+                  y: {
+                    display: true,
+                    title: {
+                      display: true,
+                      text: 'Balance',
+                      color: '#ebdbb2'
+                    },
+                    ticks: {
+                      color: '#ebdbb2',
+                      callback: function(value) {
+                        return '$' + value.toFixed(2);
+                      }
+                    },
+                    grid: {
+                      color: 'rgba(184, 187, 38, 0.2)'
+                    }
+                  }
+                },
+                interaction: {
+                  intersect: false,
+                  mode: 'index'
+                },
+                elements: {
+                  point: {
+                    hoverBorderWidth: 3
+                  }
+                }
+              }
+            });
+
+            // Update last updated time
+            const lastUpdated = document.getElementById('lastUpdated');
+            if (lastUpdated) {
+              lastUpdated.textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching balance data:', error);
+            const ctx = document.getElementById('balances').getContext('2d');
+            ctx.font = '20px serif';
+            ctx.fillStyle = '#fb4934'; // Gruvbox red
+            ctx.textAlign = 'center';
+            ctx.fillText('Error loading balance data', ctx.canvas.width / 2, ctx.canvas.height / 2);
+          });
+      }
+
+      // Initial load
+      updateChart();
+
+      // Update every minute (60,000 milliseconds)
+      setInterval(updateChart, 60000);
+
+      function sendmessage() {
+        message = document.getElementById("themessage").value;
+        const xhr = new XMLHttpRequest();
+        try {
+          xhr.open("GET", "/api/index?message=" + message);
+          xhr.send();
+          xhr.responseType = "json";
+          xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              const data = xhr.response;
+              document.getElementById("themessage").value = "";
+              document.getElementById("sendbutton").innerHTML =
+                "Message sent :)";
+              console.log(data);
+            } else {
+              console.log(`Error: `);
+              document.getElementById("sendbutton").innerHTML =
+                "Couldn't send message :/";
+            }
+          };
+        } catch (e) {
+          console.error(e);
+          document.getElementById("sendbutton").innerHTML =
+            "Couldn't send message :/";
+        }
+      }
+    </script>
+  </head>
+  <body
+    class="m-0 min-h-screen bg-black bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-gruvboxDark-fg font-serif w-full flex flex-col gap-8"
+  >
+    <header
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia flex gap-4"
+    >
+      <a href="/">Home</a>
+      <a href="https://ashesandink.store">Book store</a>
+      <a href="https://os.lewoof.xyz">Linux distro</a>
+    </header>
+    <main
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
+    >
+        <h1>Polymarket Balance Tracker</h1>
+        <p id="lastUpdated" class="text-sm text-gruvboxDark-fg3">Loading...</p>
+        <div style="height: 400px; width: 100%; max-width: 800px; margin: 0 auto;">
+          <canvas id="balances"></canvas>
+        </div>
+    </main>
+
+    <footer
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
+    >
+      <section
+        id="contact"
+        class="text-left prose max-w-screen-md prose-invert w-full"
+      >
+        <h2>Addresses, links, and contact</h2>
+
+        <ul>
+          <li class="text-wrap break-all">
+            Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+          </li>
+          <li class="text-wrap break-all">
+            Github:<!-- -->
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+          <li class="text-wrap break-all">
+            Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+          </li>
+          <li class="text-wrap break-all">
+            Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+          </li>
+          <li class="text-wrap break-all">
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col gap-2">
+          <textarea
+            maxlength="2000"
+            class="flex min-h-[60px] w-full border border-gruvboxDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-gruvboxDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gruvboxDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="themessage"
+            placeholder="Leave a message"
+          ></textarea>
+          <button
+            class="border border-gruvboxDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-gruvboxDark-fg shadow hover:bg-gruvboxDark-bg0_h/90 h-9 px-4 py-2"
+            id="sendbutton"
+            onclick="sendmessage()"
+          >
+            Send :P
+          </button>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
