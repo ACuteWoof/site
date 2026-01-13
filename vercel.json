@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "functions": {
     "api/balance/index.go": {
-      "maxDuration": 600
+      "maxDuration": 60
     }
   },
   "headers": [
