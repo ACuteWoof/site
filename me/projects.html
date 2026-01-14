@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I like computers; this page shows my projects"
+    />
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" />
+    <title>Vithushan</title>
+
+    <!--<link rel="stylesheet" href="tailwind.css" />-->
+    <link rel="stylesheet" href="../global.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Modern+Antiqua&display=swap&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer>
+      function sendmessage() {
+        message = document.getElementById("themessage").value;
+        const xhr = new XMLHttpRequest();
+        try {
+          xhr.open("GET", "/api/index?message=" + message);
+          xhr.send();
+          xhr.responseType = "json";
+          xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              const data = xhr.response;
+              document.getElementById("themessage").value = "";
+              document.getElementById("sendbutton").innerHTML =
+                "Message sent :)";
+              console.log(data);
+            } else {
+              console.log(`Error: ${xhr.status}`);
+              document.getElementById("sendbutton").innerHTML =
+                "Couldn't send message :/";
+            }
+          };
+        } catch (e) {
+          console.error(e);
+          document.getElementById("sendbutton").innerHTML =
+            "Couldn't send message :/";
+        }
+      }
+    </script>
+  </head>
+  <body
+    class="m-0 min-h-screen bg-black bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-gruvboxDark-fg font-serif w-full flex flex-col gap-8"
+  >
+    <header
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia flex gap-4"
+    >
+      <a href="/">Home</a>
+      <a href="https://ashesandink.store">Book store</a>
+      <a href="https://os.lewoof.xyz">Linux distro</a>
+    </header>
+    <main
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
+    >
+      <section id="projects">
+        <h1>Projects</h1>
+        <h2>Personal</h2>
+        <div class="flex flex-col gap-4">
+          <div class="project">
+            <img src="../assets/images/ashesandink.png" />
+            <div class="text">
+              <span class="text-lg font-bold">Ashes & Ink</span
+              ><span>Classics publishing, connected to WoofPress.</span
+              ><span><a href="https://ashesandink.store">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="../assets/images/bugsarchive.png" />
+            <div class="text">
+              <span class="text-lg font-bold">BugsArchive</span
+              ><span
+                >A site for writings about computer science from volunteers,
+                with no frontend use of JavaScript, that can be read on almost
+                any sort of browser (including terminal based web browsers),
+                with nothing but content.</span
+              ><span><a href="https://bugs.lewoof.xyz">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="../assets/images/press.png" />
+            <div class="text">
+              <span class="text-lg font-bold">WoofPress</span
+              ><span
+                >Printing books (and compilations) that are either out of print,
+                or hard to find.</span
+              ><span><a href="https://press.lewoof.xyz">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="https://os.lewoof.xyz/images/main.png" />
+            <div class="text">
+              <span class="text-lg font-bold">Woof OS</span
+              ><span
+                >Woof OS is a simple respin of Arch Linux with a focus on
+                simplicity and speed.</span
+              ><span><a href="https://os.lewoof.xyz/">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="../assets/images/kreatis.png" />
+            <div class="text">
+              <span class="text-lg font-bold">Kreatis</span
+              ><span
+                >A web development agency. (No longer active, shown here to
+                highlight my design abilities)</span
+              ><span><a href="https://kreatis.lewoof.xyz">View</a></span>
+            </div>
+          </div>
+        </div>
+        <h2>For Profit</h2>
+        <div class="flex flex-col gap-4">
+          <div class="project">
+            <img src="../assets/images/asuga-landing.png" />
+            <div class="text">
+              <span class="text-lg font-bold">Landing for Asuga Nodes</span
+              ><span
+                >Read, write, and build onchain with blazing-fast RPCs,
+                real-time streams, and developer-first APIs — all backed by
+                Solana's most dependable infrastructure.</span
+              ><span><a href="https://asuganodes.com">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="../assets/images/asuga-dashboard.png" />
+            <div class="text">
+              <span class="text-lg font-bold">Dashboard for Asuga Nodes</span
+              ><span
+                >Dashboard to manage your NFT and nodes from Asuga Nodes.</span
+              ><span><a href="https://dashboard.asuganodes.com">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="../assets/images/gamma.png" />
+            <div class="text">
+              <span class="text-lg font-bold">Gamma Tech Suite Bot</span
+              ><span
+                >A Discord bot to view analytics about tokens on Solana.</span
+              ><span><a href="https://gammasuite.tech/">View</a></span>
+            </div>
+          </div>
+          <div class="project">
+            <img src="../assets/images/gsl.png" />
+            <div class="text">
+              <span class="text-lg font-bold"
+                >E-Commerce Dashboard for GSL Wholesalers LTD</span
+              ><span
+                >The frontend for the e-commerce dashboard built specifically
+                for GSL Wholesalers LTD.</span
+              ><span
+                ><a href="https://lewoof.xyz/../assets/images/gsl.png"
+                  >Enlarge Screenshot</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-gruvboxDark-bg0_h/90 backdrop-brightness-50 p-8 py-12 backdrop-sepia"
+    >
+      <section
+        id="contact"
+        class="text-left prose max-w-screen-md prose-invert w-full"
+      >
+        <h2>Addresses, links, and contact</h2>
+
+        <ul>
+          <li class="text-wrap break-all">
+            Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+          </li>
+          <li class="text-wrap break-all">
+            Github:<!-- -->
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+          <li class="text-wrap break-all">
+            Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+          </li>
+          <li class="text-wrap break-all">
+            Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+          </li>
+          <li class="text-wrap break-all">
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col gap-2">
+          <textarea
+            maxlength="2000"
+            class="flex min-h-[60px] w-full border border-gruvboxDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-gruvboxDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gruvboxDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="themessage"
+            placeholder="Leave a message"
+          ></textarea>
+          <button
+            class="border border-gruvboxDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-gruvboxDark-fg shadow hover:bg-gruvboxDark-bg0_h/90 h-9 px-4 py-2"
+            id="sendbutton"
+            onclick="sendmessage()"
+          >
+            Send :P
+          </button>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
