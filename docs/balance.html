@@ -143,7 +143,7 @@
     }
 
     function updateChart() {
-        fetch("/api/balance")
+      fetch("/api/balance")
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -187,10 +187,10 @@
                     data: balances,
                     // add a gradient background
                     background: {
-                      type: 'linear',
+                      type: "linear",
                       gradient: {
                         gradient: {
-                          type: 'linear',
+                          type: "linear",
                           beginAtZero: true,
                           endAtZero: true,
                         },
