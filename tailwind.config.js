@@ -9,9 +9,8 @@ module.exports = {
       display: ["Modern Antiqua", "serif"],
     },
     backgroundImage: {
-      // main: 'url("https://lewoof.xyz/api/background")',
-      main: 'url("https://lewoof.xyz/api/background")',
-      church: 'url("https://lewoof.xyz/api/background/churches")',
+      main: 'url("/assets/images/background.jpg")',
+      church: 'url("/assets/images/church.jpg")',
     },
     extend: {
       colors: {
