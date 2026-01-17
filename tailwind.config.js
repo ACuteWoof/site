@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        gruvboxDark: {
+        woofDark: {
           // Official Gruvbox HARD theme
           // Background colors (from darkest to lightest)
           bg0_h: "#1d2021", // Hard background
@@ -55,7 +55,7 @@ module.exports = {
           // Gray scale
           gray: "#928374",
         },
-        gruvbox: {
+        woof: {
           bg: "#fbf1c7",
           bg0: "#fbf1c7",
           bgH: "#f9f5d7",
@@ -93,37 +93,37 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            "--tw-prose-body": theme("colors.gruvbox.fg"),
-            "--tw-prose-headings": theme("colors.gruvbox.fg"),
-            "--tw-prose-links": theme("colors.gruvbox.aqua"),
-            "--tw-prose-bold": theme("colors.gruvbox.fg"),
-            "--tw-prose-counters": theme("colors.gruvbox.aqua"),
-            "--tw-prose-bullets": theme("colors.gruvbox.aqua"),
-            "--tw-prose-hr": theme("colors.gruvbox.bg"),
-            "--tw-prose-quotes": theme("colors.gruvbox.fg"),
-            "--tw-prose-quote-borders": theme("colors.gruvbox.aqua"),
-            "--tw-prose-captions": theme("colors.gruvbox.aqua"),
-            "--tw-prose-code": theme("colors.gruvbox.yellow"),
-            "--tw-prose-pre-code": theme("colors.gruvbox.fg"),
-            "--tw-prose-pre-bg": theme("colors.gruvbox.bg"),
-            "--tw-prose-th-borders": theme("colors.gruvbox.bg"),
-            "--tw-prose-td-borders": theme("colors.gruvbox.bg"),
+            "--tw-prose-body": theme("colors.woof.fg"),
+            "--tw-prose-headings": theme("colors.woof.fg"),
+            "--tw-prose-links": theme("colors.woof.aqua"),
+            "--tw-prose-bold": theme("colors.woof.fg"),
+            "--tw-prose-counters": theme("colors.woof.aqua"),
+            "--tw-prose-bullets": theme("colors.woof.aqua"),
+            "--tw-prose-hr": theme("colors.woof.bg"),
+            "--tw-prose-quotes": theme("colors.woof.fg"),
+            "--tw-prose-quote-borders": theme("colors.woof.aqua"),
+            "--tw-prose-captions": theme("colors.woof.aqua"),
+            "--tw-prose-code": theme("colors.woof.yellow"),
+            "--tw-prose-pre-code": theme("colors.woof.fg"),
+            "--tw-prose-pre-bg": theme("colors.woof.bg"),
+            "--tw-prose-th-borders": theme("colors.woof.bg"),
+            "--tw-prose-td-borders": theme("colors.woof.bg"),
             // Dark mode invert colors (using Gruvbox HARD theme)
-            "--tw-prose-invert-body": theme("colors.gruvboxDark.fg1"),
-            "--tw-prose-invert-headings": theme("colors.gruvboxDark.fg1"),
-            "--tw-prose-invert-links": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-bold": theme("colors.gruvboxDark.fg1"),
-            "--tw-prose-invert-counters": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-bullets": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-hr": theme("colors.gruvboxDark.bg0_h"),
-            "--tw-prose-invert-quotes": theme("colors.gruvboxDark.fg1"),
-            "--tw-prose-invert-quote-borders": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-captions": theme("colors.gruvboxDark.aqua"),
-            "--tw-prose-invert-code": theme("colors.gruvboxDark.yellow"),
-            "--tw-prose-invert-pre-code": theme("colors.gruvboxDark.fg1"),
-            "--tw-prose-invert-pre-bg": theme("colors.gruvboxDark.bg0"),
-            "--tw-prose-invert-th-borders": theme("colors.gruvboxDark.bg1"),
-            "--tw-prose-invert-td-borders": theme("colors.gruvboxDark.bg1"),
+            "--tw-prose-invert-body": theme("colors.woofDark.fg1"),
+            "--tw-prose-invert-headings": theme("colors.woofDark.fg1"),
+            "--tw-prose-invert-links": theme("colors.woofDark.aqua"),
+            "--tw-prose-invert-bold": theme("colors.woofDark.fg1"),
+            "--tw-prose-invert-counters": theme("colors.woofDark.aqua"),
+            "--tw-prose-invert-bullets": theme("colors.woofDark.aqua"),
+            "--tw-prose-invert-hr": theme("colors.woofDark.bg0_h"),
+            "--tw-prose-invert-quotes": theme("colors.woofDark.fg1"),
+            "--tw-prose-invert-quote-borders": theme("colors.woofDark.aqua"),
+            "--tw-prose-invert-captions": theme("colors.woofDark.aqua"),
+            "--tw-prose-invert-code": theme("colors.woofDark.yellow"),
+            "--tw-prose-invert-pre-code": theme("colors.woofDark.fg1"),
+            "--tw-prose-invert-pre-bg": theme("colors.woofDark.bg0"),
+            "--tw-prose-invert-th-borders": theme("colors.woofDark.bg1"),
+            "--tw-prose-invert-td-borders": theme("colors.woofDark.bg1"),
           },
         },
       }),

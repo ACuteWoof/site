@@ -20,20 +20,20 @@
     @apply underline leading-none underline-offset-2 transition-all duration-150 ease-in-out;
   }
   .prose a:hover {
-    @apply !bg-gruvboxDark-aqua !text-gruvboxDark-bg !decoration-gruvboxDark-aqua;
+    @apply !bg-woofDark-aqua !text-woofDark-bg !decoration-woofDark-aqua;
   }
   a:hover {
-    @apply !bg-gruvboxDark-fg !text-gruvboxDark-bg !decoration-gruvboxDark-fg;
+    @apply !bg-woofDark-fg !text-woofDark-bg !decoration-woofDark-fg;
   }
   a.exception {
     @apply leading-none underline-offset-2 transition-all duration-150 ease-in-out;
   }
   a.exception:hover {
-    @apply bg-transparent text-gruvboxDark-fg decoration-gruvboxDark-fg;
+    @apply bg-transparent text-woofDark-fg decoration-woofDark-fg;
   }
 
   div.project {
-    @apply flex flex-col md:items-center md:flex-row gap-4 bg-gruvboxDark-bg0_h/70 hover:bg-gruvboxDark-bg0_h p-4 border border-gruvboxDark-bg4;
+    @apply flex flex-col md:items-center md:flex-row gap-4 bg-woofDark-bg0_h/70 hover:bg-woofDark-bg0_h p-4 border border-woofDark-bg4;
   }
   div.project img {
     @apply h-full md:max-h-32 sepia transition-all duration-150;
@@ -42,11 +42,11 @@
     @apply sepia-0;
   }
   div.project div.text {
-    @apply flex flex-col gap-2 text-gruvboxDark-fg0 h-full;
+    @apply flex flex-col gap-2 text-woofDark-fg0 h-full;
   }
 
   div.blogpost {
-    @apply py-2 px-4 border-l border-gruvboxDark-bg4 hover:bg-gruvboxDark-bg0_h prose prose-invert !max-w-full;
+    @apply py-2 px-4 border-l border-woofDark-bg4 hover:bg-woofDark-bg0_h prose prose-invert !max-w-full;
   }
   div.blogpost h3 {
     @apply !mt-0;
