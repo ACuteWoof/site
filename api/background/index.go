@@ -8,20 +8,14 @@ import (
 
 // Define your array of image URLs
 var imageURLs = []string{
-	// misc
 	"https://unsplash.com/photos/9DedxUSwLg4/download",
 	"https://unsplash.com/photos/8E31onOcVXg/download",
 	"https://unsplash.com/photos/Ame-KJjR5ZY/download",
-	// "https://unsplash.com/photos/emJByvG4l88/download",
 	"https://unsplash.com/photos/XBvR0B6uzmA/download",
 	"https://unsplash.com/photos/n-vnWQmmVoY/download",
 	"https://unsplash.com/photos/8XHXFfC6y0c/download",
 	"https://unsplash.com/photos/MQ4cKv5d2G0/download",
-	// "https://unsplash.com/photos/wWNz7wlv8zk/download",
 	"https://unsplash.com/photos/qlJiJw7bcuU/download",
-	// "https://unsplash.com/photos/CWzixmX3RY8/download",
-
-	// flowers
 	"https://unsplash.com/photos/YIfFVwDcgu8/download",
 	"https://unsplash.com/photos/qi9jveT9X6A/download",
 	"https://unsplash.com/photos/wPbZENgLO-4/download",
@@ -36,8 +30,6 @@ var imageURLs = []string{
 	"https://unsplash.com/photos/FwL9UMosJCg/download",
 	"https://unsplash.com/photos/rLOAyD1nSns/download",
 	"https://unsplash.com/photos/FjM4EHEzQe4/download",
-
-	// landscapes
 	"https://unsplash.com/photos/mdy0v3HnS1w/download",
 	"https://unsplash.com/photos/hoI200JXjJY/download",
 
