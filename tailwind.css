@@ -51,4 +51,11 @@
   div.blogpost h3 {
     @apply !mt-0;
   }
+
+  .prose p {
+    @apply !text-justify;
+  }
+  .prose ul {
+    @apply !text-justify;
+  }
 }
