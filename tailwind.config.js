@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
-      mono: ["Fira Code", "ui-monospace", "SFMono-Regular"],
+      mono: ["Fira Code", "ui-monospace", "monospace"],
       display: ["Modern Antiqua", "serif"],
     },
     backgroundImage: {
