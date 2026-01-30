@@ -21,9 +21,18 @@
   src: url(/assets/fonts/FiraCode-VariableFont_wght.ttf);
 }
 
+@layer base {
+  ::selection {
+    @apply bg-woofDark-aqua text-woofDark-bg;
+  }
+}
+
 @layer components {
   a {
     @apply underline leading-none underline-offset-2 transition-all duration-150 ease-in-out;
+  }
+  a:visited {
+    @apply !text-woofDark-purple;
   }
   .prose a:hover {
     @apply !bg-woofDark-aqua !text-woofDark-bg !decoration-woofDark-aqua;
