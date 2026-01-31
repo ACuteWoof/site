@@ -7,9 +7,8 @@
 -- Edward Snowden
 
 [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) encrypts a message by
-first creating a session key, encrypting the session key, encrypting the
-message with the session key, and finally encrypting the session key with the
-receiver's public key. 
+first creating a session key, encrypting the message with the session key, and
+finally encrypting the session key with the receiver's public key. 
 
 The encrypted session key can now only be decrypted using the receiver's
 private key, and the message can only be decrypted by the session key.
