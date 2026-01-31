@@ -2,8 +2,9 @@
 
 > Arguing that you don't care about the right to privacy because you have
 > nothing to hide is no different from saying you don't care about free speech
-> because you have nothing to say. \
-– Edward Snowden
+> because you have nothing to say.
+
+-- Edward Snowden
 
 [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) encrypts a message by
 first creating a session key, encrypting the session key, encrypting the
