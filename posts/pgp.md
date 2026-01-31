@@ -14,7 +14,7 @@ The encrypted session key can now only be decrypted using the receiver's
 private key, and the message can only be decrypted by the session key.
 
 The message can also be signed, where the sender uses his private key to create
-the ciphertext that can be decrypted using his private key. We can then know
+the ciphertext that can be decrypted using his public key. We can then know
 for certain that the person sending the message is who he claims to be.
 
 We can use this very nice and simple system to make communications over
