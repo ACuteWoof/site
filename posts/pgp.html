@@ -83,17 +83,17 @@
       your messages from being read by anyone other than the intended
       recipient.</p>
       <h2 id="gpg">GPG</h2>
-      <p>A key pair simply contains the public key and the private key.
-      I will be using GPG (GNU Privacy Guard) throughout this post. If
-      you are on Linux, you probably have it already installed. If not,
-      look it up on your package manager. If you are on Windows or MacOS
-      (you really shouldn’t be), you can use GPG4Win on Windows or
+      <p>I will be using GPG (GNU Privacy Guard) throughout this post.
+      If you are on Linux, you probably have it already installed. If
+      not, look it up on your package manager. If you are on Windows or
+      MacOS (you really shouldn’t be), you can use GPG4Win on Windows or
       <code>gnupg</code> through Homebrew.</p>
       <p>If you want a GUI, take a look at <a
       href="https://www.gnupg.org/software/frontends.html">https://www.gnupg.org/software/frontends.html</a>.
       We will be using the CLI.</p>
       <h2 id="generating-a-key-pair">Generating a key pair</h2>
-      <p>You can generate a key pair interactively by running</p>
+      <p>A key pair simply contains the public key and the private key.
+      You can generate a key pair interactively by running</p>
       <div class="sourceCode" id="cb1"><pre
       class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--gen-key</span></span></code></pre></div>
       <p>This will ask you a few questions (name and email are for what
