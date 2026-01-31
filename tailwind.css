@@ -31,7 +31,7 @@
   header,
   footer,
   main {
-    @apply backdrop-brightness-50;
+    @apply backdrop-brightness-50 backdrop-sepia backdrop-blur-md;
   }
 
   a {
