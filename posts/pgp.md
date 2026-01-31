@@ -138,4 +138,4 @@ you can use to identify and/or confirm the sender.
 Don't do that if others use your computer, and clear your shell history immediately after. It is much better to just write the message to file and encrypt it.
 
 ## bye bye
-That should cover enough to get you started. You should read the docs for GPG.
+That should cover enough to get you started. You should read the [docs for GPG](https://www.gnupg.org/documentation/).
