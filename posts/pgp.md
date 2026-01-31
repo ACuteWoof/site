@@ -28,7 +28,7 @@ than the intended recipient.
 
 ## GPG
 
-A key pair simply contains the public key and the private key. I will be using
+I will be using
 GPG (GNU Privacy Guard) throughout this post. If you are on Linux, you probably
 have it already installed. If not, look it up on your package manager. If you
 are on Windows or MacOS (you really shouldn't be), you can use GPG4Win on
@@ -40,6 +40,7 @@ We will be using the CLI.
 
 ## Generating a key pair
 
+A key pair simply contains the public key and the private key. 
 You can generate a key pair interactively by running 
 
 ```sh
