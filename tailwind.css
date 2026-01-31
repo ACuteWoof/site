@@ -28,6 +28,12 @@
 }
 
 @layer components {
+  header,
+  footer,
+  main {
+    @apply backdrop-brightness-50;
+  }
+
   a {
     @apply underline leading-none underline-offset-2 transition-all duration-150 ease-in-out;
   }
