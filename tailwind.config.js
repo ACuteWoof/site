@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      serif: ["Monaspace Xenon", "ui-serif", "Georgia", "serif"],
+      serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
       mono: ["Monaspace Xenon", "ui-monospace", "monospace"],
-      display: ["Monaspace Xenon", "ui-serif", "Georgia", "serif"],
+      display: ["EB Garamond", "ui-serif", "Georgia", "serif"],
     },
     backgroundImage: {
       main: 'url("/assets/images/background.jpg")',
