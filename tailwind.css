@@ -12,13 +12,13 @@
   font-family: "Monaspace Xenon";
   font-style: italic;
   font-display: swap;
-  src: url(/assets/fonts/Monaspace/Monaspace Xenon/Monaspace Xenon Var.woff");
+  src: url(/assets/fonts/Monaspace/Monaspace Xenon/Monaspace Xenon Var.woff);
 }
 
 @font-face {
   font-family: "Monaspace Xenon";
   font-display: swap;
-  src: url(/assets/fonts/Monaspace/Monaspace Xenon/Monaspace Xenon Var.woff");
+  src: url(/assets/fonts/Monaspace/Monaspace Xenon/Monaspace Xenon Var.woff);
 }
 
 @layer base {
