@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#689d6a" />
-    <meta name="description" content="Arguing that you don’t care about the right to privacy because you have nothing to hide is no different from saying you don’t care about free speech because you have nothing to say. – Edward Snowden" />
+    <meta
+      name="description"
+      content="Arguing that you don’t care about the right to privacy because you have nothing to hide is no different from saying you don’t care about free speech because you have nothing to say. – Edward Snowden"
+    />
     <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
     <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" />
     <title>Encrypting messages and files with PGP</title>
@@ -76,8 +79,8 @@
       </p>
       <p>
         The message can also be signed, where the sender uses his private key to
-        create the ciphertext that can be decrypted using his public key. We
-        can then know for certain that the person sending the message is who he
+        create the ciphertext that can be decrypted using his public key. We can
+        then know for certain that the person sending the message is who he
         claims to be.
       </p>
       <p>
@@ -215,18 +218,19 @@
         PGP message:
       </p>
       <div class="sourceCode" id="cb6">
-        <pre
-          class="sourceCode sh"
-        ><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">-----BEGIN PGP MESSAGE-----</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUw</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">D3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBa</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">xivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ==</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">=PywC</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">-----END PGP MESSAGE-----</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span> <span class="kw">|</span> <span class="ex">gpg</span> <span class="at">--decrypt</span></code></pre>
+        <pre class="sourceCode sh">
+<code class="sourceCode bash">
+<span id="cb6-1"><span class="bu">echo</span> <span class="st">&quot;</span></span>
+<span id="cb6-2"><span class="st">-----BEGIN PGP MESSAGE-----</span></span>
+<span id="cb6-3"><span class="st"></span></span>
+<span id="cb6-4"><span class="st">hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUw</span></span>
+<span id="cb6-5"><span class="st">D3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg</span></span>
+<span id="cb6-6"><span class="st">0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBa</span></span>
+<span id="cb6-7"><span class="st">xivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ==</span></span>
+<span id="cb6-8"><span class="st">=PywC</span></span>
+<span id="cb6-9"><span class="st">-----END PGP MESSAGE-----</span></span>
+<span id="cb6-10"><span class="st">&quot;</span> | <span class="ex">gpg</span> <span class="at">--decrypt</span></span>
+</code></pre>
       </div>
       <p>
         If you want the message to be written to a file instead of printed, you

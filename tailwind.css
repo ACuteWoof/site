@@ -54,7 +54,7 @@
   }
 
   .toc ul {
-	  @apply list-none;
+    @apply list-none;
   }
 
   div.project {
