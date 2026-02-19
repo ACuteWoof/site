@@ -53,6 +53,10 @@
     @apply bg-transparent text-woofDark-fg decoration-woofDark-fg;
   }
 
+  .toc ul {
+	  @apply list-none;
+  }
+
   div.project {
     @apply flex flex-col md:items-center md:flex-row gap-4 bg-woofDark-bg0_h/70 hover:bg-woofDark-bg0_h p-4 border border-woofDark-bg4;
   }
