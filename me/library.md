@@ -42,6 +42,7 @@ I have not read nor do I necessarily agree with all of these.
 - The History of the Church - Eusebius
 - Crime and Punishment - Fyodor Dostoevsky
 - The Brothers Karamazov - Fyodor Dostoevsky
+- The Count of Monte Cristo - Alexandre Dumas
 - War and Peace - Leo Tolstoy
 - Master and Man and Other stories - Leo Tolstoy
 - Twenty Thousand Leagues Under the Sea - Jules Verne
