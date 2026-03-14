@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "EB Garamond";
+  font-display: swap;
+  src: url(/assets/fonts/EBGaramond-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Monaspace Xenon";
+  font-style: italic;
+  font-display: swap;
+  src: url(/assets/fonts/Monaspace/Monaspace Xenon/Monaspace Xenon Var.woff);
+}
+
+@font-face {
+  font-family: "Monaspace Xenon";
+  font-display: swap;
+  src: url(/assets/fonts/Monaspace/Monaspace Xenon/Monaspace Xenon Var.woff);
+}
+
+@layer base {
+  ::selection {
+    @apply bg-woofDark-aqua text-woofDark-bg;
+  }
+}
+
+@layer components {
+  header,
+  footer,
+  main {
+    @apply backdrop-brightness-50 backdrop-sepia backdrop-blur-md;
+  }
+
+  a {
+    @apply underline leading-none underline-offset-2 transition-all duration-150 ease-in-out;
+  }
+  a:visited {
+    @apply !text-woofDark-purple;
+  }
+  .prose a:hover {
+    @apply !bg-woofDark-aqua !text-woofDark-bg !decoration-woofDark-aqua;
+  }
+  a:hover {
+    @apply !bg-woofDark-fg !text-woofDark-bg !decoration-woofDark-fg;
+  }
+  a.exception {
+    @apply leading-none underline-offset-2 transition-all duration-150 ease-in-out;
+  }
+  a.exception:hover {
+    @apply bg-transparent text-woofDark-fg decoration-woofDark-fg;
+  }
+
+  .toc ul {
+    @apply list-none;
+  }
+
+  div.project {
+    @apply flex flex-col md:items-center md:flex-row gap-4 bg-woofDark-bg0_h/70 hover:bg-woofDark-bg0_h p-4 border border-woofDark-bg4;
+  }
+  div.project img {
+    @apply h-full md:max-h-32 sepia transition-all duration-150;
+  }
+  div.project:hover img {
+    @apply sepia-0;
+  }
+  div.project div.text {
+    @apply flex flex-col gap-2 text-woofDark-fg0 h-full;
+  }
+
+  div.blogpost {
+    @apply py-2 px-4 border-l border-woofDark-bg4 hover:bg-woofDark-bg0_h prose prose-invert !max-w-full;
+  }
+  div.blogpost h3 {
+    @apply !mt-0;
+  }
+
+  .prose p {
+    @apply !text-justify;
+  }
+  .prose ul {
+    @apply !text-justify;
+  }
+}

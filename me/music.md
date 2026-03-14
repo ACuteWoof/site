@@ -1,0 +1,107 @@
+# Music
+
+All the albums in my playlist. This page has no real use for you unless
+you are me.
+
+- Apocalyptica & Sabaton - Live or Die (feat. Joakim Brodén)
+- Apocalyptica - 7th Symphony
+- Apocalyptica - Metal Classic, Classic Metal
+- Asking Alexandria - Dark Void EP
+- Avenged Sevenfold - Avenged Sevenfold
+- Avenged Sevenfold - City Of Evil
+- Avenged Sevenfold - Diamonds in the Rough
+- Avenged Sevenfold - Hail To The King
+- Avenged Sevenfold - Life Is But a Dream...
+- Avenged Sevenfold - Nightmare
+- Avenged Sevenfold - Sounding The Seventh Trumpet
+- Avenged Sevenfold - The Stage (Deluxe Edition)
+- Avenged Sevenfold - Waking The Fallen
+- Black Sabbath - Paranoid
+- Breaking Benjamin - Phobia (Explicit Version)
+- C418 - Minecraft -- Volume Alpha
+- Casey Edwards, Victor Borba - Bury the Light
+- CHESTER BENNINGTON - MALL (Music From The Motion Picture)
+- Dead By Sunrise - Out Of Ashes
+- Deftones - White Pony (CD2 Black Stallion)
+- Demon Hunter - Outlive
+- Dio - The Last in Line
+- Disturbed - Divisive
+- Disturbed - Immortalized
+- Disturbed - Indestructible
+- Disturbed - Ten Thousand Fists
+- Disturbed - The Sickness (10th Anniversary Edition)
+- Element Eighty - Element Eighty
+- Evanescence - Fallen
+- Falling In Reverse - Drugs
+- Falling In Reverse - Losing My Life
+- Falling In Reverse - Popular Monster
+- Falling In Reverse - Ronald
+- Falling In Reverse - The Drug In Me Is Reimagined
+- Falling In Reverse - The Drug In Me Is You
+- Falling In Reverse - Voices In My Head
+- Falling In Reverse - Watch The World Burn
+- Falling In Reverse - ZOMBIFIED
+- Fort Minor - The Rising Tied (Limited Edition)
+- Fort Minor - Welcome
+- Gojira - Fortitude
+- Gojira - From Mars to Sirius
+- Gojira - L'Enfant Sauvage
+- Gojira - Magma
+- Gojira - The Way of All Flesh
+- Grey Daze - Amends
+- Ichika Nito - Awakening
+- Ichika Nito - Metaphor
+- Imagine Dragons - Smoke + Mirrors (Super Deluxe)
+- Iron Maiden - Piece of Mind (2015 Remaster)
+- Linkin Park - A Thousand Suns
+- Linkin Park - A Thousand Suns (Deluxe Edition)
+- Linkin Park - Friendly Fire
+- Linkin Park - Hybrid Theory
+- Linkin Park - Hybrid Theory (20th Anniversary Edition)
+- Linkin Park - LIVING THINGS
+- Linkin Park - Meteora 20th Anniversary Edition
+- Linkin Park - Minutes to Midnight (Deluxe Edition)
+- Linkin Park - New Divide
+- Linkin Park - One More Light
+- Linkin Park - Recharged
+- Linkin Park - Songs From The Underground (Japan)
+- Linkin Park - The Hunting Party
+- Mark Morton - Anesthetic
+- Martin Garrix & Pierce Fulton feat. Mike Shinoda - BYLAW EP
+- Metallica - 72 Seasons
+- Metallica - Death Magnetic
+- Metallica - Hardwired...To Self-Destruct
+- Metallica - Kill 'Em All (Remastered)
+- Metallica - Load
+- Metallica - Master of Puppets (Remastered)
+- Metallica - Metallica (Remastered)
+- Metallica - Reload
+- Metallica - Ride The Lightning (Remastered)
+- Metallica - S&M 1999
+- Metallica - ...And Justice for All
+- Mike Shinoda - fine
+- Mike Shinoda - Post Traumatic
+- Muse - Absolution
+- Pantera - Cowboys from Hell (Deluxe)
+- Pantera - Vulgar Display Of Power
+- Pink Floyd - The Dark Side of the Moon
+- Pink Floyd - The Piper at the Gates of Dawn
+- Pink Floyd - The Wall
+- Pink Floyd - Wish You Were Here
+- Pink Floyd - Meddle
+- Polyphia - Muse
+- Polyphia - New Levels New Devils
+- Polyphia - Remember That You Will Die
+- Polyphia - Renaissance
+- Sabaton - Bismarck
+- Sabaton - Legends
+- Sabaton - Primo Victoria (Re-Armed)
+- Sabaton - The Last Stand
+- Sabaton - The War to End All Wars
+- Slipknot - .5 The Gray Chapter
+- Slipknot - All Hope Is Gone
+- Slipknot - Iowa
+- Slipknot - Slipknot
+- Slipknot - The End, So Far
+- Slipknot - We Are Not Your Kind
+- System Of A Down - Toxicity

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="description" content="Links to useful sites" >
+    <meta name="theme-color" content="#689d6a" >
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" >
+    <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" >
+    <title>Links</title>
+
+    <!--<link rel="stylesheet" href="tailwind.css" >-->
+    <link rel="stylesheet" href="../global.css" >
+    <script defer>
+      function sendmessage() {
+        message = document.getElementById("themessage").value;
+        const xhr = new XMLHttpRequest();
+        try {
+          xhr.open("GET", "/api/index?message=" + message);
+          xhr.send();
+          xhr.responseType = "json";
+          xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              const data = xhr.response;
+              document.getElementById("themessage").value = "";
+              document.getElementById("sendbutton").innerHTML =
+                "Message sent :)";
+              console.log(data);
+            } else {
+              console.log(`Error: `);
+              document.getElementById("sendbutton").innerHTML =
+                "Couldn't send message :/";
+            }
+          };
+        } catch (e) {
+          console.error(e);
+          document.getElementById("sendbutton").innerHTML =
+            "Couldn't send message :/";
+        }
+      }
+    </script>
+  </head>
+  <body
+    class="m-0 min-h-screen bg-black md:bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-woofDark-fg font-serif w-full flex flex-col gap-8"
+  >
+    <header
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h/90 p-8 py-12 flex gap-4"
+    >
+      <a href="/">Home</a>
+      <a href="https://ashesandink.store">Book store</a>
+      <a href="https://os.lewoof.xyz">Linux distro</a>
+    </header>
+    <main
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h/90 p-8 py-12"
+    >
+      <h1 id="useful-links">Useful links</h1>
+      <p>
+        These are some links to pages that I find very useful. Some are pretty
+        well known, some are pages I’ve never heard of before finding them after
+        hours of searching for something very specific.
+      </p>
+      <p>
+        You can also find more useful content on my Kiwix instance:
+        <a href="https://kiwix.lewoof.xyz">https://kiwix.lewoof.xyz</a>.
+      </p>
+      <h2>Learning programming languages with examples</h2>
+      <ul>
+        <li>
+          <a href="https://gobyexample.com/">https://gobyexample.com/</a> -
+          Learn Go with examples
+        </li>
+        <li>
+          <a href="https://www.cbyexample.com/">https://www.cbyexample.com/</a>
+          - Learn C and C++ with examples
+        </li>
+        <li>
+          <a href="https://www.javascriptbyexample.com/"
+            >https://www.javascriptbyexample.com/</a
+          >
+          - Learn JS with examples
+        </li>
+        <li>
+          <a href="https://rustbyexample.io/">https://rustbyexample.io/</a> -
+          Learn Rust with examples
+        </li>
+        <li>
+          <a href="https://lotz84.github.io/haskellbyexample/"
+            >https://lotz84.github.io/haskellbyexample/</a
+          >
+          - Learn Haskell with examples
+        </li>
+        <li>
+          <a href="https://www.jpryan.me/dartbyexample/"
+            >https://www.jpryan.me/dartbyexample/</a
+          >
+          - Learn Dart with examples
+        </li>
+      </ul>
+      <h2>Consumer rights &amp; self hosting</h2>
+      <ul>
+        <li>
+          <a href="https://consumerrights.wiki/"
+            >https://consumerrights.wiki/</a
+          >
+          - Louis Rossmann's consumer rights wiki
+        </li>
+        <li>
+          <a href="https://wiki.futo.org/">https://wiki.futo.org/</a> - FUTO
+          Wiki (guide to a self managed life)
+        </li>
+        <li>
+          <a href="https://git.lewoof.xyz/gitbrowse"
+            >https://git.lewoof.xyz/gitbrowse</a
+          >
+          - Gitbrowse, a simple web server by me for git
+        </li>
+        <li>
+          <a href="https://awesome-selfhosted.net/"
+            >https://awesome-selfhosted.net/</a
+          >
+          - list of self-hosted alternatives to popular services
+        </li>
+        <li>
+          <a
+            href="https://github.com/mendel5/alternative-front-ends?tab=readme-ov-file"
+            >https://github.com/mendel5/alternative-front-ends?tab=readme-ov-file</a
+          >
+          - list of alternative frontends
+        </li>
+        <li>
+          <a href="https://github.com/digitalblossom/alternative-frontends"
+            >https://github.com/digitalblossom/alternative-frontends</a
+          >
+          - another list of alternative frontends
+        </li>
+        <li>
+          <a href="https://sr.ht/~jamesponddotco/awesome-privacy-front-ends/"
+            >https://sr.ht/~jamesponddotco/awesome-privacy-front-ends/</a
+          >
+          - another list of alternative frontends
+        </li>
+        <li>
+          <a href="https://libredirect.github.io/"
+            >https://libredirect.github.io/</a
+          >
+          - another list of alternative frontends and extension that
+          autoredirects to those alternatives
+        </li>
+        <li>
+          <a href="https://farside.link/">https://farside.link/</a> -
+          automatically redirects any url to its appropriate private alternative
+          frontend
+        </li>
+        <li>
+          <a href="https://www.privacyguides.org/en/"
+            >https://www.privacyguides.org/en/</a
+          >
+          - guides on privacy, list of alternatives, etc.
+        </li>
+        <li>
+          <a href="https://docs.invidious.io/instances/"
+            >https://docs.invidious.io/instances/</a
+          >
+          - list of invidious instances
+        </li>
+        <li>
+          <a href="https://nitter.net">https://nitter.net</a> - alternative
+          frontend for Twitter, for anyone who for whatever reason wants to use
+          Twitter
+        </li>
+        <li>
+          <a href="https://kiwix.org/">https://kiwix.org/</a> - download and
+          host Wikipedia and other sites that collect and store knowledge
+        </li>
+      </ul>
+      <h2>Books &amp; learning in general</h2>
+      <ul>
+        <li>
+          <a href="https://en.wikibooks.org/">https://en.wikibooks.org/</a> -
+          public domain books
+        </li>
+        <li>
+          <a href="https://www.gutenberg.org/">https://www.gutenberg.org/</a> -
+          public domain books
+        </li>
+        <li>
+          <a href="https://osdev.org/">https://osdev.org/</a> - information on
+          developing operating systems
+        </li>
+        <li>
+          <a href="https://standardebooks.org/">https://standardebooks.org/</a>
+          - very beautifully formatted public domain E-books (available to
+          download in multiple formats and to read online)
+        </li>
+        <li>
+          <a
+            href="https://lukesmith.xyz/articles/learning-european-languages-michel-thomas/"
+            >https://lukesmith.xyz/articles/learning-european-languages-michel-thomas/</a
+          >
+          - article on learning languages in an easier and more natural way
+        </li>
+        <li>
+          <a href="https://lib.undercaffeinated.xyz/"
+            >https://lib.undercaffeinated.xyz/</a
+          >
+          - someone’s calibre library I found
+        </li>
+        <li>
+          <a href="https://www.ccel.org/">https://www.ccel.org/</a> - christian
+          classic writings, including early church fathers, post and ante Nicene
+        </li>
+        <li>
+          <a href="https://www.integral-calculator.com/"
+            >https://www.integral-calculator.com/</a
+          >
+          - integral calculator
+        </li>
+        <li>
+          <a href="https://www.feynmanlectures.caltech.edu/"
+            >https://www.feynmanlectures.caltech.edu/</a
+          >
+          - The Feynman Lectures on Physics
+        </li>
+        <li>
+          <a href="https://git-scm.com/book/en/v2"
+            >https://git-scm.com/book/en/v2</a
+          >
+          - git book
+        </li>
+      </ul>
+      <h2>Other</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/bkerler/mtkclient"
+            >https://github.com/bkerler/mtkclient</a
+          >
+          - exploits for MediaTek chips
+        </li>
+        <li>
+          <a href="https://fmhy.net/">https://fmhy.net/</a> - free media heck
+          yeah (not all sites listed in this are safe or privacy respecting)
+        </li>
+        <li>
+          <a href="https://artvee.com/c/landscape/"
+            >https://artvee.com/c/landscape/</a
+          >
+          - beautiful landscape art
+        </li>
+        <li>
+          <a href="https://oss.zone/">https://oss.zone/</a> - very cool pubnix,
+          I use their instance of 4get and I love it
+        </li>
+        <li>
+          <a href="https://httpstatusdogs.com/">https://httpstatusdogs.com/</a>
+          - dog pics for different HTTP status codes
+        </li>
+        <li>
+          <a href="https://http.cat/">https://http.cat/</a> - cat pics for
+          different HTTP status codes
+        </li>
+      </ul>
+    </main>
+
+    <footer
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h/90 p-8 py-12"
+    >
+      <section
+        id="contact"
+        class="text-left prose max-w-screen-md prose-invert w-full"
+      >
+        <h2>Addresses, links, and contact</h2>
+
+        <ul>
+          <li class="text-wrap break-all">
+            Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+          </li>
+          <li class="text-wrap break-all">
+            Github:<!-- -->
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+          <li class="text-wrap break-all">
+            Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+          </li>
+          <li class="text-wrap break-all" id="donate">
+            Monero: 47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
+          </li>
+          <li class="text-wrap break-all">
+            Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+          </li>
+          <li class="text-wrap break-all">
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-col gap-2">
+          <textarea
+            maxlength="2000"
+            class="flex min-h-[60px] w-full border border-woofDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-woofDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-woofDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="themessage"
+            placeholder="Leave a message"
+          ></textarea>
+          <button
+            class="border border-woofDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-woofDark-fg shadow hover:bg-woofDark-bg0_h/90 h-9 px-4 py-2"
+            id="sendbutton"
+            onclick="sendmessage()"
+          >
+            Send :P
+          </button>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
