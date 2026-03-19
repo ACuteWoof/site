@@ -15,6 +15,7 @@
     <pubDate>Thu, 20 Mar 2025 09:00:00 GMT</pubDate>
     <content:encoded>
 	    <![CDATA[
+	    <main>
       <h1 id="encrypting-messages-and-files-with-pgp">
         Encrypting messages and files with PGP
       </h1>
@@ -210,6 +211,39 @@
         That should cover enough to get you started. You should read the
         <a href="https://www.gnupg.org/documentation/">docs for GPG</a>.
       </p>
+</main>
+
+    <footer>
+        <h1>Addresses, links, and contact</h1>
+        <ul>
+	  <li>
+            Email:
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+          </li>
+	  <li>
+            Github:
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+	  <li>
+            Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+          </li>
+	  <li>
+            Monero: 47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
+          </li>
+	  <li>
+            Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+          </li>
+	  <li>
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+    </footer>
+
 	    ]]>
     </content:encoded>
   </item>
