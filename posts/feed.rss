@@ -6,7 +6,7 @@
     <description>Personal pages, documents, and blog posts from Vithushan</description>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Mar 2025 09:00:00 GMT</lastBuildDate>
-    <atom:link href="https://lewoof.xyz/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://lewoof.xyz/feed.rss" rel="self" type="application/rss+xml">
     <item>
       <title>Post on setting up PGP</title>
       <link>https://lewoof.xyz/posts/pgp</link>
@@ -246,7 +246,7 @@
         </ul>
     </footer>
 
-	]]>/>
+	]]>>
     </item>
   </channel>
 </rss>
