@@ -108,13 +108,7 @@
         generate a key pair interactively by running
       </p>
       <div class="sourceCode" id="cb1">
-        <pre class="sourceCode sh">
-          <code class="sourceCode bash">
-            <span id="cb1-1">
-              <a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>
-              <span class="ex">gpg</span>
-              <span class="at">--gen-key</span>
-            </span>
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--gen-key</span></span>
           </code>
         </pre>
       </div>
@@ -132,16 +126,7 @@
         the example:
       </p>
       <div class="sourceCode" id="cb2">
-        <pre class="sourceCode sh">
-          <code class="sourceCode bash">
-            <span id="cb2-1">
-              <a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>
-              <span class="ex">gpg</span>
-              <span class="at">--armor</span>
-              <span class="at">--export</span> example@example.com
-              <span class="op">></span> public.key
-            </span>
-          </code>
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--armor</span><span class="at">--export</span> example@example.com <span class="op"></span> public.key </span></code>
         </pre>
       </div>
       <p>
@@ -178,14 +163,7 @@
       <p>To encrypt a file (of any kind, including plain text), run</p>
       <div class="sourceCode" id="cb3">
         <pre class="sourceCode sh">
-          <code class="sourceCode bash">
-            <span id="cb3-1">
-              <a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>
-              <span class="ex">gpg</span>
-              <span class="at">--encrypt</span>
-              <span class="at">--recipient</span> example@example.com
-              <span class="at">--output</span> /path/where/i/want/output.gpg /path/of/original/file
-            </span>
+          <code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--encrypt</span><span class="at">--recipient</span> example@example.com <span class="at">--output</span> /path/where/i/want/output.gpg /path/of/original/file </span>
           </code>
         </pre>
       </div>
@@ -207,18 +185,7 @@
         want. For example, the following will print out the ASCII ciphertext:
       </p>
       <div class="sourceCode" id="cb4">
-        <pre class="sourceCode sh">
-          <code class="sourceCode bash">
-            <span id="cb4-1">
-              <a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>
-              <span class="bu">echo</span>
-              <span class="st">"give me money"</span>
-              <span class="kw">|</span>
-              <span class="ex">gpg</span>
-              <span class="at">--encrypt</span>
-              <span class="at">--armor</span>
-              <span class="at">--recipient</span> example@example.com
-            </span>
+        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span><span class="st">"give me money"</span><span class="kw">|</span><span class="ex">gpg</span><span class="at">--encrypt</span><span class="at">--armor</span><span class="at">--recipient</span> example@example.com </span>
           </code>
         </pre>
       </div>
@@ -256,42 +223,8 @@
         PGP message:
       </p>
       <div class="sourceCode" id="cb6">
-        <pre class="sourceCode sh">
-          <code class="sourceCode bash">
-            <span id="cb6-1">
-              <span class="bu">echo</span>
-              <span class="st">"</span>
-            </span>
-            <span id="cb6-2">
-              <span class="st">-----BEGIN PGP MESSAGE-----</span>
-            </span>
-            <span id="cb6-3">
-              <span class="st"></span>
-            </span>
-            <span id="cb6-4">
-              <span class="st">hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUw</span>
-            </span>
-            <span id="cb6-5">
-              <span class="st">D3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg</span>
-            </span>
-            <span id="cb6-6">
-              <span class="st">0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBa</span>
-            </span>
-            <span id="cb6-7">
-              <span class="st">xivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ==</span>
-            </span>
-            <span id="cb6-8">
-              <span class="st">=PywC</span>
-            </span>
-            <span id="cb6-9">
-              <span class="st">-----END PGP MESSAGE-----</span>
-            </span>
-            <span id="cb6-10">
-              <span class="st">"</span> |
-              <span class="ex">gpg</span>
-              <span class="at">--decrypt</span>
-            </span>
-          </code>
+        <pre class="sourceCode sh"><code class="sourceCode bash">
+            <span id="cb6-1"><span class="bu">echo</span><span class="st">"</span></span><span id="cb6-2"><span class="st">-----BEGIN PGP MESSAGE-----</span></span><span id="cb6-3"><span class="st"></span></span><span id="cb6-4"><span class="st">hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUw</span></span><span id="cb6-5"><span class="st">D3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg</span></span><span id="cb6-6"><span class="st">0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBa</span></span><span id="cb6-7"><span class="st">xivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ==</span></span><span id="cb6-8"><span class="st">=PywC</span></span><span id="cb6-9"><span class="st">-----END PGP MESSAGE-----</span></span><span id="cb6-10"><span class="st">"</span> | <span class="ex">gpg</span><span class="at">--decrypt</span></span></code>
         </pre>
       </div>
       <p>
