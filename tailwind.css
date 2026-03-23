@@ -83,4 +83,8 @@
   .prose ul {
     @apply !text-justify;
   }
+
+  li img {
+    @apply inline h-5 w-5 !m-0 mr-2;
+  }
 }
