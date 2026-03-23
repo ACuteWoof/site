@@ -27,6 +27,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatalln(err)
 	} else {
-		fmt.Fprintf(w, "Message sent to Woof!")
+		fmt.Fprintf(w, "Message sent!")
 	}
 }
