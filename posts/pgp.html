@@ -1,22 +1,31 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#689d6a">
-    <meta name="description" content="Arguing that you don’t care about the right to privacy because you have nothing to hide is no different from saying you don’t care about free speech because you have nothing to say. – Edward Snowden">
-    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)">
-    <link rel="icon" type="image/png" href="https://github.com/acutewoof.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#689d6a" />
+    <meta
+      name="description"
+      content="Arguing that you don’t care about the right to privacy because you have nothing to hide is no different from saying you don’t care about free speech because you have nothing to say. – Edward Snowden"
+    />
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" />
     <title>Encrypting messages and files with PGP</title>
-    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../global.css" />
   </head>
-  <body class="m-0 min-h-screen bg-woofDark-bg0_h md:bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-woofDark-fg font-serif w-full flex flex-col gap-8">
-    <header class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12 flex gap-4">
+  <body
+    class="m-0 min-h-screen bg-woofDark-bg0_h md:bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-woofDark-fg font-serif w-full flex flex-col gap-8"
+  >
+    <header
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12 flex gap-4"
+    >
       <a href="/">Home</a>
       <a href="https://ashesandink.store">Book store</a>
       <a href="https://os.lewoof.xyz">Arch respin</a>
     </header>
-    <main class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12">
+    <main
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12"
+    >
       <h1 id="encrypting-messages-and-files-with-pgp">
         Encrypting messages and files with PGP
       </h1>
@@ -27,14 +36,12 @@
           free speech because you have nothing to say.
         </blockquote>
         – Edward Snowden
-      
       </div>
       <p>
         <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a>
         encrypts a message by first creating a session key, encrypting the
         message with the session key, and finally encrypting the session key
         with the receiver’s public key.
-      
       </p>
       <p>
         The encrypted session key can now only be decrypted using the receiver’s
@@ -63,15 +70,15 @@
         on Linux, you probably have it already installed. If not, look it up on
         your package manager. If you are on Windows or MacOS (you really
         shouldn’t be), you can use GPG4Win on Windows or
-      
+
         <code>gnupg</code> through Homebrew.
-      
       </p>
       <p>
         If you want a GUI, take a look at
-      
-        <a href="https://www.gnupg.org/software/frontends.html">https://www.gnupg.org/software/frontends.html</a>. We will be using the CLI.
-      
+
+        <a href="https://www.gnupg.org/software/frontends.html"
+          >https://www.gnupg.org/software/frontends.html</a
+        >. We will be using the CLI.
       </p>
       <h2 id="generating-a-key-pair">Generating a key pair</h2>
       <p>
@@ -79,7 +86,9 @@
         generate a key pair interactively by running
       </p>
       <div class="sourceCode" id="cb1">
-        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--gen-key</span></span></code></pre>
+        <pre
+          class="sourceCode sh"
+        ><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--gen-key</span></span></code></pre>
       </div>
       <p>
         This will ask you a few questions (name and email are for what you want
@@ -87,7 +96,10 @@
         reality), and generate a private key.
       </p>
       <figure>
-        <img src="/assets/images/posts/gpg/keygen.png" alt="Generating a key pair">
+        <img
+          src="/assets/images/posts/gpg/keygen.png"
+          alt="Generating a key pair"
+        />
         <figcaption aria-hidden="true">Generating a key pair</figcaption>
       </figure>
       <p>
@@ -95,30 +107,28 @@
         the example:
       </p>
       <div class="sourceCode" id="cb2">
-        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--armor</span><span class="at">--export</span> example@example.com <span class="op"></span> public.key </span></code></pre>
+        <pre
+          class="sourceCode sh"
+        ><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--armor</span><span class="at">--export</span> example@example.com <span class="op"></span> public.key </span></code></pre>
       </div>
       <p>
-        <code>--export</code> is self explanatory, and
-        <code>--armor</code> is
+        <code>--export</code> is self explanatory, and <code>--armor</code> is
         to convert the key to ASCII, which is commonly the format in which PGP
         keys are shared. Remember to create a new key after the shown expiry and
         to share it to everybody. Keys that don’t expire can be created through
-        the full generation dialog (
-        <code>gpg --full-generate-key</code>) but is
-        not recommended.
-      
+        the full generation dialog ( <code>gpg --full-generate-key</code>) but
+        is not recommended.
       </p>
       <h2 id="importing-a-key">Importing a key</h2>
       <p>
         You have now generated a key pair. Let’s say that your friend has also
         generated a keypair. You can download his key, and import it with
-      
+
         <code>gpg --import /path/to/key</code>. For example, say I want to
         import the example key I generated:
-      
       </p>
       <figure>
-        <img src="/assets/images/posts/gpg/import.png" alt="Importing a key">
+        <img src="/assets/images/posts/gpg/import.png" alt="Importing a key" />
         <figcaption aria-hidden="true">Importing a key</figcaption>
       </figure>
       <p>
@@ -130,19 +140,19 @@
       </h2>
       <p>To encrypt a file (of any kind, including plain text), run</p>
       <div class="sourceCode" id="cb3">
-        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--encrypt</span><span class="at">--recipient</span> example@example.com <span class="at">--output</span> /path/where/i/want/output.gpg /path/of/original/file</span></code></pre>
+        <pre
+          class="sourceCode sh"
+        ><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--encrypt</span><span class="at">--recipient</span> example@example.com <span class="at">--output</span> /path/where/i/want/output.gpg /path/of/original/file</span></code></pre>
       </div>
       <p>
         This will work perfectly fine for plain text as well, and can be
         decrypted just the same. However, you might prefer sending an ASCII
         version of the ciphertext when messaging instead of having to upload
         each message as a file. For an ASCII output, you simply add
-      
+
         <code>--armor</code> and change the output file path to something more
-        sensible like
-        <code>.txt</code> (the file extension really is irrelevant
+        sensible like <code>.txt</code> (the file extension really is irrelevant
         to GPG).
-      
       </p>
       <p>
         You might however not want to create a new file. In this case, you can
@@ -150,24 +160,30 @@
         want. For example, the following will print out the ASCII ciphertext:
       </p>
       <div class="sourceCode" id="cb4">
-        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span><span class="st">"give me money"</span><span class="kw">|</span><span class="ex">gpg</span><span class="at">--encrypt</span><span class="at">--armor</span><span class="at">--recipient</span> example@example.com</span></code></pre>
+        <pre
+          class="sourceCode sh"
+        ><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span><span class="st">"give me money"</span><span class="kw">|</span><span class="ex">gpg</span><span class="at">--encrypt</span><span class="at">--armor</span><span class="at">--recipient</span> example@example.com</span></code></pre>
       </div>
       <figure>
-        <img src="/assets/images/posts/gpg/plaintext.png" alt="Encrypting plain text">
+        <img
+          src="/assets/images/posts/gpg/plaintext.png"
+          alt="Encrypting plain text"
+        />
         <figcaption aria-hidden="true">Encrypting plain text</figcaption>
       </figure>
       <p>
         When encrypting, you would also want to add
-        <code>--sign</code> to sign
-        the message, proving that the message is from your key pair.
-      
+        <code>--sign</code> to sign the message, proving that the message is
+        from your key pair.
       </p>
       <h2 id="decrypting-a-message-or-a-file">
         Decrypting a message or a file
       </h2>
       <p>To decrypt a file, run</p>
       <div class="sourceCode" id="cb5">
-        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--decrypt</span><span class="at">--output</span> /path/where/i/want/original /path/of/encrypted/file.gpg</span></code></pre>
+        <pre
+          class="sourceCode sh"
+        ><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span><span class="at">--decrypt</span><span class="at">--output</span> /path/where/i/want/original /path/of/encrypted/file.gpg</span></code></pre>
       </div>
       <p>
         This will decrypt the file and save it to the specified output file.
@@ -177,7 +193,9 @@
         PGP message:
       </p>
       <div class="sourceCode" id="cb6">
-        <pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><span class="bu">echo</span><span class="st">"</span></span><span id="cb6-2"><span class="st">-----BEGIN PGP MESSAGE-----</span></span><span id="cb6-3"><span class="st"></span></span><span id="cb6-4"><span class="st">hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUw</span></span><span id="cb6-5"><span class="st">D3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg</span></span><span id="cb6-6"><span class="st">0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBa</span></span><span id="cb6-7"><span class="st">xivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ==</span></span><span id="cb6-8"><span class="st">=PywC</span></span><span id="cb6-9"><span class="st">-----END PGP MESSAGE-----</span></span><span id="cb6-10"><span class="st">"</span> | <span class="ex">gpg</span><span class="at">--decrypt</span></span></code></pre>
+        <pre
+          class="sourceCode sh"
+        ><code class="sourceCode bash"><span id="cb6-1"><span class="bu">echo</span><span class="st">"</span></span><span id="cb6-2"><span class="st">-----BEGIN PGP MESSAGE-----</span></span><span id="cb6-3"><span class="st"></span></span><span id="cb6-4"><span class="st">hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUw</span></span><span id="cb6-5"><span class="st">D3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg</span></span><span id="cb6-6"><span class="st">0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBa</span></span><span id="cb6-7"><span class="st">xivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ==</span></span><span id="cb6-8"><span class="st">=PywC</span></span><span id="cb6-9"><span class="st">-----END PGP MESSAGE-----</span></span><span id="cb6-10"><span class="st">"</span> | <span class="ex">gpg</span><span class="at">--decrypt</span></span></code></pre>
       </div>
       <p>
         If you want the message to be written to a file instead of printed, you
@@ -189,7 +207,10 @@
         signer, which you can use to identify and/or confirm the sender.
       </p>
       <figure>
-        <img src="/assets/images/posts/gpg/decrypt.png" alt="Decrypting plain text">
+        <img
+          src="/assets/images/posts/gpg/decrypt.png"
+          alt="Decrypting plain text"
+        />
         <figcaption aria-hidden="true">Decrypting plain text</figcaption>
       </figure>
       <h2 id="note-on-piping">NOTE ON PIPING</h2>
@@ -201,43 +222,73 @@
       <h2 id="bye-bye">bye bye</h2>
       <p>
         That should cover enough to get you started. You should read the
-      
+
         <a href="https://www.gnupg.org/documentation/">docs for GPG</a>.
-      
       </p>
     </main>
-    <footer class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12">
-      <section id="contact" class="text-left prose max-w-screen-md prose-invert w-full">
+    <footer
+      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12"
+    >
+      <section
+        id="contact"
+        class="text-left prose max-w-screen-md prose-invert w-full"
+      >
         <h2>Addresses, links, and contact</h2>
-	        <ul>
+        <ul>
           <li class="text-wrap break-all">
-            <img src="/assets/images/icons/email.png">Email:<!-- -->
-            <a target="_blank" href="mailto:contact@lewoof.xyz">contact@lewoof.xyz</a>
-          </li>
-          <li class="text-wrap break-all"><img src="/assets/images/icons/matrix.png">Matrix: <a href="https://matrix.to/#/@woof:matrix.lewoof.xyz">woof@matrix.lewoof.xyz</a>
+            <img src="/assets/images/icons/email.png" />Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
           </li>
           <li class="text-wrap break-all">
-		  <img src="/assets/images/icons/github.png">Github:<!-- -->
+            <img src="/assets/images/icons/matrix.png" />Matrix:
+            <a href="https://matrix.to/#/@woof:matrix.lewoof.xyz"
+              >woof@matrix.lewoof.xyz</a
+            >
+          </li>
+          <li class="text-wrap break-all">
+            <img src="/assets/images/icons/xmpp.png" />XMPP:
+            lewoof@anonlounge.xyz
+          </li>
+          <li class="text-wrap break-all">
+            <img src="/assets/images/icons/github.png" />Github:<!-- -->
             <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
           </li>
           <li class="text-wrap break-all" id="donate">
-           <img src="/assets/images/icons/sol.ico">Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+            <img src="/assets/images/icons/sol.ico" />Solana:
+            JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
           </li>
           <li class="text-wrap break-all" id="donate">
-            <img src="/assets/images/icons/xmr.png">Monero: 47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
+            <img src="/assets/images/icons/xmr.png" />Monero:
+            47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
           </li>
           <li class="text-wrap break-all">
-            <img src="/assets/images/icons/btc.png">Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+            <img src="/assets/images/icons/btc.png" />Bitcoin (native segwit):
+            bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
           </li>
           <li class="text-wrap break-all">
-            <img src="/assets/images/icons/bmc.ico">BuyMeACoffee:
-            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof">acutewoof</a>
+            <img src="/assets/images/icons/bmc.ico" />BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
           </li>
         </ul>
 
         <form class="flex flex-col gap-2" action="/api/index" method="get">
-          <textarea maxlength="2000" class="flex min-h-[60px] w-full border border-woofDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-woofDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-woofDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" id="themessage" placeholder="Leave a message" type="text" name="message"></textarea>
-          <button class="border border-woofDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-woofDark-fg shadow hover:bg-woofDark-bg0_h h-9 px-4 py-2" id="sendbutton" type="submit">
+          <textarea
+            maxlength="2000"
+            class="flex min-h-[60px] w-full border border-woofDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-woofDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-woofDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="themessage"
+            placeholder="Leave a message"
+            type="text"
+            name="message"
+          ></textarea>
+          <button
+            class="border border-woofDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-woofDark-fg shadow hover:bg-woofDark-bg0_h h-9 px-4 py-2"
+            id="sendbutton"
+            type="submit"
+          >
             Send :P
           </button>
         </form>
