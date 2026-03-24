@@ -201,12 +201,6 @@
         >
         <figcaption aria-hidden="true">Decrypting plain text</figcaption>
       </figure>
-      <h2 id="note-on-piping">NOTE ON PIPING</h2>
-      <p>
-        Don’t do that if others use your computer, and clear your shell history
-        immediately after. It is much better to just write the message to file
-        and encrypt it.
-      </p>
       <h2 id="bye-bye">bye bye</h2>
       <p>
         That should cover enough to get you started. You should read the
