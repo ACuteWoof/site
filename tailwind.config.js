@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["Atkinson Hyperlegible", "ui-serif", "Georgia", "serif"],
+      sans: ["B612", "ui-serif", "Georgia", "serif"],
       serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
-      mono: ["Monaspace Xenon", "ui-monospace", "monospace"],
-      display: ["Atkinson Hyperlegible", "EB Garamond", "ui-serif", "Georgia", "serif"],
+      mono: ["B612 Mono", "ui-monospace", "monospace"],
+      display: ["B612", "EB Garamond", "ui-serif", "Georgia", "serif"],
     },
     backgroundImage: {
       main: 'url("/assets/images/background.jpg")',
