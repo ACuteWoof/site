@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
+      sans: ["Atkinson Hyperlegible", "ui-serif", "Georgia", "serif"],
       serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
       mono: ["Monaspace Xenon", "ui-monospace", "monospace"],
       display: ["EB Garamond", "ui-serif", "Georgia", "serif"],
