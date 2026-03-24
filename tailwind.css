@@ -11,13 +11,15 @@
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  font-display: bold;
+  font-display: swap;
+  font-style: bold;
   src: url(/assets/fonts/atkinson/AtkinsonHyperlegible-Bold.ttf);
 }
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  font-display: italic;
+  font-display: swap;
+  font-style: italic;
   src: url(/assets/fonts/atkinson/AtkinsonHyperlegible-Italic.ttf);
 }
 
