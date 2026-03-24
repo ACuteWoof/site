@@ -7,7 +7,7 @@ module.exports = {
       sans: ["Atkinson Hyperlegible", "ui-serif", "Georgia", "serif"],
       serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
       mono: ["Monaspace Xenon", "ui-monospace", "monospace"],
-      display: ["EB Garamond", "ui-serif", "Georgia", "serif"],
+      display: ["Atkinson Hyperlegible", "EB Garamond", "ui-serif", "Georgia", "serif"],
     },
     backgroundImage: {
       main: 'url("/assets/images/background.jpg")',
