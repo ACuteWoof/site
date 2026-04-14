@@ -11,7 +11,7 @@
     <atom:link href="https://lewoof.xyz/posts/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title>A little update for my RSS users</title>
-      <link>https://lewoof.xyz/notes/feed.rss</link>
+      <link>https://lewoof.xyz/notes/feed.xml</link>
       <description>
 	      <p>
         I now have an RSS feed for personal summaries I've written of courses I
