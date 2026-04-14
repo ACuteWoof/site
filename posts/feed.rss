@@ -10,9 +10,48 @@
     <lastBuildDate>Thu, 20 Mar 2025 09:00:00 GMT</lastBuildDate>
     <atom:link href="https://lewoof.xyz/posts/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
+      <title>A little update for my RSS users</title>
+      <link>https://lewoof.xyz/notes/feed.rss</link>
+      <description>
+        I now have an RSS feeds for personal summaries I've written of courses I
+        take. They were originally meant as something for me to be able to share
+        with friends who are on the same course as me, and for me to revisit
+        concepts that I often forget. However, I have realised that the reason I
+        had to write them myself was that I could not find any concise
+        notes online of these courses, and the ones that did exist were
+        outdated, not concise, not accurate, or do not properly cover
+        the syllabus in its entirety. I hope that these notes are useful
+        for anyone taking these courses, or are interested in
+        the topics and would like something that they can have printed
+        out to look at everyday in order to recall ideas from said
+        topics.
+	<br>
+        You can add the notes feed with this feed URL:
+        https://lewoof.xyz/notes/feed.rss.
+	<br>
+        It could also be added by sharing my site's homepage to your RSS reader
+        which might (depending on its features) detect the blog post feed and
+        the notes feed.
+	<br>
+        This post will not be posted on the site as a page. This is also not a
+        proper blog post. Rather it is more similar to a broadcasted text
+        message. It is an exclusive for you (not very exclusive
+        considering all it takes is an RSS reader to see this, but one
+        is not to expect such unicorns in the slopocalypse that is
+        2026), the few people who follow the feed. Other posts however
+        will be on the site as HTML pages as well as RSS feed items.
+      </description>
+      <guid isPermaLink="false">lewoof-posts-rss-feed-info</guid>
+      <pubDate>Tue, 14 Apr 2025 09:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Using PGP</title>
       <link>https://lewoof.xyz/posts/pgp</link>
-      <description>Encrypting messages on platforms that suck</description>
+      <description>
+          Arguing that you don’t care about the right to privacy because you
+          have nothing to hide is no different from saying you don’t care about
+          free speech because you have nothing to say. – Edward Snowden
+      </description>
       <guid isPermaLink="false">lewoof-posts-pgp</guid>
       <pubDate>Thu, 20 Mar 2025 09:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
