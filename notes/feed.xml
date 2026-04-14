@@ -22,11 +22,13 @@
       <pubDate>Tue, 20 Apr 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>9231 Further Mechanics</title>
+      <title>9231 Further Mechanics (incomplete)</title>
       <link>https://lewoof.xyz/notes/further/mechanics.pdf</link>
         <description>
                 Summary of the CAIE International AS &amp; A Levels, 9231
                 Further Mechanics.
+
+		I have not completed the notes for this however. An updated item will be posted when it is complete.
 
                 Typst file:
                 https://git.lewoof.xyz/notes/further-mechanics/branch/master/tree/mechanics.typ/
