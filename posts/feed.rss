@@ -12,7 +12,7 @@
     <item>
       <title>A little update for my RSS users</title>
       <link>https://lewoof.xyz/notes/feed.xml</link>
-      <description>
+      <description><![CDATA[
 	      <p>
         I now have an RSS feed for personal summaries I've written of courses I
         take. They were originally meant as something for me to be able to share
@@ -45,6 +45,7 @@
         2026), the few people who follow the feed. Other posts however
         will be on the site as HTML pages as well as RSS feed items.
 	      </p>
+]]>
       </description>
       <guid isPermaLink="false">lewoof-posts-rss-feed-info</guid>
       <pubDate>Tue, 14 Apr 2025 09:00:00 GMT</pubDate>
