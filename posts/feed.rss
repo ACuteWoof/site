@@ -7,7 +7,7 @@
     <link>https://lewoof.xyz</link>
     <description>Blog posts from Vithushan</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2025 02:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 02:00:00 GMT</lastBuildDate>
     <atom:link href="https://lewoof.xyz/posts/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title>A little update for my RSS users</title>
@@ -48,7 +48,7 @@
 ]]>
       </description>
       <guid isPermaLink="false">lewoof-posts-rss-feed-info</guid>
-      <pubDate>Tue, 14 Apr 2025 09:00:00 GMT</pubDate>
+      <pubDate>Tue, 14 Apr 2026 09:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Using PGP</title>
@@ -59,7 +59,7 @@
           free speech because you have nothing to say. – Edward Snowden
       </description>
       <guid isPermaLink="false">lewoof-posts-pgp</guid>
-      <pubDate>Thu, 20 Mar 2025 09:00:00 GMT</pubDate>
+      <pubDate>Thu, 20 Mar 2026 09:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 	    <main>
       <h1 id="encrypting-messages-and-files-with-pgp">
