@@ -27,7 +27,7 @@
     class="m-0 min-h-screen bg-woofDark-bg0_h md:md:bg-main bg-fixed bg-cover bg-center md:p-8 lg:p-12 text-woofDark-fg font-sans w-full flex items-center justify-center"
   >
     <main
-      class="flex flex-col gap-8 w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12"
+      class="flex flex-col gap-8 w-full max-w-screen-xl mx-auto bg-woofDark-bg0_h p-8 py-12"
     >
       <section
         id="hero"
@@ -60,297 +60,319 @@
       </section>
       <section
         id="sitemap"
-        class="text-left prose max-w-screen-md prose-invert w-full"
+        class="text-left prose max-w-screen-xl prose-invert w-full"
       >
         <h2>Sitemap</h2>
-        <h3>/me/</h3>
-        <p>Things directly about me as a person.</p>
-        <ul>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/projects.png" /><a
-              href="/me/projects"
-              >/me/projects</a
-            >: significant projects I've worked on and/or am working on, both
-            personal and professional
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/library.png" /><a href="/me/library"
-              >/me/library</a
-            >: books I own (not necessarily ones that I have read nor do I agree
-            with all of them)
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/music.png" /><a href="/me/music"
-              >/me/music</a
-            >: my playlist; quite a useless page for anyone except me, like the
-            library page
-          </li>
-        </ul>
-        <h3>/docs/</h3>
-        <p>
-          Pages that you, the visitor, might find useful. This is less
-          categorized than the other lists here.
-        </p>
-        <ul>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/benedict.png" /><a
-              href="/docs/rosary"
-              >/docs/rosary</a
-            >: mysteries of the Rosary with passages from Scripture, and Latin
-            prayers
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/aquinas.png" /><a href="/docs/study"
-              >/docs/study</a
-            >: guidance from the Angelic Doctor, St. Thomas Aquinas, on how to
-            study
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/link.png" /><a href="/docs/links"
-              >/docs/links</a
-            >: links to useful webpages
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/press.png" /><a href="/docs/optatus"
-              >/docs/optatus</a
-            >: the work of St. Optatus; physical copies sold on
-            <a href="https://ashesandink.store">Ashes & Ink</a>
-          </li>
-        </ul>
-        <h3>/posts/</h3>
-        <p>
-          Blog posts about things that interest me, things that I hate, or
-          things that I love. There exists only one post right now so this
-          description should tell you what to expect when you follow the RSS
-          feed.
-        </p>
-        <ul>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/rss.png" /><a href="/posts/feed.rss"
-              >/posts/feed.rss</a
-            >: RSS feed for posts
-          </li>
-          <li class="text-wrap break-words">
-            <a href="/posts/pgp">/posts/pgp</a>: encrypting messages on
-            platforms that suck
-          </li>
-        </ul>
-        <h3>/notes/</h3>
-        <p>
-          These are personal notes/summaries that you potentially may find
-          useful.
-        </p>
-        <ul>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/rss.png" /><a href="/notes/feed.rss"
-              >/notes/feed.rss</a
-            >: RSS feed for notes
-          </li>
-          <li class="text-wrap break-words">
-            <a href="/notes/further/mechanics.pdf"
-              >/notes/further/mechanics.pdf</a
-            >: 9231 Further Mechanics
-          </li>
-          <li class="text-wrap break-words">
-            <a href="/notes/further/pure-1.pdf">/notes/further/pure-1.pdf</a>:
-            9231 Further Pure Mathematics 1
-          </li>
-          <li class="text-wrap break-words">
-            <a href="/notes/math/pure-2-3.pdf">/notes/math/pure-2-3.pdf</a>:
-            9231 Pure Mathematics 2 and 3
-          </li>
-        </ul>
+        <div class="lg:grid lg:grid-cols-2 gap-8">
+          <div>
+            <h3>/me/</h3>
+            <p>Things directly about me as a person.</p>
+            <ul>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/projects.png" /><a
+                  href="/me/projects"
+                  >/me/projects</a
+                >: significant projects I've worked on and/or am working on,
+                both personal and professional
+              </li>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/library.png" /><a
+                  href="/me/library"
+                  >/me/library</a
+                >: books I own (not necessarily ones that I have read nor do I
+                agree with all of them)
+              </li>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/music.png" /><a href="/me/music"
+                  >/me/music</a
+                >: my playlist; quite a useless page for anyone except me, like
+                the library page
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>/docs/</h3>
+            <p>
+              Pages that you, the visitor, might find useful. This is less
+              categorized than the other lists here.
+            </p>
+            <ul>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/benedict.png" /><a
+                  href="/docs/rosary"
+                  >/docs/rosary</a
+                >: mysteries of the Rosary with passages from Scripture, and
+                Latin prayers
+              </li>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/aquinas.png" /><a
+                  href="/docs/study"
+                  >/docs/study</a
+                >: guidance from the Angelic Doctor, St. Thomas Aquinas, on how
+                to study
+              </li>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/link.png" /><a href="/docs/links"
+                  >/docs/links</a
+                >: links to useful webpages
+              </li>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/press.png" /><a
+                  href="/docs/optatus"
+                  >/docs/optatus</a
+                >: the work of St. Optatus; physical copies sold on
+                <a href="https://ashesandink.store">Ashes & Ink</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>/posts/</h3>
+            <p>
+              Blog posts about things that interest me, things that I hate, or
+              things that I love. There exists only one post right now so this
+              description should tell you what to expect when you follow the RSS
+              feed.
+            </p>
+            <ul>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/rss.png" /><a
+                  href="/posts/feed.rss"
+                  >/posts/feed.rss</a
+                >: RSS feed for posts
+              </li>
+              <li class="text-wrap break-words">
+                <a href="/posts/pgp">/posts/pgp</a>: encrypting messages on
+                platforms that suck
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>/notes/</h3>
+            <p>
+              These are personal notes/summaries that you potentially may find
+              useful.
+            </p>
+            <ul>
+              <li class="text-wrap break-words">
+                <img src="/assets/images/icons/rss.png" /><a
+                  href="/notes/feed.rss"
+                  >/notes/feed.rss</a
+                >: RSS feed for notes
+              </li>
+              <li class="text-wrap break-words">
+                <a href="/notes/further/mechanics.pdf"
+                  >/notes/further/mechanics.pdf</a
+                >: 9231 Further Mechanics
+              </li>
+              <li class="text-wrap break-words">
+                <a href="/notes/further/pure-1.pdf">/notes/further/pure-1.pdf</a
+                >: 9231 Further Pure Mathematics 1
+              </li>
+              <li class="text-wrap break-words">
+                <a href="/notes/math/pure-2-3.pdf">/notes/math/pure-2-3.pdf</a>:
+                9231 Pure Mathematics 2 and 3
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <section
-        id="selfhost"
-        class="text-left prose max-w-screen-md prose-invert w-full"
-      >
-        <h2>Self hosted</h2>
-        <p>
-          These services are hosted on an old but modern computer on my floor.
-          If you want any other service hosted, please contact me, and consider
-          donating so I can purchase a hard disk for it.
-        </p>
-        <ul>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/minecraft.svg" /><a
-              target="_blank"
-              href="https://mc.lewoof.xyz"
-              >mc.lewoof.xyz</a
-            >: PaperMC Minecraft server, use port 19132 for Geyser, 25565 for
-            Java clients, and 443 (HTTPS) for a map of the world
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/matrix.png" /><a
-              target="_blank"
-              href="https://matrix.lewoof.xyz"
-              >matrix.lewoof.xyz</a
-            >: Cinny, and Matrix homeserver
-          </li>
-          <li class="text-wrap break-words">
-            <img src="https://searx.lewoof.xyz/favicon.ico" /><a
-              target="_blank"
-              href="https://searx.lewoof.xyz"
-              >searx.lewoof.xyz</a
-            >: SearXNG instance
-          </li>
-          <li class="text-wrap break-words">
-            <img src="https://kiwix.lewoof.xyz/skin/favicon/favicon.ico" /><a
-              target="_blank"
-              href="https://kiwix.lewoof.xyz"
-              >kiwix.lewoof.xyz</a
-            >: Kiwix instance, with only a few ZIMs because of my very limited
-            storage (<a href="#donate">donate</a> to help)
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/git.png" /><a
-              target="_blank"
-              href="https://git.lewoof.xyz"
-              >git.lewoof.xyz</a
-            >
-            :
-            <a href="https://git.lewoof.xyz/me/gitbrowse">Gitbrowse</a>, a Git
-            web frontend in Go
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/nginx.ico" /><a
-              target="_blank"
-              href="https://files.lewoof.xyz"
-              >files.lewoof.xyz</a
-            >
-            : files I have
-          </li>
-        </ul>
-      </section>
-      <section
-        id="subdomains"
-        class="text-left prose max-w-screen-md prose-invert w-full"
-      >
-        <h2>Other subdomains</h2>
-        <ul>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/bugsarchive.png" /><a
-              target="_blank"
-              href="https://bugs.lewoof.xyz"
-              >bugs.lewoof.xyz</a
-            >: BugsArchive, a compendium of computer science
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/ashesandink.png" /><a
-              target="_blank"
-              href="https://press.lewoof.xyz"
-              >press.lewoof.xyz</a
-            >: WoofPress, printing old books on request (see
-            <a target="_blank" href="https://ashesandink.store">Ashes & Ink</a>)
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/woof-os.png" /><a
-              target="_blank"
-              href="https://os.lewoof.xyz"
-              >os.lewoof.xyz</a
-            >: Woof OS, Arch Linux respin with my configs
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/woof-os.png" /><a
-              target="_blank"
-              href="https://repo.os.lewoof.xyz"
-              >repo.os.lewoof.xyz</a
-            >: Woof OS repository Github page
-          </li>
-          <li class="text-wrap break-words">
-            <img src="/assets/images/icons/md.svg" /><a
-              target="_blank"
-              href="https://rmd.lewoof.xyz"
-              >rmd.lewoof.xyz</a
-            >: rmd, just a nice markdown renderer
-          </li>
-        </ul>
-      </section>
-      <section
-        id="pgp"
-        class="text-left prose max-w-screen-md prose-invert w-full"
-      >
-        <h2>Encrypt your messages</h2>
-        <p>
-          If you contact me through an unencrypted chat, I expect you to use my
-          PGP public key to encrypt any message that you want to send, and
-          provide your own public key if you expect a response.
-        </p>
-        <p>
-          Fingerprint:
+      <div class="lg:grid lg:grid-cols-2 gap-8">
+        <section
+          id="selfhost"
+          class="text-left prose max-w-screen-xl prose-invert w-full"
+        >
+          <h2>Self hosted</h2>
+          <p>
+            These services are hosted on an old but modern computer on my floor.
+            If you want any other service hosted, please contact me, and
+            consider donating so I can purchase a hard disk for it.
+          </p>
+          <ul>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/minecraft.svg" /><a
+                target="_blank"
+                href="https://mc.lewoof.xyz"
+                >mc.lewoof.xyz</a
+              >: PaperMC Minecraft server, use port 19132 for Geyser, 25565 for
+              Java clients, and 443 (HTTPS) for a map of the world
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/matrix.png" /><a
+                target="_blank"
+                href="https://matrix.lewoof.xyz"
+                >matrix.lewoof.xyz</a
+              >: Cinny, and Matrix homeserver
+            </li>
+            <li class="text-wrap break-words">
+              <img src="https://searx.lewoof.xyz/favicon.ico" /><a
+                target="_blank"
+                href="https://searx.lewoof.xyz"
+                >searx.lewoof.xyz</a
+              >: SearXNG instance
+            </li>
+            <li class="text-wrap break-words">
+              <img src="https://kiwix.lewoof.xyz/skin/favicon/favicon.ico" /><a
+                target="_blank"
+                href="https://kiwix.lewoof.xyz"
+                >kiwix.lewoof.xyz</a
+              >: Kiwix instance, with only a few ZIMs because of my very limited
+              storage (<a href="#donate">donate</a> to help)
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/git.png" /><a
+                target="_blank"
+                href="https://git.lewoof.xyz"
+                >git.lewoof.xyz</a
+              >
+              :
+              <a href="https://git.lewoof.xyz/me/gitbrowse">Gitbrowse</a>, a Git
+              web frontend in Go
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/nginx.ico" /><a
+                target="_blank"
+                href="https://files.lewoof.xyz"
+                >files.lewoof.xyz</a
+              >
+              : files I have
+            </li>
+          </ul>
+        </section>
+        <section
+          id="subdomains"
+          class="text-left prose max-w-screen-xl prose-invert w-full"
+        >
+          <h2>Other subdomains</h2>
+          <ul>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/bugsarchive.png" /><a
+                target="_blank"
+                href="https://bugs.lewoof.xyz"
+                >bugs.lewoof.xyz</a
+              >: BugsArchive, a compendium of computer science
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/ashesandink.png" /><a
+                target="_blank"
+                href="https://press.lewoof.xyz"
+                >press.lewoof.xyz</a
+              >: WoofPress, printing old books on request (see
+              <a target="_blank" href="https://ashesandink.store">Ashes & Ink</a
+              >)
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/woof-os.png" /><a
+                target="_blank"
+                href="https://os.lewoof.xyz"
+                >os.lewoof.xyz</a
+              >: Woof OS, Arch Linux respin with my configs
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/woof-os.png" /><a
+                target="_blank"
+                href="https://repo.os.lewoof.xyz"
+                >repo.os.lewoof.xyz</a
+              >: Woof OS repository Github page
+            </li>
+            <li class="text-wrap break-words">
+              <img src="/assets/images/icons/md.svg" /><a
+                target="_blank"
+                href="https://rmd.lewoof.xyz"
+                >rmd.lewoof.xyz</a
+              >: rmd, just a nice markdown renderer
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="lg:grid lg:grid-cols-2 gap-8">
+        <section
+          id="pgp"
+          class="text-left prose max-w-screen-xl prose-invert w-full"
+        >
+          <h2>Encrypt your messages</h2>
+          <p>
+            If you contact me through an unencrypted chat, I expect you to use
+            my PGP public key to encrypt any message that you want to send, and
+            provide your own public key if you expect a response.
+          </p>
+          <p>
+            Fingerprint:
 
-          <code>57A61EF1C337F03927334D1D5E3A7FABA827D655</code>
-          <br />
-          <a href="pubkey.asc">Download public key</a>
-        </p>
-        <p>
-          If you have no idea about what any of this is, see
-          <a href="/posts/pgp">this post</a> and come back to this section.
-        </p>
-      </section>
-      <section
-        id="contact"
-        class="text-left prose max-w-screen-md prose-invert w-full"
-      >
-        <h2>Addresses, links, and contact</h2>
-        <ul>
-          <li class="text-wrap break-all">
-            <img src="/assets/images/icons/email.png" />Email:<!-- -->
-            <a target="_blank" href="mailto:contact@lewoof.xyz"
-              >contact@lewoof.xyz</a
+            <code>57A61EF1C337F03927334D1D5E3A7FABA827D655</code>
+            <br />
+            <a href="pubkey.asc">Download public key</a>
+          </p>
+          <p>
+            If you have no idea about what any of this is, see
+            <a href="/posts/pgp">this post</a> and come back to this section.
+          </p>
+        </section>
+        <section
+          id="contact"
+          class="text-left prose max-w-screen-xl prose-invert w-full"
+        >
+          <h2>Addresses, links, and contact</h2>
+          <ul>
+            <li class="text-wrap break-all">
+              <img src="/assets/images/icons/email.png" />Email:<!-- -->
+              <a target="_blank" href="mailto:contact@lewoof.xyz"
+                >contact@lewoof.xyz</a
+              >
+            </li>
+            <li class="text-wrap break-all">
+              <img src="/assets/images/icons/matrix.png" />Matrix:
+              <a href="https://matrix.to/#/@woof:matrix.lewoof.xyz"
+                >@woof:matrix.lewoof.xyz</a
+              >
+            </li>
+            <li class="text-wrap break-all">
+              <img src="/assets/images/icons/xmpp.svg" />XMPP:
+              lewoof@anonlounge.xyz
+            </li>
+            <li class="text-wrap break-all">
+              <img src="/assets/images/icons/github.png" />Github:<!-- -->
+              <a target="_blank" href="https://github.com/acutewoof"
+                >acutewoof</a
+              >
+            </li>
+            <li class="text-wrap break-all" id="donate">
+              <img src="/assets/images/icons/sol.png" />Solana:
+              JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+            </li>
+            <li class="text-wrap break-all" id="donate">
+              <img src="/assets/images/icons/xmr.png" />Monero:
+              47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
+            </li>
+            <li class="text-wrap break-all">
+              <img src="/assets/images/icons/btc.png" />Bitcoin (native segwit):
+              bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
+            </li>
+            <li class="text-wrap break-all">
+              <img src="/assets/images/icons/bmc.ico" />BuyMeACoffee:
+              <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+                >acutewoof</a
+              >
+            </li>
+          </ul>
+          <form class="flex flex-col gap-2" action="/api/index" method="get">
+            <textarea
+              maxlength="2000"
+              class="flex min-h-[60px] w-full border border-woofDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-woofDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-woofDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+              id="themessage"
+              placeholder="Leave a message. Provide in your message a way to contact you back if you want a response."
+              type="text"
+              name="message"
+            ></textarea>
+            <button
+              class="border border-woofDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-woofDark-fg shadow hover:bg-woofDark-bg0_h h-9 px-4 py-2"
+              id="sendbutton"
+              type="submit"
             >
-          </li>
-          <li class="text-wrap break-all">
-            <img src="/assets/images/icons/matrix.png" />Matrix:
-            <a href="https://matrix.to/#/@woof:matrix.lewoof.xyz"
-              >@woof:matrix.lewoof.xyz</a
-            >
-          </li>
-          <li class="text-wrap break-all">
-            <img src="/assets/images/icons/xmpp.svg" />XMPP:
-            lewoof@anonlounge.xyz
-          </li>
-          <li class="text-wrap break-all">
-            <img src="/assets/images/icons/github.png" />Github:<!-- -->
-            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
-          </li>
-          <li class="text-wrap break-all" id="donate">
-            <img src="/assets/images/icons/sol.png" />Solana:
-            JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
-          </li>
-          <li class="text-wrap break-all" id="donate">
-            <img src="/assets/images/icons/xmr.png" />Monero:
-            47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
-          </li>
-          <li class="text-wrap break-all">
-            <img src="/assets/images/icons/btc.png" />Bitcoin (native segwit):
-            bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
-          </li>
-          <li class="text-wrap break-all">
-            <img src="/assets/images/icons/bmc.ico" />BuyMeACoffee:
-            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
-              >acutewoof</a
-            >
-          </li>
-        </ul>
-        <form class="flex flex-col gap-2" action="/api/index" method="get">
-          <textarea
-            maxlength="2000"
-            class="flex min-h-[60px] w-full border border-woofDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-woofDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-woofDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-            id="themessage"
-            placeholder="Leave a message. Provide in your message a way to contact you back if you want a response."
-            type="text"
-            name="message"
-          ></textarea>
-          <button
-            class="border border-woofDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-woofDark-fg shadow hover:bg-woofDark-bg0_h h-9 px-4 py-2"
-            id="sendbutton"
-            type="submit"
-          >
-            Send :P
-          </button>
-        </form>
-      </section>
+              Send :P
+            </button>
+          </form>
+        </section>
+      </div>
     </main>
   </body>
 </html>
