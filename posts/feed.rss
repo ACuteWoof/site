@@ -5,10 +5,10 @@
   <channel>
     <title>Posts on lewoof.xyz</title>
     <link>https://lewoof.xyz</link>
-    <description>Personal pages, documents, and blog posts from Vithushan</description>
+    <description>Blog posts from Vithushan</description>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Mar 2025 09:00:00 GMT</lastBuildDate>
-    <atom:link href="https://lewoof.xyz/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://lewoof.xyz/posts/feed.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title>Using PGP</title>
       <link>https://lewoof.xyz/posts/pgp</link>
