@@ -70,14 +70,14 @@ Once generated, you can export the public key by running, in the case of
 the example:
 
 ``` {.sourceCode .sh}
-gpg--armor--export example@example.com  public.key 
+gpg --armor --export example@example.com  public.key 
 ```
 
 `--export` is self explanatory, and `--armor` is to convert the key to
 ASCII, which is commonly the format in which PGP keys are shared.
 Remember to create a new key after the shown expiry and to share it to
 everybody. Keys that don't expire can be created through the full
-generation dialog ( `gpg --full-generate-key`) but is not recommended.
+generation dialog (`gpg --full-generate-key`) but is not recommended.
 
 ## Importing a key
 
@@ -96,7 +96,7 @@ wants to send you encrypted messages.
 To encrypt a file (of any kind, including plain text), run
 
 ``` {.sourceCode .sh}
-gpg--encrypt--recipient example@example.com --output /path/where/i/want/output.gpg /path/of/original/file
+gpg --encrypt --recipient example@example.com --output /path/where/i/want/output.gpg /path/of/original/file
 ```
 
 This will work perfectly fine for plain text as well, and can be
@@ -111,7 +111,7 @@ pipe the output of echo into GPG and have it encrypt any string you
 want. For example, the following will print out the ASCII ciphertext:
 
 ``` {.sourceCode .sh}
-echo"give me money"|gpg--encrypt--armor--recipient example@example.com
+echo "give me money" | gpg --encrypt --armor --recipient example@example.com
 ```
 
 ![Encrypting plain text](/assets/images/posts/gpg/plaintext.png)
@@ -124,7 +124,7 @@ message, proving that the message is from your key pair.
 To decrypt a file, run
 
 ``` {.sourceCode .sh}
-gpg--decrypt--output /path/where/i/want/original /path/of/encrypted/file.gpg
+gpg --decrypt --output /path/where/i/want/original /path/of/encrypted/file.gpg
 ```
 
 This will decrypt the file and save it to the specified output file.
@@ -133,7 +133,7 @@ Like for encryption, you can also pipe the output of echo to decrypt a
 PGP message:
 
 ``` {.sourceCode .sh}
-echo"-----BEGIN PGP MESSAGE-----hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUwD3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBaxivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ===PywC-----END PGP MESSAGE-----" | gpg--decrypt
+echo "-----BEGIN PGP MESSAGE-----hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUwD3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBaxivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ===PywC-----END PGP MESSAGE-----" | gpg--decrypt
 ```
 
 If you want the message to be written to a file instead of printed, you

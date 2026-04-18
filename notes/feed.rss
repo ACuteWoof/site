@@ -7,8 +7,42 @@
     <link>https://lewoof.xyz</link>
     <description>Personal notes from Vithushan</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 02:00:00 GMT</lastBuildDate>
-    <atom:link href="https://lewoof.xyz/notes/feed.rss" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 18 Apr 2026 11:00:00 GMT</lastBuildDate>
+    <atom:link href="https://lewoof.xyz/notes/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Correction on 9709 Pure Mathematics 2 and 3</title>
+      <link>https://lewoof.xyz/notes/math/pure-math-2-3.pdf</link>
+      <description><![CDATA[
+      <p>
+	The PDF has been updated to correct a mistaken line under the section for differential equations:
+	the last equation stated, <code>integral f(y) dy = integral g(y) dx</code>; it should state, <code>integral f(y) dy = integral g(x) dx</code>.
+      </p>
+	      Git show:
+      <pre>
+commit 51e1609349717db598f0b758099ba8bc77b400bc (HEAD -> master, origin/master)
+Author: acutewoof <sutharshanvithushan@gmail.com>
+Date:   Sat Apr 18 16:19:39 2026 +0530
+
+    fixed mistyped g(y) in place of g(x)
+
+diff --git a/pure-math-2-3.typ b/pure-math-2-3.typ
+index fa00f31..0a37970 100644
+--- a/pure-math-2-3.typ
++++ b/pure-math-2-3.typ
+@@ -118,7 +118,7 @@ $ integral (k f'(x))/f(x) dif x = k ln(abs(f(x))) + c $
+ 
+ Differential equations in this syllabus can be solved by integrating both sides of the equation once rearranged such that the equation is of the form $f(y)(dif y)/(dif x) = g(x)$.
+ 
+-$ f(y)(dif y)/(dif x) = g(x) => integral f(y) (dif y)/(dif x)dif x = integral g(x) dif x => integral f(y) dif y = integral g(y) dif x $
++$ f(y)(dif y)/(dif x) = g(x) => integral f(y) (dif y)/(dif x)dif x = integral g(x) dif x => integral f(y) dif y = integral g(x) dif x $
+ 
+The general solution to a differential equation doesn't consider example points on the graph to find the constants of integration. The particular solution does.
+      </pre>
+	]]>
+      	</description>
+      <guid isPermaLink="false">lewoof-feed-pure-2-3-51e1609349717db598f0b758099ba8bc77b400bc</guid>
+    <pubDate>Tue, 18 Apr 2026 11:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>9709 Pure Mathematics 2 and 3</title>
       <link>https://lewoof.xyz/notes/math/pure-math-2-3.pdf</link>
@@ -19,7 +53,7 @@
 		Typst file: https://git.lewoof.xyz/notes/pure-2-3/branch/master/tree/pure-math-2-3.typ/
       </description>
       <guid isPermaLink="false">lewoof-feed-pure-2-3</guid>
-      <pubDate>Tue, 20 Apr 2026 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>9231 Further Mechanics (incomplete)</title>
@@ -34,7 +68,7 @@
                 https://git.lewoof.xyz/notes/further-mechanics/branch/master/tree/mechanics.typ/
         </description>
       <guid isPermaLink="false">lewoof-feed-further-mechanics</guid>
-      <pubDate>Tue, 20 Apr 2026 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>9231 Further Pure Mathematics 1</title>
@@ -47,7 +81,7 @@
                 https://git.lewoof.xyz/notes/further-pure/branch/master/tree/pure-1.typ/
         </description>
       <guid isPermaLink="false">lewoof-feed-further-pure-1</guid>
-      <pubDate>Tue, 20 Apr 2026 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
