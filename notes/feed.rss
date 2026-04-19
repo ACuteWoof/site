@@ -7,8 +7,49 @@
     <link>https://lewoof.xyz</link>
     <description>Personal notes from Vithushan</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Apr 2026 11:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 Apr 2026 02:15:00 GMT</lastBuildDate>
     <atom:link href="https://lewoof.xyz/notes/feed.xml" rel="self" type="application/rss+xml"/>
+
+
+
+    <item>
+      <title>Correction on 9231 Further Pure Mathematics 1</title>
+      <link>https://lewoof.xyz/notes/further/pure-1.pdf</link>
+      <description><![CDATA[
+      <p>
+	The PDF has been updated to correct a mistaken equation in the first page on roots of polynomials.
+      </p>
+	      Git show:
+      <pre>
+commit 009a0c338e7c1c8564a6c95e840d746e6c8a9e50 (HEAD -> master, origin/master)
+Author: acutewoof <sutharshanvithushan@gmail.com>
+Date:   Sun Apr 19 07:37:08 2026 +0530
+
+    correct d -> 3d
+
+diff --git a/pure-1.typ b/pure-1.typ
+index 1109cae..a3b1457 100644
+--- a/pure-1.typ
++++ b/pure-1.typ
+@@ -52,7 +52,7 @@ $
+ $
+   a (alpha^3 + beta^3 + gamma^3) + b (alpha^2 + beta^2 + gamma^2) + c (alpha + beta + gamma) + 3d = 0
+ $
+-$ a S_3 + b S_2 + c S_1 + d = 0 $
++$ a S_3 + b S_2 + c S_1 + 3d = 0 $
+ 
+ It should be evident from this example how this can be applied to other
+ polynomials
+      </pre>
+	]]>
+      	</description>
+      <guid isPermaLink="false">lewoof-feed-further-pure-1-009a0c338e7c1c8564a6c95e840d746e6c8a9e50</guid>
+    <pubDate>Tue, 19 Apr 2026 02:15:00 GMT</pubDate>
+    </item>
+
+
+
+
     <item>
       <title>Correction on 9709 Pure Mathematics 2 and 3</title>
       <link>https://lewoof.xyz/notes/math/pure-math-2-3.pdf</link>
