@@ -8,7 +8,7 @@
     <description>Blog posts from Vithushan</description>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Apr 2026 02:00:00 GMT</lastBuildDate>
-    <atom:link href="https://lewoof.xyz/posts/feed.rss" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://lewoof.xyz/posts/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>A little update for my RSS users</title>
       <link>https://lewoof.xyz/notes/feed.xml</link>
