@@ -7,8 +7,30 @@
     <link>https://lewoof.xyz</link>
     <description>Blog posts from Vithushan</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Apr 2026 02:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Apr 2026 05:00:00 GMT</lastBuildDate>
     <atom:link href="https://lewoof.xyz/posts/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Woof OS Update</title>
+      <link>https://os.lewoof.xyz/archtovoid</link>
+      <description><![CDATA[The notice is on the Woof OS website instead of the posts on www.lewoof.xyz. 
+Below is the notice:
+<p>
+I no longer use Arch Linux. I have switched to Void. Woof OS
+therefore will follow suit and will eventually be a respin of Void
+Linux instead. I am very busy however so this will not happen for at
+least a year. Woof OS installs will work and update just fine since
+they are just respins of Arch Linux, but the ISOs will not be
+updated. When Woof OS does get updated, there will be a post on my
+blog (<a href="https://lewoof.xyz">lewoof.xyz</a>). Add the RSS
+feed, <a href="https://lewoof.xyz/posts/feed.xml">https://lewoof.xyz/posts/feed.xml</a>
+to your reader to be notified when there is a new post. I'm too lazy
+to make a separate RSS feed for this (temporarily) dead project.
+</p>
+]]>
+      </description>
+      <guid isPermaLink="false">lewoof-posts-woof-os-migrating-to-void</guid>
+      <pubDate>Mon, 20 Apr 2026 05:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>A little update for my RSS users</title>
       <link>https://lewoof.xyz/notes/feed.xml</link>
