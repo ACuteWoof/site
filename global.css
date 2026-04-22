@@ -138,6 +138,10 @@ li img {
 	margin-right: 0.5rem;
 }
 
+li::marker {
+  color: var(--aqua-dim);
+}
+
 input,
 button,
 textarea {
