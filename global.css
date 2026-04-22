@@ -67,6 +67,10 @@ body.bg-church {
 	background-image: url("./assets/images/church.jpg");
 }
 
+body.nobg {
+	background-image: none;
+}
+
 a {
 	color: var(--blue);
 }
@@ -111,6 +115,11 @@ article {
 
 .hero {
 	text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .hero img {
