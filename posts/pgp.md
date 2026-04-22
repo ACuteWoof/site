@@ -57,7 +57,7 @@ A key pair simply contains the public key and the private key. You can
 generate a key pair interactively by running
 
 ``` {.sourceCode .sh}
-gpg--gen-key
+gpg --gen-key
 ```
 
 This will ask you a few questions (name and email are for what you want
