@@ -53,7 +53,6 @@ pre {
 }
 
 body {
-	background-image: url("./assets/images/background.jpg");
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -63,13 +62,6 @@ body {
 	margin: 0;
 }
 
-body.bg-church {
-	background-image: url("./assets/images/church.jpg");
-}
-
-body.nobg {
-	background-image: none;
-}
 
 a {
 	color: var(--blue);
@@ -123,8 +115,8 @@ article {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .hero img {
@@ -139,7 +131,7 @@ li img {
 }
 
 li::marker {
-  color: var(--aqua-dim);
+	color: var(--aqua-dim);
 }
 
 input,
@@ -157,6 +149,15 @@ textarea {
 @media (width >=48rem) {
 	body {
 		padding: 2rem;
+		background-image: url("./assets/images/background.jpg");
+	}
+
+	body.bg-church {
+		background-image: url("./assets/images/church.jpg");
+	}
+
+	body.nobg {
+		background-image: none;
 	}
 
 	.home-grid {
