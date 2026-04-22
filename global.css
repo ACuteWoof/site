@@ -101,7 +101,12 @@ main {
 article,
 header,
 footer {
-	max-width: 54rem;
+	max-width: 56rem;
+}
+
+header {
+	display: flex;
+	gap: 0.5rem;
 }
 
 article {
