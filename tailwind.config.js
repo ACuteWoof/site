@@ -3,12 +3,6 @@ module.exports = {
   content: ["./**/*.html"],
   theme: {
     extend: {},
-    fontFamily: {
-      sans: ["B612", "ui-serif", "Georgia", "serif"],
-      serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
-      mono: ["B612 Mono", "ui-monospace", "monospace"],
-      display: ["B612", "EB Garamond", "ui-serif", "Georgia", "serif"],
-    },
     backgroundImage: {
       main: 'url("/assets/images/background.jpg")',
       church: 'url("/assets/images/church.jpg")',

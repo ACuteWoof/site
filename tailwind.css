@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "B612";
-  font-display: swap;
-  src: url(/assets/fonts/B612/B612-Regular.ttf);
-}
-
-@font-face {
-  font-family: "EB Garamond";
-  font-display: swap;
-  src: url(/assets/fonts/EBGaramond-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "B612 Mono";
-  font-style: italic;
-  font-display: swap;
-  src: url(/assets/fonts/B612_Mono/B612Mono-Italic.ttf);
-}
-
-@font-face {
-  font-family: "B612 Mono";
-  font-display: swap;
-  src: url(/assets/fonts/B612_Mono/B612Mono-Regular.ttf);
-}
-
 @layer base {
   ::selection {
     @apply bg-woofDark-aqua text-woofDark-bg;
