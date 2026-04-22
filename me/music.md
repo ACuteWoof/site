@@ -1,3 +1,12 @@
+---
+author: Vithushan Sutharsan (ACuteWoof)
+description: I like computers
+lang: en
+theme-color: "\\#689d6a"
+title: Vithushan
+viewport: width=device-width, initial-scale=1.0
+---
+
 # Music
 
 All the albums in my playlist. This page has no real use for you unless
@@ -11,14 +20,14 @@ you are me.
 - Avenged Sevenfold - City Of Evil
 - Avenged Sevenfold - Diamonds in the Rough
 - Avenged Sevenfold - Hail To The King
-- Avenged Sevenfold - Life Is But a Dream...
+- Avenged Sevenfold - Life Is But a Dream…
 - Avenged Sevenfold - Nightmare
 - Avenged Sevenfold - Sounding The Seventh Trumpet
 - Avenged Sevenfold - The Stage (Deluxe Edition)
 - Avenged Sevenfold - Waking The Fallen
 - Black Sabbath - Paranoid
 - Breaking Benjamin - Phobia (Explicit Version)
-- C418 - Minecraft -- Volume Alpha
+- C418 - Minecraft – Volume Alpha
 - Casey Edwards, Victor Borba - Bury the Light
 - CHESTER BENNINGTON - MALL (Music From The Motion Picture)
 - Dead By Sunrise - Out Of Ashes
@@ -45,7 +54,7 @@ you are me.
 - Fort Minor - Welcome
 - Gojira - Fortitude
 - Gojira - From Mars to Sirius
-- Gojira - L'Enfant Sauvage
+- Gojira - L’Enfant Sauvage
 - Gojira - Magma
 - Gojira - The Way of All Flesh
 - Grey Daze - Amends
@@ -70,15 +79,15 @@ you are me.
 - Martin Garrix & Pierce Fulton feat. Mike Shinoda - BYLAW EP
 - Metallica - 72 Seasons
 - Metallica - Death Magnetic
-- Metallica - Hardwired...To Self-Destruct
-- Metallica - Kill 'Em All (Remastered)
+- Metallica - Hardwired…To Self-Destruct
+- Metallica - Kill ’Em All (Remastered)
 - Metallica - Load
 - Metallica - Master of Puppets (Remastered)
 - Metallica - Metallica (Remastered)
 - Metallica - Reload
 - Metallica - Ride The Lightning (Remastered)
 - Metallica - S&M 1999
-- Metallica - ...And Justice for All
+- Metallica - …And Justice for All
 - Mike Shinoda - fine
 - Mike Shinoda - Post Traumatic
 - Muse - Absolution

@@ -1,0 +1,149 @@
+:root {
+	--bg_h: #1d2021;
+	--bg: #282828;
+	--bg_s: #32302f;
+	--bg1: #3c3836;
+	--bg2: #504945;
+	--bg3: #665c54;
+	--bg4: #7c6f64;
+
+	--fg: #fbf1c7;
+	--fg1: #ebdbb2;
+	--fg2: #d5c4a1;
+	--fg3: #bdae93;
+	--fg4: #a89984;
+
+	--red: #fb4934;
+	--green: #b8bb26;
+	--yellow: #fabd2f;
+	--blue: #83a598;
+	--purple: #d3869b;
+	--aqua: #8ec07c;
+	--gray: #928374;
+	--orange: #fe8019;
+
+	--red-dim: #cc2412;
+	--green-dim: #98971a;
+	--yellow-dim: #d79921;
+	--blue-dim: #458588;
+	--purple-dim: #b16286;
+	--aqua-dim: #689d6a;
+	--gray-dim: #a89984;
+	--orange-dim: #d65d0e;
+}
+
+code {
+	background-color: var(--bg1);
+	color: var(--aqua-dim);
+}
+
+hr {
+	border-color: var(--bg_s)
+}
+
+.gallery404 {
+	columns: 3;
+}
+
+pre {
+	background-color: var(--bg1);
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	padding: 0.5rem;
+}
+
+body {
+	background-image: url("./assets/images/background.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: var(--bg_s);
+	color: var(--fg1);
+	margin: 0;
+}
+
+body.bg-church {
+	background-image: url("./assets/images/church.jpg");
+}
+
+a {
+	color: var(--blue);
+}
+
+a:hover {
+	background-color: var(--blue);
+	color: var(--bg);
+}
+
+a:visited {
+	background-color: var(--purple);
+}
+
+header,
+article,
+main,
+footer {
+	background-color: var(--bg);
+	max-width: 80rem;
+	margin: auto;
+	padding: 2rem;
+}
+
+main {
+	max-width: 80rem;
+}
+
+article,
+header,
+footer {
+	max-width: 54rem;
+}
+
+article {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.long-line {
+	line-break: anywhere;
+}
+
+.hero {
+	text-align: center;
+}
+
+.hero img {
+	height: 1rem;
+	width: 1rem;
+}
+
+li img {
+	height: 1rem;
+	width: 1rem;
+	margin-right: 0.5rem;
+}
+
+input,
+button,
+textarea {
+	background-color: var(--bg_s);
+	border-color: var(--bg1);
+	border-style: solid;
+	color: var(--fg1);
+	box-sizing: border-box;
+	padding: 0.5rem;
+	width: 100%;
+}
+
+@media (width >=48rem) {
+	body {
+		padding: 2rem;
+	}
+
+	.home-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 1rem;
+	}
+}

@@ -3,73 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#689d6a" />
     <meta name="description" content="$description$" />
     <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <meta name="theme-color" content="#689d6a" />
     <link rel="icon" type="image/png" href="https://github.com/acutewoof.png" />
     <title>$title$</title>
     <!--<link rel="stylesheet" href="tailwind.css" >-->
     <link rel="stylesheet" href="../global.css" />
   </head>
-  <body
-    class="m-0 min-h-screen bg-woofDark-bg0 md:p-8 lg:p-12 text-woofDark-fg font-sans w-full flex flex-col gap-8"
-  >
-    <header
-      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12 flex gap-4"
-    >
+  <body>
+    <header>
       <a href="/">Home</a>
       <a href="https://ashesandink.store">Book store</a>
       <a href="https://os.lewoof.xyz">Arch respin</a>
     </header>
-    <main
-      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12"
-    >
-      <h1>$title$</h1>
-      <div class="toc" id="toc">$toc$</div>
-      $body$
-    </main>
+    <article>$body$</article>
     <footer
-      class="prose prose-invert w-full max-w-screen-md mx-auto bg-woofDark-bg0_h p-8 py-12"
+      
     >
       <section
         id="contact"
-        class="text-left prose max-w-screen-md prose-invert w-full"
+        
       >
         <h2>Addresses, links, and contact</h2>
         <ul>
-          <li class="text-wrap break-all">
+          <li >
             Email:<!-- -->
             <a target="_blank" href="mailto:contact@lewoof.xyz"
               >contact@lewoof.xyz</a
             >
           </li>
-          <li class="text-wrap break-all">
+          <li >
             Matrix:
             <a href="https://matrix.to/#/@woof:matrix.lewoof.xyz"
               >@woof:matrix.lewoof.xyz</a
             >
           </li>
-          <li class="text-wrap break-all">
+          <li >
             XMPP:
             lewoof@anonlounge.xyz
           </li>
-          <li class="text-wrap break-all">
+          <li >
             Github:<!-- -->
             <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
           </li>
-          <li class="text-wrap break-all" id="donate">
+          <li class="long-line">
             Solana:
             JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
           </li>
-          <li class="text-wrap break-all" id="donate">
+          <li class="long-line">
             Monero:
             47DAoKGaa2UF1nL7M5wvdnhqapAuSnLKACTbhYGEbAYicjdDra1HnnKNUy4bzrL4voRrwP44y3MYX7vmdY4X8HJv3oB6erS
           </li>
-          <li class="text-wrap break-all">
+          <li class="long-line">
             Bitcoin (native segwit):
             bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
           </li>
-          <li class="text-wrap break-all">
+          <li >
             BuyMeACoffee:
             <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
               >acutewoof</a
@@ -77,17 +67,15 @@
           </li>
         </ul>
 
-        <form class="flex flex-col gap-2" action="/api/index" method="get">
+        <form >
           <textarea
             maxlength="2000"
-            class="flex min-h-[60px] w-full border border-woofDark-bg4 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-woofDark-bg4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-woofDark-bg3 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
             id="themessage"
             placeholder="Leave a message. Provide in your message a way to contact you back if you want a response."
             type="text"
             name="message"
           ></textarea>
           <button
-            class="border border-woofDark-bg4 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-woofDark-fg shadow hover:bg-woofDark-bg0_h h-9 px-4 py-2"
             id="sendbutton"
             type="submit"
           >

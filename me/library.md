@@ -1,4 +1,4 @@
-# Mini Library {#library}
+# Mini Library
 
 I don\'t own many books; this list exists however for me to not forget
 the order in which I arrange them and to remember the ones I have lended
@@ -18,7 +18,7 @@ I have not read nor do I necessarily agree with all of these.
 
 ## Paperback
 
-### Wordsworth Editions {#wordsworth-edition}
+### Wordsworth Editions
 
 - The House of the Dead & The Gambler - Fyodor Dostoevsky
 - Crime and Punishment - Fyodor Dostoevsky
