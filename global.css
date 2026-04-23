@@ -32,6 +32,10 @@
 	--orange-dim: #d65d0e;
 }
 
+figcaption {
+	color: var(--fg4);
+}
+
 code {
 	background-color: var(--bg1);
 	color: var(--aqua-dim);
