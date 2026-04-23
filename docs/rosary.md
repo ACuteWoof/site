@@ -39,7 +39,6 @@ sins, the resurrection of the body, and life everlasting. Amen.
 
 ## Our Father
 
-
 Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat
 regnum tuum. Fiat voluntas tua, sicut in caelo et in terra. Panem
 nostrum quotidianum da nobis hodie, et dimitte nobis debita nostra sicut
@@ -52,9 +51,7 @@ bread and forgive us our trespasses as we forgive those who trespass
 against us; and lead us not into temptation, but deliver us from evil.
 Amen.
 
-
 ## Hail Mary
-
 
 Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et
 benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro
@@ -64,9 +61,7 @@ Hail Mary, full of grace. The Lord is with thee. Blessed art thou among
 women, And blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of
 God, Pray for us sinners, Now and at the hour of our death. Amen.
 
-
 ## Glory Be
-
 
 Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et
 nunc, et semper, et in saecula saeculorum. Amen.
@@ -75,9 +70,7 @@ Glory be to the Father, and to the Son, and to the Holy Spirit. As it
 was in the beginning, is now, and ever shall be, world without end.
 Amen.
 
-
 ## The Fatima Prayer
-
 
 Domine Iesu, dimitte nobis debita nostra, salva nos ab igne inferiori,
 perduc in caelum omnes animas, praesertim eas, quae misericordiae tuae
@@ -86,9 +79,7 @@ maxime indigent.
 O my Jesus, forgive us our sins, save us from the fires of hell, and
 lead all souls to heaven, especially those most in need of Thy mercy.
 
-
 ## Hail Holy Queen
-
 
 Salve, Regina, mater misericordiae; vita, dulcedo et spes nostra, salve.
 Ad te clamamus exsules filii Hevae. Ad te suspiramus gementes et flentes
@@ -108,14 +99,17 @@ O loving, O sweet Virgin Mary.\
 Pray for us, O holy Mother of God. That we may be made worthy of the
 promises of Christ.
 
-
 # The Mysteries
 
 ## The Joyful Mysteries
 
 ### The Annunciation
 
-![Annunciation](/assets/images/docs/rosary/annunciation.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/annunciation.jpg"
+alt="Annunciation" />
+<figcaption>The Annunciation</figcaption>
+</figure>
 
 In the sixth month the angel Gabriel was sent from God to a city of
 Galilee named Nazareth, to a virgin betrothed to a man whose name was
@@ -140,7 +134,10 @@ from her.
 
 ### The Visitation
 
-![Visitation](/assets/images/docs/rosary/visitation.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/visitation.jpg" alt="Visitation" />
+<figcaption>The Visitation</figcaption>
+</figure>
 
 In those days Mary set out and went with haste to a Judean town in the
 hill country, where she entered the house of Zechariah and greeted
@@ -178,7 +175,10 @@ her home.
 
 ### The Nativity
 
-![Nativity](/assets/images/docs/rosary/nativity.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/nativity.jpg" alt="Nativity" />
+<figcaption>The Nativity</figcaption>
+</figure>
 
 And while they were there, the time came for her to be delivered. And
 she gave birth to her first-born son and wrapped him in swaddling
@@ -211,7 +211,11 @@ God for all they had heard and seen, as it had been told them.
 
 ### The Presentation
 
-![Presentation](/assets/images/docs/rosary/presentation.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/presentation.jpg"
+alt="Presentation" />
+<figcaption>The Presentation</figcaption>
+</figure>
 
 Now there was a man in Jerusalem, whose name was Simeon, and this man
 was righteous and devout, looking for the consolation of Israel, and the
@@ -249,7 +253,7 @@ of God was upon him.
 
 ### The Finding in the Temple
 
-![Finding](/assets/images/docs/rosary/finding.jpg)
+![The Finding in the Temple](/assets/images/docs/rosary/finding.jpg)
 
 Now his parents went to Jerusalem every year at the feast of the
 Passover.
@@ -277,7 +281,10 @@ man.
 
 ### The Baptism
 
-![Baptism](/assets/images/docs/rosary/baptism.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/baptism.jpg" alt="Baptism" />
+<figcaption>The Baptism</figcaption>
+</figure>
 
 In those days came John the Baptist, preaching in the wilderness of
 Judea, "Repent, for the kingdom of heaven is at hand." For this is he
@@ -293,10 +300,10 @@ wrath to come? Bear fruit that befits repentance, and do not presume to
 say to yourselves, 'We have Abraham as our father'; for I tell you, God
 is able from these stones to raise up children to Abraham. Even now the
 axe is laid to the root of the trees; every tree therefore that does not
-bear good fruit is cut down and thrown into the fire. "I baptize you
-with water for repentance, but he who is coming after me is mightier
-than I, whose sandals I am not worthy to carry; he will baptize you with
-the Holy Spirit and with fire. His winnowing fork is in his hand, and he
+bear good fruit is cut down and thrown into the fire."I baptize you with
+water for repentance, but he who is coming after me is mightier than I,
+whose sandals I am not worthy to carry; he will baptize you with the
+Holy Spirit and with fire. His winnowing fork is in his hand, and he
 will clear his threshing floor and gather his wheat into the granary,
 but the chaff he will burn with unquenchable fire." Then Jesus came from
 Galilee to the Jordan to John, to be baptized by him. John would have
@@ -310,7 +317,10 @@ beloved Son, with whom I am well pleased."
 
 ### The Wedding at Cana
 
-![Wedding](/assets/images/docs/rosary/wedding.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/wedding.jpg" alt="Wedding" />
+<figcaption>The Wedding</figcaption>
+</figure>
 
 On the third day there was a marriage at Cana in Galilee, and the mother
 of Jesus was there;
@@ -336,7 +346,11 @@ and his disciples; and there they stayed for a few days.
 
 ### The Proclamation of the Kingdom
 
-![Proclamation](/assets/images/docs/rosary/proclamation.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/proclamation.jpg"
+alt="Proclamation" />
+<figcaption>The Proclamation</figcaption>
+</figure>
 
 Now after John was arrested, Jesus came into Galilee, preaching the
 gospel of God, and saying, "The time is fulfilled, and the kingdom of
@@ -354,7 +368,11 @@ hired servants, and followed him.
 
 ### The Transfiguration
 
-![Transfiguration](/assets/images/docs/rosary/transfiguration.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/transfiguration.jpg"
+alt="Transfiguration" />
+<figcaption>The Transfiguration</figcaption>
+</figure>
 
 And after six days Jesus took with him Peter and James and John his
 brother, and led them up a high mountain apart. And he was transfigured
@@ -417,7 +435,10 @@ come into the time of trial.'
 
 ### The Scourging at the Pillar
 
-![Scourging](/assets/images/docs/rosary/scourging.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/scourging.jpg" alt="Scourging" />
+<figcaption>The Scourging</figcaption>
+</figure>
 
 Now at the festival he used to release a prisoner for them, anyone for
 whom they asked. Now a man called Barabbas was in prison with the rebels
@@ -435,7 +456,10 @@ flogging Jesus, he handed him over to be crucified.
 
 ### The Crowning with Thorns
 
-![Crowning](/assets/images/docs/rosary/crowning.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/crowning.jpg" alt="Crowning" />
+<figcaption>The Crowning</figcaption>
+</figure>
 
 Then Pilate took Jesus and had him flogged. And the soldiers wove a
 crown of thorns and put it on his head, and they dressed him in a purple
@@ -453,7 +477,10 @@ Now when Pilate heard this, he was more afraid than ever.
 
 ### The Carrying of the Cross
 
-![Carrying](/assets/images/docs/rosary/carrying.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/carrying.jpg" alt="Carrying" />
+<figcaption>The Carrying</figcaption>
+</figure>
 
 Then he handed him over to them to be crucified.
 
@@ -466,12 +493,16 @@ the Jews.' Many of the Jews read this inscription, because the place
 where Jesus was crucified was near the city; and it was written in
 Hebrew, in Latin, and in Greek. Then the chief priests of the Jews said
 to Pilate, 'Do not write, "The King of the Jews", but, "This man said, I
-am King of the Jews." ' Pilate answered, 'What I have written I have
+am King of the Jews."' Pilate answered, 'What I have written I have
 written.'
 
 ### The Crucifixion
 
-![Crucifixion](/assets/images/docs/rosary/crucifixion.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/crucifixion.jpg"
+alt="Crucifixion" />
+<figcaption>The Crucifixion</figcaption>
+</figure>
 
 And that is what the soldiers did.
 
@@ -492,7 +523,11 @@ said, 'It is finished.' Then he bowed his head and gave up his spirit.
 
 ### The Resurrection
 
-![Resurrection](/assets/images/docs/rosary/resurrection.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/resurrection.jpg"
+alt="Resurrection" />
+<figcaption>The Resurrection</figcaption>
+</figure>
 
 After the sabbath, as the first day of the week was dawning, Mary
 Magdalene and the other Mary went to see the tomb. And suddenly there
@@ -510,7 +545,10 @@ disciples.
 
 ### The Ascension
 
-![Ascension](/assets/images/docs/rosary/ascension.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/ascension.jpg" alt="Ascension" />
+<figcaption>The Ascension</figcaption>
+</figure>
 
 But you will receive power when the Holy Spirit has come upon you; and
 you will be my witnesses in Jerusalem, in all Judea and Samaria, and to
@@ -523,7 +561,10 @@ into heaven, will come in the same way as you saw him go into heaven.'
 
 ### The Descent of the Holy Spirit on Mary and the Apostles
 
-![Descent](/assets/images/docs/rosary/descent.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/descent.jpg" alt="Descent" />
+<figcaption>The Descent</figcaption>
+</figure>
 
 When the day of Pentecost had come, they were all together in one place.
 And suddenly from heaven there came a sound like the rush of a violent
@@ -546,7 +587,10 @@ three thousand persons were added.
 
 ### The Assumption
 
-![Assumption](/assets/images/docs/rosary/assumption.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/assumption.jpg" alt="Assumption" />
+<figcaption>The Assumption</figcaption>
+</figure>
 
 *CCC 965* After her Son's Ascension, Mary "aided the beginnings of the
 Church by her prayers." In her association with the apostles and several
@@ -573,7 +617,10 @@ Christians:
 
 ### The Coronation
 
-![Coronation](/assets/images/docs/rosary/coronation.jpg)
+<figure>
+<img src="/assets/images/docs/rosary/coronation.jpg" alt="Coronation" />
+<figcaption>The Coronation</figcaption>
+</figure>
 
 A great portent appeared in heaven: a woman clothed with the sun, with
 the moon under her feet, and on her head a crown of twelve stars. She
