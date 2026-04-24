@@ -47,6 +47,10 @@
   }
 }
 
+.title {
+	text-align: center;
+}
+
 figcaption {
   color: var(--fg4);
 }
