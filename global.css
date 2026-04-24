@@ -41,6 +41,12 @@ code {
   color: var(--aqua-dim);
 }
 
+blockquote {
+  border-left: 0.15rem solid var(--aqua-dim);
+  padding-left: 1rem;
+  margin-left: 0;
+}
+
 hr {
   border-color: var(--bg_s);
 }
