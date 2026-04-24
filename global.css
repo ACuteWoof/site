@@ -32,6 +32,21 @@
   --orange-dim: #d65d0e;
 }
 
+section:target {
+  animation: fadeout 5s ease-in-out forwards;
+}
+
+@keyframes fadeout {
+  from {
+    background-color: var(--bg_s);
+    color: var(--aqua);
+  }
+  to {
+    background-color: var(--bg);
+    color: var(--fg1);
+  }
+}
+
 figcaption {
   color: var(--fg4);
 }
