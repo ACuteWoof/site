@@ -178,11 +178,11 @@ td {
 @media (width >=48rem) {
   body {
     padding: 2rem;
-    background-image: url("./assets/images/background.jpg");
+    /* background-image: url("./assets/images/background.jpg"); */
   }
 
   body.bg-church {
-    background-image: url("./assets/images/church.jpg");
+    /* background-image: url("./assets/images/church.jpg"); */
   }
 
   body.nobg {
