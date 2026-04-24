@@ -92,7 +92,7 @@ footer {
   background-color: var(--bg);
   max-width: 80rem;
   margin: auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 main {
@@ -193,5 +193,12 @@ td {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 1rem;
+  }
+
+  header,
+  article,
+  main,
+  footer {
+    padding: 2rem;
   }
 }
