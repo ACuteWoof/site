@@ -14,15 +14,29 @@ say. – Edward Snowden" />
     <!--<link rel="stylesheet" href="tailwind.css" >-->
     <link rel="stylesheet" href="../global.css" />
   </head>
-  <body class="nobg">
+  <body>
     <header>
       <a href="/">Home</a>
       <a href="https://ashesandink.store">Book store</a>
       <a href="https://os.lewoof.xyz">Arch respin</a>
     </header>
-    <article><h1 id="encrypting-messages-and-files-with-pgp">Encrypting
-messages and files with PGP</h1>
-<blockquote>
+    <article>
+	    <h1 class="title">Encrypting messages and files with PGP</h1>
+	    <div class="toc"><ul>
+<li><a href="#gpg" id="toc-gpg">GPG</a></li>
+<li><a href="#generating-a-key-pair"
+id="toc-generating-a-key-pair">Generating a key pair</a></li>
+<li><a href="#importing-a-key" id="toc-importing-a-key">Importing a
+key</a></li>
+<li><a href="#encrypting-a-message-or-a-file-and-signing"
+id="toc-encrypting-a-message-or-a-file-and-signing">Encrypting a message
+or a file (and signing)</a></li>
+<li><a href="#decrypting-a-message-or-a-file"
+id="toc-decrypting-a-message-or-a-file">Decrypting a message or a
+file</a></li>
+<li><a href="#bye-bye" id="toc-bye-bye">bye bye</a></li>
+</ul></div>
+	    <blockquote>
 <p>Arguing that you don’t care about the right to privacy because you
 have nothing to hide is no different from saying you don’t care about
 free speech because you have nothing to say.</p>
@@ -59,7 +73,7 @@ be using the CLI.</p>
 <h2 id="generating-a-key-pair">Generating a key pair</h2>
 <p>A key pair simply contains the public key and the private key. You
 can generate a key pair interactively by running</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg --gen-key</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--gen-key</span></span></code></pre></div>
 <p>This will ask you a few questions (name and email are for what you
 want others to see you as when they import your key; it doesn’t have to
 match reality), and generate a private key.</p>
