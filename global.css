@@ -32,7 +32,7 @@
   --orange-dim: #d65d0e;
 }
 
-section:target {
+:target {
   animation: fadeout 5s ease-in-out forwards;
 }
 
