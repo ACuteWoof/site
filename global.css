@@ -1,7 +1,7 @@
 :root {
-  --bg_h: #1d2021;
-  --bg: #282828;
-  --bg_s: #32302f;
+  --bg: #1d2021;
+  --bg_s: #282828;
+  --bg0: #32302f;
   --bg1: #3c3836;
   --bg2: #504945;
   --bg3: #665c54;
@@ -56,7 +56,7 @@ figcaption {
 }
 
 code {
-  background-color: var(--bg1);
+  background-color: var(--bg_s);
   color: var(--fg);
 }
 
@@ -75,7 +75,7 @@ hr {
 }
 
 pre {
-  background-color: var(--bg1);
+  background-color: var(--bg_s);
   white-space: pre-wrap;
   overflow-wrap: break-word;
   padding: 0.5rem;
