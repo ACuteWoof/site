@@ -54,7 +54,7 @@ CLI.
 A key pair simply contains the public key and the private key. You can
 generate a key pair interactively by running
 
-``` {.sourceCode .sh}
+```sh
 gpg --gen-key
 ```
 
@@ -67,7 +67,7 @@ reality), and generate a private key.
 Once generated, you can export the public key by running, in the case of
 the example:
 
-``` {.sourceCode .sh}
+```sh
 gpg --armor --export example@example.com  public.key 
 ```
 
@@ -93,7 +93,7 @@ wants to send you encrypted messages.
 
 To encrypt a file (of any kind, including plain text), run
 
-``` {.sourceCode .sh}
+```sh
 gpg --encrypt --recipient example@example.com --output /path/where/i/want/output.gpg /path/of/original/file
 ```
 
@@ -108,7 +108,7 @@ You might however not want to create a new file. In this case, you can
 pipe the output of echo into GPG and have it encrypt any string you
 want. For example, the following will print out the ASCII ciphertext:
 
-``` {.sourceCode .sh}
+```sh
 echo "give me money" | gpg --encrypt --armor --recipient example@example.com
 ```
 
@@ -121,7 +121,7 @@ message, proving that the message is from your key pair.
 
 To decrypt a file, run
 
-``` {.sourceCode .sh}
+```sh
 gpg --decrypt --output /path/where/i/want/original /path/of/encrypted/file.gpg
 ```
 
@@ -130,7 +130,7 @@ This will decrypt the file and save it to the specified output file.
 Like for encryption, you can also pipe the output of echo to decrypt a
 PGP message:
 
-``` {.sourceCode .sh}
+```sh
 echo "-----BEGIN PGP MESSAGE-----hF4DSH1j+9Saq+sSAQdAGJWd63M09ISORNb165HP7FX7ixsIOsOd4M57ZVU+2wUwD3SEn06aw9gyMp6cjgWvEEEsFFp2SsPsjhSpGdnQwO1NnECmLEQqLf54BHX79rLg0kcBr51rAgFF1TvRck1gilSpxnqATRBiQ91Axs++tzl+8BT+XdISMUrHpPMVfUBaxivJxbyi2sCL1P42jLX/lrZVcIsgmkOdrQ===PywC-----END PGP MESSAGE-----" | gpg--decrypt
 ```
 

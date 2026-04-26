@@ -57,7 +57,21 @@ figcaption {
 
 code {
   background-color: var(--bg_s);
-  color: var(--fg);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-break: anywhere;
+}
+
+pre {
+  background-color: var(--bg_s);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 0.5rem;
+}
+
+pre code {
+  white-space: pre-wrap !important;
+  word-break: break-word;
 }
 
 blockquote {
@@ -74,12 +88,6 @@ hr {
   margin: auto;
 }
 
-pre {
-  background-color: var(--bg_s);
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  padding: 0.5rem;
-}
 
 body {
   background-position: center;
