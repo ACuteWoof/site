@@ -7,9 +7,19 @@
 		<link>https://lewoof.xyz</link>
 		<description>Blog posts from Vithushan</description>
 		<language>en-us</language>
-		<pubDate>Fri, 24 Apr 2026 09:30:00 GMT</pubDate>
 		<atom:link href="https://lewoof.xyz/posts/feed.xml" rel="self"
 			type="application/rss+xml" />
+
+		<item>
+			<title>Another Woof OS Update</title>
+			<link>https://os.lewoof.xyz/archtovoid</link>
+			<description><![CDATA[
+				The previous notice said that I no longer use Arch. Which was true for a while, but I must return for reasons. Woof OS development will still be halted and its future undetermined until I have free time.
+]]>
+      </description>
+			<guid isPermaLink="false">lewoof-posts-woof-os-unsure</guid>
+			<pubDate>Wed, 13 May 2026 22:00:00 GMT</pubDate>
+		</item>
 
 		<item>
 			<title>Excerpts, April 2026</title>
