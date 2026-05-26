@@ -592,14 +592,14 @@ three thousand persons were added.
 <figcaption>The Assumption</figcaption>
 </figure>
 
-*CCC 965* After her Son's Ascension, Mary "aided the beginnings of the
+_CCC 965_ After her Son's Ascension, Mary "aided the beginnings of the
 Church by her prayers." In her association with the apostles and several
 women, "we also see Mary by her prayers imploring the gift of the
 Spirit, who had already overshadowed her in the Annunciation."
 
 . . . also in her Assumption
 
-*CCC 966* "Finally the Immaculate Virgin, preserved free from all stain
+_CCC 966_ "Finally the Immaculate Virgin, preserved free from all stain
 of original sin, when the course of her earthly life was finished, was
 taken up body and soul into heavenly glory, and exalted by the Lord as
 Queen over all things, so that she might be the more fully conformed to

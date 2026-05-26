@@ -91,5 +91,6 @@ I have not read nor do I necessarily agree with all of these.
 - Brave New World - Aldous Huxley
 - No Longer Human - Osamu Dazai
 - Julius Caesar - William Shakespeare
+- The C Programming Language Second Edition - Brian W. Kernighan, Dennis M. Ritche
 - Everything You Always Wanted to Know About Mathematics - Brendan W.
   Sullivan with Prof. John Mackey

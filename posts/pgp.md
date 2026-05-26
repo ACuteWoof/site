@@ -68,7 +68,7 @@ Once generated, you can export the public key by running, in the case of
 the example:
 
 ```sh
-gpg --armor --export example@example.com  public.key 
+gpg --armor --export example@example.com  public.key
 ```
 
 `--export` is self explanatory, and `--armor` is to convert the key to

@@ -48,7 +48,7 @@
 }
 
 .title {
-	text-align: center;
+  text-align: center;
 }
 
 figcaption {
@@ -87,7 +87,6 @@ hr {
 .gallery404 {
   margin: auto;
 }
-
 
 body {
   background-position: center;
@@ -235,4 +234,3 @@ td {
     scroll-behavior: smooth;
   }
 }
-
