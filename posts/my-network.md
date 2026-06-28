@@ -169,6 +169,7 @@ previous paragraph, there will be a post with more details on each service
 hosted.
 
 Helpful documentation/articles:
+
 - [comfy.guide guide on nginx](https://comfy.guide/server/nginx/)
 - [Arch Wiki/Nginx](https://wiki.archlinux.org/title/Nginx)
 - [Arch Wiki/Certbot](https://wiki.archlinux.org/title/Certbot)

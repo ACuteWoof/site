@@ -173,18 +173,23 @@ for anyone looking to create a setup to get started. Below are links to
 documentation that will be helpful. In the future, when the setup is
 cleaned up as described in the previous paragraph, there will be a post
 with more details on each service hosted.</p>
-<p>Helpful documentation/articles: - <a
-href="https://comfy.guide/server/nginx/">comfy.guide guide on nginx</a>
-- <a href="https://wiki.archlinux.org/title/Nginx">Arch Wiki/Nginx</a> -
-<a href="https://wiki.archlinux.org/title/Certbot">Arch Wiki/Certbot</a>
-- <a
+<p>Helpful documentation/articles:</p>
+<ul>
+<li><a href="https://comfy.guide/server/nginx/">comfy.guide guide on
+nginx</a></li>
+<li><a href="https://wiki.archlinux.org/title/Nginx">Arch
+Wiki/Nginx</a></li>
+<li><a href="https://wiki.archlinux.org/title/Certbot">Arch
+Wiki/Certbot</a></li>
+<li><a
 href="https://docs.openconnect-vpn.net/recipes/ocserv-multihost/">Openconnect
-documentation “How to share the same port for VPN and HTTP”</a> - <a
-href="https://comfy.guide/server/coturn/">comfy.guide guide on
-coturn</a></p>
-<p>Add my RSS feed to your feed reader (start using RSS if you don’t
-already) to be notified when I post about each service in more
-detail.</p>
+documentation “How to share the same port for VPN and HTTP”</a></li>
+<li><a href="https://comfy.guide/server/coturn/">comfy.guide guide on
+coturn</a></li>
+</ul>
+<p>Add my <a href="https://lewoof.xyz/posts/feed.xml">RSS feed</a> to
+your feed reader (start using RSS if you don’t already) to be notified
+when I post about each service in more detail.</p>
 ]]>
       </description>
 			<guid isPermaLink="false">lewoof-posts-my-network-06-28</guid>
