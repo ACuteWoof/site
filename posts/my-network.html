@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="On self hosting with nginx and
+certbot." />
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <meta name="theme-color" content="#689d6a" />
+    <link rel="icon" type="image/png" href="/assets/images/icon.png" />
+    <title>My network</title>
+    <!--<link rel="stylesheet" href="tailwind.css" >-->
+    <link rel="stylesheet" href="../global.css" />
+      </head>
+  <body class="nobg">
+    <header>
+      <a href="/">Home</a>
+      <a href="https://books.lewoof.xyz">Book store</a>
+      <a href="https://os.lewoof.xyz">Arch respin</a>
+    </header>
+    <article>
+      <h1 class="title">My network</h1>
+      <div class="toc"></div>
+      <p>This post outlines how the networking for my self hosted
+      services are setup, including how I use my domain with my dynamic
+      public IP address (I am not willing to pay for a static IP)
+      without using a DDNS service.</p>
+      <p>The description of the network will be purely practical. I will
+      not be describing the transfer of packets to the highest possible
+      precision.</p>
+      <p>The clients are categorized into home clients and global
+      clients. Global clients refers to clients that, regardless of
+      location, connect to the server through the domain name as
+      registered on a public DNS. If the clients connect to the services
+      on the server by either mapping the domains to the local IP
+      address of the home server, or directly connect to the home server
+      through the local IP address, they are home clients.</p>
+      <p>The following image shows an (imperfect) overview of the
+      setup:</p>
+      <figure>
+      <img src="../assets/images/posts/my-network/overview.svg"
+      alt="Overview of the network" />
+      <figcaption aria-hidden="true">Overview of the
+      network</figcaption>
+      </figure>
+      <p>Home server IP addresses:</p>
+      <pre><code>eno1    192.168.1.2
+tun0    10.10.10.208</code></pre>
+      <p>Each service can be accessed through their own port. For
+      example, the Jellyfin instance is accessible on port 8096. Nginx
+      however lets you map a domain/subdomain to this port. Under
+      <code>http</code> in <code>nginx.conf</code>, the following lines
+      proxy <code>https://tv.lewoof.xyz</code> to
+      <code>http://127.0.0.1:8096</code>:</p>
+      <pre><code>server {
+    listen 443 ssl http2;
+    server_name tv.lewoof.xyz;
+
+    ssl_certificate /etc/letsencrypt/live/oc.lewoof.xyz/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/oc.lewoof.xyz/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    client_max_body_size 500M;
+    ssl_protocols TLSv1.3 TLSv1.2;
+
+    location / {
+        proxy_pass http://127.0.0.1:8096;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;upgrade&quot;;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+
+        # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+        proxy_buffering off;
+    }
+}</code></pre>
+      <p>Now on the local network, if the DNS points
+      <code>tv.lewoof.xyz</code> to <code>192.168.1.2</code>, nginx will
+      proxy the request to Jellyfin.</p>
+      <p>Before setting up certbot, the same block would have
+      <code>listen 80</code> instead of 443. When
+      <code>certbot --nginx</code> is run, it will be changed to 443 and
+      SSL certificate lines will automatically be added. Certbot will
+      fail complaining that there are no services on port 80 if there is
+      no server block listening on port 80. Use <code>nginx -t</code> to
+      test your nginx config if you could not get it to use port 80. In
+      order for Certbot to be able to generate certificates, the server
+      name for which I am trying to obtain a certificate has to be
+      pointing to the server’s public IP address, and port 80 should be
+      exposed to the internet. If Certbot cannot call
+      <code>tv.lewoof.xyz</code> on port 80 over HTTP and get a response
+      from my machine, it cannot give me a certificate for
+      <code>tv.lewoof.xyz</code>.</p>
+      <p>Not all services go through nginx. If a service (SSH for
+      example) is not something I want to be able to access outside the
+      local network, either physical or virtual, proxying to them
+      through nginx is unnecessary.</p>
+      <p>So far this works great on the local network, and local clients
+      are satisfied. What about our friends from across the globe? If I
+      had a static IP, all it would take is to do some port forwarding
+      on the router and changing the DNS settings with Cloudflare to
+      point my domain to said IP. However, I do not have a static IP nor
+      do I want to pay my ISP for it. To address this, I setup an
+      openconnect server on a VPS and registered its IP with my domain
+      name. Now as this is the VPN server, it can access all the devices
+      connected to the VPN, and my home server is always connected on
+      <code>10.10.10.208</code>.</p>
+      <p>On this server I have Coturn, HAProxy, ocserv, and nginx. VPN
+      traffic on openconnect is on port 443, the same port needed for
+      nginx, and I could not get nginx to sit in front of the VPN server
+      while having it proxy requests through the VPN server. I use
+      HAProxy to decide based on SNI whether a request should be handled
+      by nginx or by ocserv. I also use HAProxy to proxy requests that
+      are not HTTPS traffic as it is much simpler to handle them
+      directly in HAProxy.</p>
+      <p>I must also remark that running nginx on this VPS is
+      unnecessary. I should be just fine handling over all of the HTTP
+      and HTTPS traffic to the nginx instance on the home server, but an
+      unfortunate temporary solution is still sticking around. From the
+      HAProxy config shown below you should be able to see that what
+      nginx instance you want to point to is arbitrary and does not make
+      a difference as long as said instance is configured to proxy all
+      the requests you expect.</p>
+      <pre><code>defaults
+    timeout connect         10s
+    timeout client          1m
+    timeout server          1m
+    timeout tunnel          3h
+
+# frontends
+
+frontend www-https
+   bind 0.0.0.0:443
+   mode tcp
+   tcp-request inspect-delay 5s
+   tcp-request content accept if { req.ssl_hello_type 1 }
+   use_backend bk_vpn         if { req_ssl_sni test.com }
+   use_backend bk_nginx if { req_ssl_sni -i -m end .xyz }
+   default_backend bk_vpn
+
+frontend minecraft_front
+   bind *:25565
+   mode tcp
+   default_backend minecraft_back
+
+# backends
+backend minecraft_back
+   mode tcp
+   server mc 10.10.10.208:25565 check send-proxy-v2
+
+backend bk_vpn
+   mode tcp
+   option ssl-hello-chk
+   server server-vpn 127.0.0.1:4443 send-proxy-v2
+
+backend bk_nginx
+   mode tcp
+   option ssl-hello-chk
+   server server-web 127.0.0.1:4444 check</code></pre>
+      <p>Shown above is the entire HAProxy config file
+      (<code>/etc/haproxy/haproxy.cfg</code>). The HTTPS frontend
+      decides whether a request should be handled by ocserv (the VPN) or
+      nginx. If the requested SNI is <code>test.com</code> (I spoof the
+      SNI on all of my VPN requests, <code>test.com</code> here is used
+      to redact the actual SNI I want to use in the config), the request
+      is handled by ocserv. If the SNI ends in <code>.xyz</code> (my
+      domain name being <code>lewoof.xyz</code>), the request is handled
+      by nginx. You should also notice that any request sent on the
+      Minecraft port is forwarded to <code>10.10.10.208:25565</code>.
+      This is the IP of the homeserver on the VPN, any request can be
+      forwarded directly to the homserver with this IP, including
+      <code>server-web</code> on <code>bk_nginx</code>. If I clean up my
+      config files, <code>server server-web 127.0.0.1:4444 check</code>
+      would be replaced with
+      <code>server server-web 10.10.10.208:443 check</code>. The nginx
+      instance running on this VPS also simply proxies each domain to
+      <code>10.10.10.208</code> on the appropriate port.</p>
+      <p>What I have written so far serves the purpose of the post,
+      viz., to be a basic outline of the networking setup that allows me
+      to self host my services. The wrtiting combined with the diagram
+      should be sufficient for anyone looking to create a setup to get
+      started. Below are links to documentation that will be helpful. In
+      the future, when the setup is cleaned up as described in the
+      previous paragraph, there will be a post with more details on each
+      service hosted.</p>
+      <p>Helpful documentation/articles: - <a
+      href="https://comfy.guide/server/nginx/">comfy.guide guide on
+      nginx</a> - <a href="https://wiki.archlinux.org/title/Nginx">Arch
+      Wiki/Nginx</a> - <a
+      href="https://wiki.archlinux.org/title/Certbot">Arch
+      Wiki/Certbot</a> - <a
+      href="https://docs.openconnect-vpn.net/recipes/ocserv-multihost/">Openconnect
+      documentation “How to share the same port for VPN and HTTP”</a> -
+      <a href="https://comfy.guide/server/coturn/">comfy.guide guide on
+      coturn</a></p>
+      <p>Add my RSS feed to your feed reader (start using RSS if you
+      don’t already) to be notified when I post about each service in
+      more detail.</p>
+    </article>
+    <footer>
+      <section id="contact">
+        <h2>Addresses, links, and contact</h2>
+        <ul>
+          <li>
+            Email:<!-- -->
+            <a target="_blank" href="mailto:contact@lewoof.xyz"
+              >contact@lewoof.xyz</a
+            >
+          </li>
+          <li>
+            Matrix:
+            <a href="https://matrix.to/#/@woof:matrix.lewoof.xyz"
+              >@woof:matrix.lewoof.xyz</a
+            >
+          </li>
+          <li>XMPP: lewoof@anonlounge.xyz</li>
+          <li>
+            Github:<!-- -->
+            <a target="_blank" href="https://github.com/acutewoof">acutewoof</a>
+          </li>
+          <li class="long-line">
+            Solana: GHHPYZDDyXmwPLnQPEBgXAD9FzZmDPhCbVRpgqxuEpQ3
+          </li>
+          <li class="long-line">
+            Bitcoin (native segwit): bc1qqzqw40g566rmyvafrccjagktmd9nqvyqwcz6jh
+          </li>
+          <li>
+            BuyMeACoffee:
+            <a target="_blank" href="https://www.buymeacoffee.com/acutewoof"
+              >acutewoof</a
+            >
+          </li>
+        </ul>
+
+        <form action="/api/index" method="get">
+          <textarea
+            maxlength="2000"
+            id="themessage"
+            placeholder="Leave a message. Provide in your message a way to contact you back if you want a response."
+            type="text"
+            name="message"
+            rows="3"
+          ></textarea>
+          <button id="sendbutton" type="submit">Send :P</button>
+        </form>
+      </section>
+    </footer>
+  </body>
+</html>
