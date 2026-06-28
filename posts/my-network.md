@@ -22,7 +22,7 @@ local IP address, they are home clients.
 
 The following image shows an (imperfect) overview of the setup:
 
-![Overview of the network](../assets/images/posts/my-network/overview.svg)
+![Overview of the network](/assets/images/posts/my-network/overview.svg)
 
 Home server IP addresses:
 ```
@@ -175,5 +175,6 @@ Helpful documentation/articles:
 - [Openconnect documentation "How to share the same port for VPN and HTTP"](https://docs.openconnect-vpn.net/recipes/ocserv-multihost/)
 - [comfy.guide guide on coturn](https://comfy.guide/server/coturn/)
 
-Add my RSS feed to your feed reader (start using RSS if you don't already) to
-be notified when I post about each service in more detail.
+Add my [RSS feed](https://lewoof.xyz/posts/feed.xml) to your feed reader (start
+using RSS if you don't already) to be notified when I post about each service
+in more detail.
