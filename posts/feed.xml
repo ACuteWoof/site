@@ -11,7 +11,7 @@
 			type="application/rss+xml" />
 		<item>
 			<title>Overview of my network</title>
-			<link>https://os.lewoof.xyz/posts/my-network.html</link>
+			<link>https://lewoof.xyz/posts/my-network.html</link>
 			<description><![CDATA[
 <p>This post outlines how the networking for my self hosted services are
 setup, including how I use my domain with my dynamic public IP address
