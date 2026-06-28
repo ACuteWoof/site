@@ -36,7 +36,7 @@ alt="Overview of the network" />
 <p>Home server IP addresses:</p>
 <pre><code>eno1    192.168.1.2
 tun0    10.10.10.208</code></pre>
-<p>Each service can be accessed through their own port. For example, the
+<p>Each service can be accessed through its own port. For example, the
 Jellyfin instance is accessible on port 8096. Nginx however lets you map
 a domain/subdomain to this port. Under <code>http</code> in
 <code>nginx.conf</code>, the following lines proxy
@@ -107,7 +107,7 @@ SNI whether a request should be handled by nginx or by ocserv. I also
 use HAProxy to proxy requests that are not HTTPS traffic as it is much
 simpler to handle them directly in HAProxy.</p>
 <p>I must also remark that running nginx on this VPS is unnecessary. I
-should be just fine handling over all of the HTTP and HTTPS traffic to
+should be just fine handing over all of the HTTP and HTTPS traffic to
 the nginx instance on the home server, but an unfortunate temporary
 solution is still sticking around. From the HAProxy config shown below
 you should be able to see that what nginx instance you want to point to
