@@ -20,7 +20,7 @@ service.</p>
 <p>The description of the network will be purely practical. I will not
 be describing the transfer of packets to the highest possible
 precision.</p>
-<p>The clients are categorized into home clients and global clients.
+<p>The clients are categorized into local clients and global clients.
 Global clients refers to clients that, regardless of location, connect
 to the server through the domain name as registered on a public DNS. If
 the clients connect to the services on the server by either mapping the

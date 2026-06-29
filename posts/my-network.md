@@ -13,12 +13,12 @@ willing to pay for a static IP) without using a DDNS service.
 The description of the network will be purely practical. I will not be
 describing the transfer of packets to the highest possible precision.
 
-The clients are categorized into home clients and global clients. Global
+The clients are categorized into local clients and global clients. Global
 clients refers to clients that, regardless of location, connect to the server
 through the domain name as registered on a public DNS. If the clients connect
 to the services on the server by either mapping the domains to the local IP
 address of the home server, or directly connect to the home server through the
-local IP address, they are home clients.
+local IP address, they are local clients.
 
 The following image shows an (imperfect) overview of the setup:
 
@@ -30,7 +30,7 @@ eno1    192.168.1.2
 tun0    10.10.10.208
 ```
 
-Each service can be accessed through their own port. For example, the Jellyfin
+Each service can be accessed through its own port. For example, the Jellyfin
 instance is accessible on port 8096. Nginx however lets you map a
 domain/subdomain to this port. Under `http` in `nginx.conf`, the following
 lines proxy `https://tv.lewoof.xyz` to `http://127.0.0.1:8096`:
@@ -101,7 +101,7 @@ be handled by nginx or by ocserv. I also use HAProxy to proxy requests that are
 not HTTPS traffic as it is much simpler to handle them directly in HAProxy. 
 
 I must also remark that running nginx on this VPS is unnecessary. I should be
-just fine handling over all of the HTTP and HTTPS traffic to the nginx instance
+just fine handing over all of the HTTP and HTTPS traffic to the nginx instance
 on the home server, but an unfortunate temporary solution is still sticking
 around. From the HAProxy config shown below you should be able to see that what
 nginx instance you want to point to is arbitrary and does not make a difference
