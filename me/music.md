@@ -1,33 +1,20 @@
----
-author: Vithushan Sutharsan (ACuteWoof)
-description: I like computers
-lang: en
-theme-color: "\\#689d6a"
-title: Vithushan
-viewport: width=device-width, initial-scale=1.0
----
-
-# Music
-
-All the albums in my playlist. This page has no real use for you unless
-you are me.
-
-- Apocalyptica & Sabaton - Live or Die (feat. Joakim Brodén)
 - Apocalyptica - 7th Symphony
 - Apocalyptica - Metal Classic, Classic Metal
+- Apocalyptica & Sabaton - Live or Die (feat. Joakim Brodén)
 - Asking Alexandria - Dark Void EP
 - Avenged Sevenfold - Avenged Sevenfold
 - Avenged Sevenfold - City Of Evil
 - Avenged Sevenfold - Diamonds in the Rough
 - Avenged Sevenfold - Hail To The King
-- Avenged Sevenfold - Life Is But a Dream…
+- Avenged Sevenfold - Life Is But a Dream...
 - Avenged Sevenfold - Nightmare
 - Avenged Sevenfold - Sounding The Seventh Trumpet
 - Avenged Sevenfold - The Stage (Deluxe Edition)
 - Avenged Sevenfold - Waking The Fallen
 - Black Sabbath - Paranoid
-- Breaking Benjamin - Phobia (Explicit Version)
+- Breaking Benjamin - Phobia
 - C418 - Minecraft – Volume Alpha
+- C418 - Minecraft – Volume Beta
 - Casey Edwards, Victor Borba - Bury the Light
 - CHESTER BENNINGTON - MALL (Music From The Motion Picture)
 - Dead By Sunrise - Out Of Ashes
@@ -54,10 +41,12 @@ you are me.
 - Fort Minor - Welcome
 - Gojira - Fortitude
 - Gojira - From Mars to Sirius
-- Gojira - L’Enfant Sauvage
+- Gojira - L'Enfant Sauvage
 - Gojira - Magma
 - Gojira - The Way of All Flesh
 - Grey Daze - Amends
+- Hell's Enemy - No Dawn for Demon Kind
+- Hell's Enemy - West of Eden
 - Ichika Nito - Awakening
 - Ichika Nito - Metaphor
 - Imagine Dragons - Smoke + Mirrors (Super Deluxe)
@@ -77,27 +66,28 @@ you are me.
 - Linkin Park - The Hunting Party
 - Mark Morton - Anesthetic
 - Martin Garrix & Pierce Fulton feat. Mike Shinoda - BYLAW EP
+- mcla_music
+- Metallica - …And Justice for All
 - Metallica - 72 Seasons
 - Metallica - Death Magnetic
-- Metallica - Hardwired…To Self-Destruct
-- Metallica - Kill ’Em All (Remastered)
+- Metallica - Hardwired...To Self-Destruct
+- Metallica - Kill 'Em All (Remastered)
 - Metallica - Load
 - Metallica - Master of Puppets (Remastered)
 - Metallica - Metallica (Remastered)
 - Metallica - Reload
 - Metallica - Ride The Lightning (Remastered)
 - Metallica - S&M 1999
-- Metallica - …And Justice for All
 - Mike Shinoda - fine
 - Mike Shinoda - Post Traumatic
 - Muse - Absolution
 - Pantera - Cowboys from Hell (Deluxe)
 - Pantera - Vulgar Display Of Power
+- Pink Floyd - Meddle
 - Pink Floyd - The Dark Side of the Moon
 - Pink Floyd - The Piper at the Gates of Dawn
 - Pink Floyd - The Wall
 - Pink Floyd - Wish You Were Here
-- Pink Floyd - Meddle
 - Polyphia - Muse
 - Polyphia - New Levels New Devils
 - Polyphia - Remember That You Will Die
