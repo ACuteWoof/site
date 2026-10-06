@@ -9,11 +9,13 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed.", http.StatusMethodNotAllowed)
+		http.Redirect(w, r, "/me/swan", http.StatusTemporaryRedirect)
 		return
 	}
 
 	if err := r.ParseForm(); err != nil {
 		http.Error(w, "Bad request.", http.StatusBadRequest)
+		http.Redirect(w, r, "/me/swan", http.StatusTemporaryRedirect)
 		return
 	}
 
