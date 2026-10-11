@@ -46,7 +46,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	blobBaseURL := strings.TrimSuffix(
 		os.Getenv("CONTENT_BLOB_BASE_URL"), "/",
 	)
-	url := blobBaseURL + "anniversary.html"
+	url := blobBaseURL + "/anniversary.html"
 	token := os.Getenv("BLOB_READ_WRITE_TOKEN")
 
 	if url == "" || token == "" {
