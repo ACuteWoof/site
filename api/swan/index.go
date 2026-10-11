@@ -4,24 +4,42 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"time"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		http.Error(w, "Method not allowed.", http.StatusMethodNotAllowed)
-		http.Redirect(w, r, "/me/swan", http.StatusTemporaryRedirect)
-		return
+	var authorized bool
+	cookie, err := r.Cookie("access_code")
+	if err == nil && cookie.Value == os.Getenv("ACCESS_CODE") {
+		authorized = true
 	}
 
-	if err := r.ParseForm(); err != nil {
-		http.Error(w, "Bad request.", http.StatusBadRequest)
-		http.Redirect(w, r, "/me/swan", http.StatusTemporaryRedirect)
-		return
-	}
+	if !authorized {
+		if r.Method != http.MethodPost {
+			http.Redirect(w, r, "/me/swan", http.StatusTemporaryRedirect)
+			return
+		}
 
-	if r.PostFormValue("access-code") != os.Getenv("ACCESS_CODE") {
-		http.Error(w, "Access denied.", http.StatusForbidden)
-		return
+		if err := r.ParseForm(); err != nil {
+			http.Redirect(w, r, "/me/swan", http.StatusTemporaryRedirect)
+			return
+		}
+
+		inputCode := r.PostFormValue("access-code")
+		if inputCode != os.Getenv("ACCESS_CODE") {
+			http.Error(w, "Access denied.", http.StatusForbidden)
+			return
+		}
+
+		http.SetCookie(w, &http.Cookie{
+			Name:     "access_code",
+			Value:    inputCode,
+			Path:     "/",
+			Expires:  time.Now().Add(30 * 24 * time.Hour),
+			HttpOnly: true,                               
+			Secure:   true,                              
+			SameSite: http.SameSiteLaxMode,
+		})
 	}
 
 	url := os.Getenv("CONTENT_BLOB_URL")
@@ -59,3 +77,4 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
+
