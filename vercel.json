@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/api/files/(.*)",
+      "destination": "/api/file/index.go"
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
