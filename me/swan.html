@@ -22,7 +22,7 @@
       <h1 id="projects">Enter access code:</h1>
       <table>
         <tr>
-          <form action="../blob/letters.html" method="post" id="theform">
+          <form action="/api/swan" method="post" id="theform">
             <td>
               <input name="access-code" type="password" />
             </td>
@@ -82,51 +82,4 @@
       </section>
     </footer>
   </body>
-
-  <script defer>
-    const form = document.getElementById("theform");
-    const play = document.getElementById("play");
-    const audio = document.getElementById("myAudio");
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const audio = new Audio("../assets/swan-lake.mp3");
-      audio.loop = true;
-
-      const playback = audio.play();
-
-      try {
-        const login = await fetch(form.action, {
-          method: form.method || "POST",
-          body: new FormData(form),
-          credentials: "same-origin",
-        });
-
-        if (!login.ok) {
-          audio.pause();
-          return;
-        }
-
-        const response = await fetch("/api/swan/", {
-          credentials: "same-origin",
-        });
-
-        if (!response.ok) {
-          audio.pause();
-          throw new Error(`Swan page failed: ${response.status}`);
-        }
-
-        const html = await response.text();
-        document.open();
-        document.write(html);
-        document.close();
-
-        await playback;
-      } catch (error) {
-        audio.pause();
-        console.error(error);
-      }
-    });
-  </script>
 </html>
