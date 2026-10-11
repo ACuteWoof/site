@@ -9,11 +9,11 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	var authorized bool
-	cookie, err := r.Cookie("access_code")
-	if err == nil && cookie.Value == os.Getenv("ACCESS_CODE") {
-		authorized = true
-	}
+	var authorized bool = false
+	// cookie, err := r.Cookie("access_code")
+	// if err == nil && cookie.Value == os.Getenv("ACCESS_CODE") {
+	// 	authorized = true
+	// }
 
 	if !authorized {
 		if r.Method != http.MethodPost {
