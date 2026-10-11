@@ -15,7 +15,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	requestedFile := strings.TrimPrefix(r.URL.Path, "/api/blob/")
+	requestedFile := strings.TrimPrefix(r.URL.Path, "/api/file/")
 	if requestedFile == "" || requestedFile == "/" {
 		http.Error(w, "Filename missing.", http.StatusBadRequest)
 		return
