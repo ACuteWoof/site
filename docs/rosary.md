@@ -18,24 +18,7 @@ In the name of the Father, and of the Son, and of the Holy Spirit. Amen.
 
 ## Apostles Creed
 
-Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in
-Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est
-de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato,
-crucifixus, mortuus, et sepultus, descendit ad infernos, tertia die
-resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris
-omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in
-Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem,
-remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.
-
-I believe in God, the Father almighty creator of heaven and earth and in
-Jesus Christ, His only Son, our Lord, who was conceived by the Holy
-Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was
-crucified, died, and was buried. He descended into hell. On the third
-day he rose again from the dead. He ascended into heaven and is seated
-at the right hand of God, the Father almighty. He will come again in
-glory to judge the living and the dead. I believe in the Holy Spirit,
-the Holy Catholic Church, the communion of saints, the forgiveness of
-sins, the resurrection of the body, and life everlasting. Amen.
+Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad infernos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen. I believe in God, the Father almighty creator of heaven and earth and in Jesus Christ, His only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell. On the third day he rose again from the dead. He ascended into heaven and is seated at the right hand of God, the Father almighty. He will come again in glory to judge the living and the dead. I believe in the Holy Spirit, the Holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 ## Our Father
 
