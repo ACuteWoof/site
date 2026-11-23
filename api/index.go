@@ -12,6 +12,9 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
 	var websocket_uri string = os.Getenv("WEBSOCKET_URI")
 
+	fmt.Println("IP of sender:", r.RemoteAddr)
+	fmt.Println("Query:", r.URL.RawQuery)
+
 	message := r.FormValue("message")
 
 	postBody, _ := json.Marshal(map[string]string{
