@@ -18,7 +18,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		"content": string("To: <@618114750827462660> From:" + r.RemoteAddr + "\n---\n\n" + message),
 	})
 
-	fmt.Println(r.URL.Query()["message"][0])
 	fmt.Println(message)
 
 	responseBody := bytes.NewBuffer(postBody)
