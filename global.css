@@ -247,6 +247,10 @@ body.chat {
 	gap: 1rem;
 }
 
+.chat-content .item:hover {
+	background-color: var(--bg_s);
+}
+
 .chat-content .item p {
 	margin: 0
 }
