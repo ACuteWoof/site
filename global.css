@@ -267,6 +267,15 @@ body.chat {
 	color: var(--purple);
 }
 
+.message-form-item {
+	flex-grow: 1;
+}
+
+textarea#message{
+	field-sizing: content;
+	min-height: 3rem;
+}
+
 @media (width >=48rem) {
 	body {
 		padding: 2rem;
@@ -294,9 +303,6 @@ body.chat {
 		padding: 2rem;
 	}
 
-	.message-form-item {
-		flex-grow: 1;
-	}
 
 	.chat-textboxes {
 		flex-direction: row;
