@@ -247,6 +247,10 @@ body.chat {
 	gap: 1rem;
 }
 
+.chat-content .item p {
+	margin: 0
+}
+
 .chat-content .item .content {
 	overflow-wrap: anywhere;
 }
