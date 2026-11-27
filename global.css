@@ -255,6 +255,13 @@ body.chat {
 	overflow-wrap: anywhere;
 }
 
+.woof {
+	color: var(--yellow);
+}
+
+.swan {
+	color: var(--purple);
+}
 
 @media (width >=48rem) {
 	body {
