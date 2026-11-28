@@ -274,11 +274,11 @@ body.chat {
 }
 
 .chat-content .item img {
-	max-height: 20rem;
+	/* max-height: 20rem; */
 }
 
 .chat-content .item video {
-	max-height: 20rem;
+	/* max-height: 20rem; */
 }
 
 textarea#message {
